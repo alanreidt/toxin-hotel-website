@@ -2,14 +2,108 @@ doctype html
 html(lang=ru)
   head
     meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='description' content='')
     meta(name='keywords' content='')
+
     title Home
     link(rel='stylesheet' href='../../styles/index.less')
 
   body
-    p Hello, World!!!
+    header.header.page__header
+      .page__container
+        h1.visually-hidden toxin
+        .logo.header__left
+          img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin logo', width='106', height='40')
+          //- C://Users/nafun/Documents/web-projects/toxin/src/blocks/common.blocks/logo/logo.svg
+          //- ../../blocks/common.blocks/logo/logo.svg
+        .header__right
+          nav.nav
+            h2.visually-hidden main navigation
+            ul.nav__content
+              li.nav__item
+                a.nav__link(href='#') home
+              li.nav__item
+                a.nav__link(href='#') about us
+              li.nav__item.nav__item_expanded
+                a.nav__link(href='#') services
+              li.nav__item
+                a.nav__link(href='#') careers
+              li.nav__item
+                a.nav__link(href='#') news
+              li.nav__item
+                a.nav__link(href='#') documentation
+          .reseption
+            .reseption__item
+              button.btn login
+              button.btn register
+            .reseption__item
+              p Cosmin Negoita
+
+    footer.footer.page__footer
+      .page__container
+        .footer__main
+          .footer__item
+            .logo
+              //- that's not a figure, I use it only for training purposes.
+              figure
+                img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin logo', width='106', height='40')
+                figcaption
+                  p
+                    | Lorem ipsum dolor sit amet consectetur
+                    | adipiscing elit aliquam eget nullam
+                    | pellentesque aliquam curabitur cociis.
+
+          nav.footer__item
+            h2.visually-hidden footer navigation
+            section
+              h3 navigation
+              ul
+                li
+                  a(href='#') about us
+                li
+                  a(href='#') news
+                li
+                  a(href='#') support
+                li
+                  a(href='#') product
+
+            section
+              h3 about us
+              ul
+                li
+                  a(href='#') who we are
+                li
+                  a(href='#') our team
+                li
+                  a(href='#') careers
+                li
+                  a(href='#') investors
+
+            section
+              h3 support
+              ul
+                li
+                  a(href='#') documentation
+                li
+                  a(href='#') community
+                li
+                  a(href='#') get in touch
+
+          aside.footer__item
+            h3 subscribe to our newsletter
+            p
+              | receive our latest news and
+              | promotions in your inbox!
+
+        hr
+
+        .footer__secondary
+          p.copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
+          .socials
+            .socials__icon-tw 1
+            .socials__icon-fb 2
+            .socials__icon-ig 3
 
     script(../../scripts/index.js)
