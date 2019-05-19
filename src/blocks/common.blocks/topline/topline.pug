@@ -1,0 +1,39 @@
+//- maybe page__topline must be separate element (html tag)
+header.topline.page__topline
+  //- or use prepproc capabilities instead of general class
+  .page__container
+    //- or use prepproc capabilities instead of general class
+    h1.visually-hidden toxin
+
+    //- take into account footer's logo and interactive logo (not from index page)
+    //- maybe topline__logo must be separate element (html tag)
+    .logo.topline__logo
+      //- add styles for alt atr (using logo__img class for that)
+      img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin', width='106', height='40')
+
+    //- reception — a place where you can find navigation, entrance (login, register), profile info (Full Name and etc.)
+    .topline__reception
+      //- take into account footer's nav (with several sections) and simple lists (lists without nav)
+      nav.nav
+        //- visually hidden usually
+        h2.nav__title.visually-hidden main navigation
+        ul.nav__content
+          li.nav__item
+            a.nav__link(href='#') home
+          li.nav__item
+            a.nav__link(href='#') about us
+          li.nav__item.nav__item_expandable
+            a.nav__link(href='#') services
+          li.nav__item
+            a.nav__link(href='#') careers
+          li.nav__item
+            a.nav__link(href='#') news
+          li.nav__item
+            a.nav__link(href='#') documentation
+
+      .entrance
+        .entrance__item.entrance__item_active
+          button.btn login
+          button.btn register
+        .entrance__item
+          p Cosmin Negoita
