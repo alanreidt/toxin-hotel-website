@@ -1,0 +1,28 @@
+mixin logo(href)
+  .logo(class!=attributes.class)
+    if href
+      a(href=href)
+    else
+      if block
+        block
+
+//-
+  .logo
+    a(href="/")
+      +image('../../blocks/common.blocks/logo/logo.svg', 'toxin', '106', '40')(class='logo__img')
+
+  .logo.topline__logo
+    //- add styles for alt atr (using logo__img class for that)
+    //- img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin', width='106', height='40')
+    +image('../../blocks/common.blocks/logo/logo.svg', 'toxin', '106', '40')(class='logo__img')
+
+  .logo
+    h1.logo__title toxin
+
+  .logo
+    //- img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin logo', width='106', height='40')
+    +image('../../blocks/common.blocks/logo/logo.svg', 'toxin', '106', '40')(class='logo__img')
+    p.logo__description
+    | Lorem ipsum dolor sit amet consectetur
+    | adipiscing elit aliquam eget nullam
+    | pellentesque aliquam curabitur cociis.
