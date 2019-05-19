@@ -7,26 +7,36 @@ html(lang=ru)
     meta(name='description' content='')
     meta(name='keywords' content='')
 
+  block head
     title Home
     link(rel='stylesheet' href='../../styles/index.less')
 
-  body
-    header.header.page__header
+  body(class='page')
+    //- maybe page__topline must be separate element (html tag)
+    header.topline.page__topline
+      //- or use prepproc capabilities instead of general class
       .page__container
+        //- or use prepproc capabilities instead of general class
         h1.visually-hidden toxin
-        .logo.header__left
-          img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin logo', width='106', height='40')
-          //- C://Users/nafun/Documents/web-projects/toxin/src/blocks/common.blocks/logo/logo.svg
-          //- ../../blocks/common.blocks/logo/logo.svg
-        .header__right
+
+        //- take into account footer's logo and interactive logo (not from index page)
+        //- maybe topline__logo must be separate element (html tag)
+        .logo.topline__logo
+          //- add styles for alt atr (using logo__img class for that)
+          img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin', width='106', height='40')
+
+        //- reception — a place where you can find navigation, entrance (login, register), profile info (Full Name and etc.)
+        .topline__reception
+          //- take into account footer's nav (with several sections) and simple lists (lists without nav)
           nav.nav
-            h2.visually-hidden main navigation
+            //- visually hidden usually
+            h2.nav__title.visually-hidden main navigation
             ul.nav__content
               li.nav__item
                 a.nav__link(href='#') home
               li.nav__item
                 a.nav__link(href='#') about us
-              li.nav__item.nav__item_expanded
+              li.nav__item.nav__item_expandable
                 a.nav__link(href='#') services
               li.nav__item
                 a.nav__link(href='#') careers
@@ -34,13 +44,18 @@ html(lang=ru)
                 a.nav__link(href='#') news
               li.nav__item
                 a.nav__link(href='#') documentation
-          .reseption
-            .reseption__item
+
+          .entrance
+            .entrance__item.entrance__item_active
               button.btn login
               button.btn register
-            .reseption__item
+            .entrance__item
               p Cosmin Negoita
 
+    main
+      block main
+
+    //- maybe page__footer must be separate element (html tag)
     footer.footer.page__footer
       .page__container
         .footer__main
@@ -50,60 +65,64 @@ html(lang=ru)
               figure
                 img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin logo', width='106', height='40')
                 figcaption
-                  p
+                  p.logo__discription
                     | Lorem ipsum dolor sit amet consectetur
                     | adipiscing elit aliquam eget nullam
                     | pellentesque aliquam curabitur cociis.
 
-          nav.footer__item
-            h2.visually-hidden footer navigation
-            section
-              h3 navigation
-              ul
-                li
-                  a(href='#') about us
-                li
-                  a(href='#') news
-                li
-                  a(href='#') support
-                li
-                  a(href='#') product
+          nav.nav.footer__item
+            //- visually hidden usually
+            h2.nav__title.visually-hidden footer navigation
+            section.section
+              h3.section__title navigation
+              ul.list
+                li.list__item
+                  a.list__link(href='#') about us
+                li.list__item
+                  a.list__link(href='#') news
+                li.list__item
+                  a.list__link(href='#') support
+                li.list__item
+                  a.list__link(href='#') product
 
-            section
-              h3 about us
-              ul
-                li
-                  a(href='#') who we are
-                li
-                  a(href='#') our team
-                li
-                  a(href='#') careers
-                li
-                  a(href='#') investors
+            section.section
+              h3.section__title about us
+              ul.list
+                li.list__item
+                  a.list__link(href='#') who we are
+                li.list__item
+                  a.list__link(href='#') our team
+                li.list__item
+                  a.list__link(href='#') careers
+                li.list__item
+                  a.list__link(href='#') investors
 
-            section
-              h3 support
-              ul
-                li
-                  a(href='#') documentation
-                li
-                  a(href='#') community
-                li
-                  a(href='#') get in touch
+            section.section
+              h3.section__title support
+              ul.list
+                li.list__item
+                  a.list__link(href='#') documentation
+                li.list__item
+                  a.list__link(href='#') community
+                li.list__item
+                  a.list__link(href='#') get in touch
 
-          aside.footer__item
-            h3 subscribe to our newsletter
-            p
+          aside.subscription.footer__item
+            h3.subscription__title subscribe to our newsletter
+            p.subscription__description
               | receive our latest news and
               | promotions in your inbox!
+            form
+              input.subscription__email(type='email')
 
-        hr
-
+        //- there would be a line for separation
         .footer__secondary
-          p.copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
+          p.footer__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
+
           .socials
             .socials__icon-tw 1
             .socials__icon-fb 2
             .socials__icon-ig 3
 
-    script(../../scripts/index.js)
+    block page-bottom
+      script(../../scripts/index.js)
