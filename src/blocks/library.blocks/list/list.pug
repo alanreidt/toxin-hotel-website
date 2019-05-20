@@ -1,0 +1,31 @@
+mixin list(items)
+  ul.list(class!=attributes.class)
+    if attributes.href
+      each item,index in items
+        li.list__item
+          a.list__link(href!=attributes.href)= index + ': ' + item
+    else
+      each item in items
+        li.list__item= item
+//-
+  +list({home:'home', 'about us':'about us', services:'services'})(class='nav' href='/')
+
+//-
+  ul.list
+    li.list__item Text1
+    li.list__item Text2
+    li.list__item Text3
+
+  ul.nav__content
+    li.nav__item
+      a.nav__link(href='#') home
+    li.nav__item
+      a.nav__link(href='#') about us
+    li.nav__item.nav__item_expandable
+      a.nav__link(href='#') services
+    li.nav__item
+      a.nav__link(href='#') careers
+    li.nav__item
+      a.nav__link(href='#') news
+    li.nav__item
+      a.nav__link(href='#') documentation
