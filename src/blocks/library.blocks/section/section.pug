@@ -1,0 +1,11 @@
+//- would be better to use for heading level some validation tool
+//- Problems:
+      - how to add mods for title?
+mixin section(title={h3: 'section-title'}, tag='section')
+  #{tag}.section
+    if typeof(title) === 'string'
+      h2.section__title= title
+    else
+      each item,index in title
+        #{index}.section__title= item
+    block
