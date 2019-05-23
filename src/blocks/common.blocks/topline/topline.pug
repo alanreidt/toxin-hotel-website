@@ -1,12 +1,13 @@
 //- maybe page__topline must be separate element (html tag)
 header.topline.page__topline
   //- or use prepproc capabilities instead of general class
-  .page__container
-    //- or use prepproc capabilities instead of general class
-    h1.visually-hidden toxin
+  .topline__inner
+    //- or use prepproc capabilities instead of general class (no)
+    h1.topline__semantic-title toxin
 
     //- take into account footer's logo and interactive logo (not from index page)
     //- maybe topline__logo must be separate element (html tag)
+
     .logo.topline__logo
       //- add styles for alt atr (using logo__img class for that)
       img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin', width='106', height='40')
@@ -16,7 +17,7 @@ header.topline.page__topline
       //- take into account footer's nav (with several sections) and simple lists (lists without nav)
       nav.nav
         //- visually hidden usually
-        h2.nav__title.visually-hidden main navigation
+        h2.nav__semantic-title main navigation
         ul.nav__content
           li.nav__item
             a.nav__link(href='#') home
