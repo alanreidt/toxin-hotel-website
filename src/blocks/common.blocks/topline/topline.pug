@@ -8,7 +8,7 @@ header.topline.page__topline
     //- take into account footer's logo and interactive logo (not from index page)
     //- maybe topline__logo must be separate element (html tag)
 
-    .logo.topline__logo
+    .logo
       //- add styles for alt atr (using logo__img class for that)
       img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin', width='106', height='40')
 
@@ -20,7 +20,7 @@ header.topline.page__topline
         h2.nav__semantic-title main navigation
         ul.nav__content
           li.nav__item
-            a.nav__link(href='#') home
+            a.nav__link.nav__link_active(href='#') home
           li.nav__item
             a.nav__link(href='#') about us
           li.nav__item.nav__item_expandable
@@ -32,9 +32,9 @@ header.topline.page__topline
           li.nav__item
             a.nav__link(href='#') documentation
 
-      .entrance
+      .entrance.topline__entrance
         .entrance__item.entrance__item_active
-          button.btn login
-          button.btn register
+          a(href='#').button.button_secondary.topline__button login
+          a(href='#').button.topline__button register
         .entrance__item
           p Cosmin Negoita
