@@ -11,7 +11,9 @@ html(lang=ru)
 
   block head
     title Home
-    link(rel='stylesheet' href='../../styles/index.less')
+    link(href='../../styles/index.less' rel='stylesheet')
+    //- replace with local fonts later
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Quicksand&display=swap' rel='stylesheet')
 
   body(class='page')
     include ../../blocks/common.blocks/topline/topline.pug
