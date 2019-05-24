@@ -1,1 +1,204 @@
+/** TO DO:
+  *   + Rule out problem with vertical align of the button (maybe font family will help)
+  *   + Rule out problem with vertical align of the nav__link (maybe that's true)
+  *   -
+  */
 
+@topline-horizontal-padding: @site-padding;
+@topline-vertical-padding: 15px;
+
+
+/* =================
+    BLOCKS
+  ================== */
+
+/* PAGE */
+
+.page {
+  margin: 0;
+}
+
+/* NAV */
+
+.nav__semantic-title {
+  .visually-hidden();
+}
+
+.nav__content {
+  // reset default rulesets
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.nav__item {
+}
+
+.nav__item_expandable {
+  position: relative;
+  // background-color: red;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+
+    position: absolute;
+    // align to middle
+    top: 50%;
+    transform: translateY(-50%);
+
+    right: 0;
+
+    background: url('../blocks/common.blocks/topline/expand_more.svg') no-repeat;
+    // background-color: #999;
+  }
+}
+
+.nav__link {
+  .body-text();
+  text-decoration: none;
+
+  display: inline-block;
+  // isolate component's rule from external influence
+  vertical-align: middle;
+  padding: 10px 15px;
+
+  line-height: 1.21429; /* 17px = 14px * 1.21429 */
+  font-family: #fonts[primary];
+  color: #colors[dark-shade-50];
+  text-transform: capitalize;
+}
+
+.nav__link_active {
+  font-weight: 700;
+  color: #colors[dark-shade-75];
+}
+
+/*  */
+
+
+/* ENTRANCE */
+
+.entrance__item {
+  display: none;
+}
+
+.entrance__item_active {
+  display: block;
+}
+
+/*  */
+
+/* BUTTON */
+
+@button-height: 44px;
+@button-border-width: 2px;
+
+a.button {
+  text-decoration: none;
+}
+
+button.button {
+  cursor: pointer;
+}
+
+.button {
+  .h3-text();
+
+  // add standart behaviour of a <button> to compatibility with <a>
+  // isolate component's rules from external influence
+  display: inline-block;
+  vertical-align: middle;
+
+  // add standart behaviour of a <button> to compatibility with <a>
+  // isolate component's rules from external influence
+  box-sizing: border-box;
+
+  height: @button-height;
+  // using substraction because of box-sizing: content-box
+  // now line-heigth equal to the border-box of the button
+  line-height: @button-height - 2 * @button-border-width;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border: @button-border-width solid #colors[primary];
+  border-radius: 22px;
+
+  // probably, sets value to 1.2 (or 1.15, depending on browser (user agent))
+  // doesn't work with <a>, but work with <button>,
+  // because text in a <button> aligns in the middle
+  // line-height: normal;
+  color: #fff;
+  background-image: @primary-gradient;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.button_secondary {
+  color: #colors[primary];
+  background-image: none;
+  background-color: #fff;
+
+  &:hover {
+    // border: 2px solid lighten(#colors[primary], 50%);
+  }
+}
+
+
+/*  */
+
+/* ================================= */
+
+.topline {
+  // padding-top: @topline-vertical-padding;
+  // padding-bottom: @topline-vertical-padding;
+}
+
+.topline__inner {
+  .container();
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+
+  padding-left: @topline-horizontal-padding;
+  padding-right: @topline-horizontal-padding;
+}
+
+.topline__semantic-title {
+  .visually-hidden();
+}
+
+.topline__reception {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: inherit;
+}
+
+.topline__entrance {
+  margin-left: 15px;
+}
+
+.topline__button {
+  @button-height: 34px;
+
+  height: @button-height;
+  line-height: @button-height - 2 * @button-border-width;
+
+  &:last-child {
+    margin-left: 20px;
+  }
+}
