@@ -64,6 +64,11 @@
 
 .container {
   width: 100%;
-  max-width: 1160px;
+  // max-width: @site-width - 2 * @site-padding;
+  max-width: @site-width;
   margin: auto;
+  padding-left: @site-padding;
+  padding-right: @site-padding;
+
+  box-sizing: border-box;
 }
