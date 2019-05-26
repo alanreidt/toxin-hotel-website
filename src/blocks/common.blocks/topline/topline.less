@@ -7,52 +7,44 @@
 @topline-horizontal-padding: @site-padding;
 @topline-vertical-padding: 15px;
 
-
-/* =================
-    BLOCKS
-  ================== */
-
 .topline {
-  // padding-top: @topline-vertical-padding;
-  // padding-bottom: @topline-vertical-padding;
-}
+  &__inner {
+    .container();
 
-.topline__inner {
-  .container();
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
+    padding-left: @topline-horizontal-padding;
+    padding-right: @topline-horizontal-padding;
+  }
 
-  padding-left: @topline-horizontal-padding;
-  padding-right: @topline-horizontal-padding;
-}
+  &__semantic-title {
+    .visually-hidden();
+  }
 
-.topline__semantic-title {
-  .visually-hidden();
-}
+  &__reception {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: inherit;
+  }
 
-.topline__reception {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: inherit;
-}
+  &__entrance {
+    margin-left: 15px;
+  }
 
-.topline__entrance {
-  margin-left: 15px;
-}
+  &__button {
+    @button-height: 34px;
 
-.topline__button {
-  @button-height: 34px;
+    height: @button-height;
+    line-height: @button-height - 2 * @button-border-width;
 
-  height: @button-height;
-  line-height: @button-height - 2 * @button-border-width;
-
-  &:last-child {
-    margin-left: 20px;
+    &:last-child {
+      margin-left: 20px;
+    }
   }
 }
