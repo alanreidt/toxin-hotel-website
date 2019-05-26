@@ -15,10 +15,4 @@ header.topline.page__topline
     //- reception — a place where you can find navigation, entrance (login, register), profile info (Full Name and etc.)
     .topline__reception
       include ../topline-nav/topline-nav.pug
-
-      .entrance.topline__entrance
-        .entrance__item.entrance__item_active
-          a(href='#').button.button_secondary.topline__button login
-          a(href='#').button.topline__button register
-        .entrance__item
-          p Cosmin Negoita
+      include ../entrance/entrance.pug
