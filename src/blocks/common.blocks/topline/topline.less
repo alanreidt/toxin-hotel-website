@@ -12,68 +12,6 @@
     BLOCKS
   ================== */
 
-/* BUTTON */
-
-@button-height: 44px;
-@button-border-width: 2px;
-
-a.button {
-  text-decoration: none;
-}
-
-button.button {
-  cursor: pointer;
-}
-
-.button {
-  .h3-text();
-
-  // add standart behaviour of a <button> to compatibility with <a>
-  // isolate component's rules from external influence
-  display: inline-block;
-  vertical-align: middle;
-
-  // add standart behaviour of a <button> to compatibility with <a>
-  // isolate component's rules from external influence
-  box-sizing: border-box;
-
-  height: @button-height;
-  // using substraction because of box-sizing: content-box
-  // now line-heigth equal to the border-box of the button
-  line-height: @button-height - 2 * @button-border-width;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  border: @button-border-width solid #colors[primary];
-  border-radius: 22px;
-
-  // probably, sets value to 1.2 (or 1.15, depending on browser (user agent))
-  // doesn't work with <a>, but work with <button>,
-  // because text in a <button> aligns in the middle
-  // line-height: normal;
-  color: #fff;
-  background-image: @primary-gradient;
-
-  &:hover {
-    opacity: 0.5;
-  }
-}
-
-.button_secondary {
-  color: #colors[primary];
-  background-image: none;
-  background-color: #fff;
-
-  &:hover {
-    // border: 2px solid lighten(#colors[primary], 50%);
-  }
-}
-
-
-/*  */
-
-/* ================================= */
-
 .topline {
   // padding-top: @topline-vertical-padding;
   // padding-bottom: @topline-vertical-padding;
