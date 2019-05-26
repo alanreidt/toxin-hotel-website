@@ -1,3 +1,7 @@
+/** TO DO:
+  *   - Remake button on hover
+  */
+
 @button-height: 44px;
 @button-border-width: 2px;
 
@@ -38,7 +42,8 @@ button.button {
   color: #fff;
   background-image: @primary-gradient;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.5;
   }
 
@@ -47,7 +52,8 @@ button.button {
     background-image: none;
     background-color: #fff;
 
-    &:hover {
+    &:hover,
+    &:focus {
       // border: 2px solid lighten(#colors[primary], 50%);
     }
   }
