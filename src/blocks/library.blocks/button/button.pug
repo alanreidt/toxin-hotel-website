@@ -20,10 +20,10 @@ mixin button(text, mods)
     }
   //- передан href — это ссылка
   if (attributes.href)
-    a.button(class=allMods)&attributes(attributes)!= text
+    a.button(class=allMods)&attributes(attributes)= text
       block
 
   //- иначе это button
   else
-    button.button(class=allMods)&attributes(attributes)!= text
+    button.button(class=allMods)&attributes(attributes)= text
       block
