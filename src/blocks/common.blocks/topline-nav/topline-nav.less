@@ -48,9 +48,13 @@
     padding: 10px 15px;
 
     line-height: 1.21429; /* 17px = 14px * 1.21429 */
-    font-family: #fonts[primary];
     color: #colors[dark-shade-50];
     text-transform: capitalize;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   &__link_active {
