@@ -10,8 +10,10 @@ html(lang=ru)
     meta(name='keywords' content='')
 
   block head
-    title Home
-    link(href='../../styles/base.less' rel='stylesheet')
+    block title
+      title Home Page
+    block main-styles
+      link(href='../../styles/base.less' rel='stylesheet')
     //- replace with local fonts later
     link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Quicksand&display=swap' rel='stylesheet')
 
