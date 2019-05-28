@@ -7,3 +7,18 @@ block main-styles
   link(href='../../styles/components.less' rel='stylesheet')
 
 block body
+  section.section
+    h2.section__title buttons
+    .section__row
+      +button('click me', 'main')(href='#').section__button
+      //- button with hover state
+      +button('click me', 'main')(href='#').section__button
+    .section__row
+      +button('click me', 'secondary')(href='#').section__button
+      //- button with hover state
+      +button('click me', 'secondary')(href='#').section__button
+    .section__row
+      +button('click me')(href='#').section__button
+      +button('click me', 'reset')(href='#').section__button
+    .section__row
+      +button('перейти к оплате', 'full-width').section__button
