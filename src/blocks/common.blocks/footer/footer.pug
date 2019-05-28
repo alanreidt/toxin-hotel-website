@@ -1,69 +1,15 @@
-//- maybe page__footer must be separate element (html tag)
-footer.footer.page__footer
-  .footer__inner
-    .footer__main
-      .footer__item
-        .logo
-          img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin logo', width='106', height='40')
-          p.logo__description
-            | Lorem ipsum dolor sit amet consectetur
-            | adipiscing elit aliquam eget nullam
-            | pellentesque aliquam curabitur cociis.
+footer.footer
+  .footer__main
+    .footer__item
+      .logo
+        img.logo__img(src='../../blocks/common.blocks/logo/logo.svg', alt='toxin logo', width='106', height='40')
+        p.logo__description
+          | lorem ipsum dolor sit amet consectetur
+          | adipiscing elit aliquam eget nullam
+          | pellentesque aliquam curabitur cociis.
 
-      nav.nav.footer__item
-        //- visually hidden usually
-        h2.nav__semantic-title footer navigation
+    include ../footer-nav/footer-nav.pug
 
-        section.section
-          h3.section__title navigation
+    include ../subscription/subscription.pug
 
-          ul.list
-            li.list__item
-              a.list__link(href='#') about us
-            li.list__item
-              a.list__link(href='#') news
-            li.list__item
-              a.list__link(href='#') support
-            li.list__item
-              a.list__link(href='#') product
-
-        section.section
-          h3.section__title about us
-
-          ul.list
-            li.list__item
-              a.list__link(href='#') who we are
-            li.list__item
-              a.list__link(href='#') our team
-            li.list__item
-              a.list__link(href='#') careers
-            li.list__item
-              a.list__link(href='#') investors
-
-        section.section
-          h3.section__title support
-
-          ul.list
-            li.list__item
-              a.list__link(href='#') documentation
-            li.list__item
-              a.list__link(href='#') community
-            li.list__item
-              a.list__link(href='#') get in touch
-
-      aside.section.subscription.footer__item
-        h3.section__title.subscription__title subscribe to our newsletter
-        p.subscription__description
-          | receive our latest news and
-          | promotions in your inbox!
-        form
-          input.subscription__email(type='email')
-
-    //- there would be a line for separation
-    .footer__secondary
-      p.footer__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
-
-      .socials
-        .socials__icon-tw 1
-        .socials__icon-fb 2
-        .socials__icon-ig 3
+  include ../footer-titres/footer-titres.pug
