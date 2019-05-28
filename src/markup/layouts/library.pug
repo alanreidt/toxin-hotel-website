@@ -1,0 +1,24 @@
+include ./mixins.pug
+
+doctype html
+html(lang=ru)
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='description' content='')
+    meta(name='keywords' content='')
+
+  block head
+    block title
+      title Home Page
+    block main-styles
+      link(href='../../styles/base.less' rel='stylesheet')
+    //- replace with local fonts later
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Quicksand&display=swap' rel='stylesheet')
+
+  body(class='page')
+    block body
+
+    block page-bottom
+      script(../../scripts/index.js)
