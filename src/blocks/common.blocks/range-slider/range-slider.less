@@ -1,0 +1,81 @@
+@range-slider-handle-width: 12px;
+
+.range-slider {
+  &__header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    .h3-text();
+
+    display: inline-block;
+    vertical-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__output {
+    .h3-text();
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-weight: 400;
+    color: #colors[dark-shade-50];
+  }
+
+  &__description {
+    .body-text();
+
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    font-size: 12px;
+    line-height: 1.17;
+    color: #colors[dark-shade-50];
+  }
+}
+
+.range-slider__input {
+  background-color: #fff;
+  // change to dark-shade-25 later
+  border: 1px solid #colors[dark-shade-50];
+  border-radius: 3px;
+  box-shadow: none;
+
+  &.noUi-horizontal {
+    height: 6px;
+  }
+
+  & .noUi-connect {
+    background-image: @secondary-gradient;
+  }
+
+  &.noUi-horizontal .noUi-handle {
+    // find generic value
+    top: -4px;
+    width: @range-slider-handle-width;
+    height: @range-slider-handle-width;
+  }
+
+  & .noUi-handle {
+    background-image: @secondary-gradient;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+html:not([dir='rtl']) .noUi-horizontal .noUi-handle {
+  right: -1 * @range-slider-handle-width / 2;
+}

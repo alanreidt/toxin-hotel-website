@@ -8,6 +8,11 @@ block main-styles
 
 block body
   section.section
+    h2.section__title range slider
+    .section__row
+      include ../../blocks/common.blocks/range-slider/range-slider.pug
+
+  section.section
     h2.section__title buttons
     .section__row
       +button('click me', 'main')(href='#').section__button
