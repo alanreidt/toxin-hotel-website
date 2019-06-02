@@ -1,0 +1,52 @@
+.permission-form {
+  &__checkbox {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__input {
+    .default-styles-reset();
+    margin: 0;
+
+    float: left;
+
+    // if float isn't active the rules'd be useful
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    background-color: transparent;
+    // change to dark-shade-25 later
+    border: 1px solid #colors[dark-shade-50];
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &:checked {
+      background: url(../blocks/common.blocks/permission-form/permission-form__check.svg) no-repeat center;
+    }
+  }
+
+  &__text {
+    .body-text();
+
+    // this lets the element to not overlap a floated element,
+    // but to become narrower
+    display: block;
+    overflow: auto;
+
+    line-height: 1.29;
+    color: #colors[dark-shade-50];
+
+    // removes the ability to select text
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}

@@ -103,3 +103,15 @@
     // border-bottom-right-radius: 4px;
   }
 }
+
+.default-styles-reset() {
+  // outline:            none;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+
+  // reset IE9+
+  &::-ms-check {
+    display: none;
+  }
+}

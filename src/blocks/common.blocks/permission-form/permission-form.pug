@@ -1,0 +1,13 @@
+form.permission__form(action='' method='get' name='permission-form' autocomplete='on')
+  .permission-form__checkbox
+    label.permission-form__label(for='checkbox-smoke')
+      input.permission-form__input(id='checkbox-smoke' type='checkbox' name='permission' value='smoke')
+      span.permission-form__text можно курить
+  .permission-form__checkbox
+    label.permission-form__label(for='checkbox-pets')
+      input.permission-form__input(id='checkbox-pets' type='checkbox' name='permission' value='pets' checked)
+      span.permission-form__text можно с питомцами
+  .permission-form__checkbox
+    label.permission-form__label(for='checkbox-guests')
+      input.permission-form__input(id='checkbox-guests' type='checkbox' name='permission' value='guests' checked)
+      span.permission-form__text можно пригласить гостей (до 10 человек)
