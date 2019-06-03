@@ -1,0 +1,82 @@
+.like-button {
+  @like-button-width: 40px;
+  @like-button-height: @like-button-width / 2;
+  @like-button-border-width: 1px;
+  @like-button-padding: 4px;
+  @like-button-inner-elem-diameter: @like-button-height - 2 * @like-button-padding;
+
+  display: inline-block;
+  vertical-align: middle;
+
+  &__input {
+    .default-styles-reset();
+    margin: 0;
+
+    position: relative;
+    z-index: 100;
+
+    display: inline-block;
+    vertical-align: middle;
+    width: @like-button-width;
+    height: @like-button-height;
+
+    // background: @primary-gradient center/30% 60% no-repeat;
+    // background-position: center right 4px;
+    background-color: transparent;
+    border: @like-button-border-width solid #colors[dark-shade-25];
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    &:checked {
+      border-color: #colors[primary];
+    }
+
+    &:checked::before,
+    &:checked::after, {
+      // background-image: @primary-gradient;
+      color: #colors[primary];
+    }
+
+    &:checked::before {
+      content: '\e87d';
+    }
+  }
+
+  &__input::before,
+  &__input::after {
+    content: '';
+    position: absolute;
+    z-index: 200;
+
+    // aligns in the middle
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #colors[dark-shade-25];
+
+    transition: all 0.15s ease;
+  }
+
+  &__input::before {
+    .material-icons();
+
+    content: '\e87e';
+    left: @like-button-padding;
+
+    width: @like-button-inner-elem-diameter;
+    height: @like-button-inner-elem-diameter;
+
+    font-size: 12px;
+  }
+
+  &__input::after {
+    .body-text();
+
+    content: '12';
+    right: 10px;
+
+    font-size: 10px;
+    color: #colors[dark-shade-25];
+  }
+}
