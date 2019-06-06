@@ -16,9 +16,9 @@ mixin input-field(mods)
         allMods = allMods + ' input-field_' + modsList[i].trim();
       }
     }
-  .input-field
+  .input-field(class=allMods)
     //- set up label, instead of placeholder
     label.input-field__label(for!=attributes.id)
       //- there would be label content
-      input.input-field__input(class=allMods)&attributes(attributes)
+      input.input-field__input&attributes(attributes)
     block

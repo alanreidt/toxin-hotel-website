@@ -4,10 +4,5 @@ aside.section.subscription.footer__item
     | receive our latest news and
     | promotions in your inbox!
   form.subscription__form(action='' method='get' name='footer-form' autocomplete='on')
-    //- does <fieldset> appropriate here?
-    .subscription__form-field
-      //- set up label, instead of placeholder
-      label.subscription__label(for='footer-form__email')
-        //- there would be label content
-        input(type='email' name='footer-form__email' id='footer-form__email' placeholder='Your email address' maxlength='24' autocomplete='email' spellcheck='false' required).subscription__email
-      button.subscription__button(type='submit')
+    +input-field('subscription')(type='email' name='email' id='email' placeholder='Your email address' maxlength='24' autocomplete='email' spellcheck='false' required)
+

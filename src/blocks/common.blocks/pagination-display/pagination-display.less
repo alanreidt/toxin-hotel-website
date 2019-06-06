@@ -8,8 +8,6 @@
   flex-direction: row;
   flex-wrap: nowrap;
 
-  &__item {}
-
   &__link {
     .body-text();
     text-decoration: none;
@@ -43,7 +41,15 @@
   }
 
   &__link_arrow {
-    .arrow();
+    // .arrow();
+    .decoration_type_arrow-forward();
+    &::before{
+      // styles for .decoration_type_arrow-forward();
+      width: inherit;
+      height: inherit;
+      line-height: inherit;
+      color: #fff;
+    }
 
     background-image: @secondary-gradient;
 

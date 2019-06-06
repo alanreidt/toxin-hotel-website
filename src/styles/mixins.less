@@ -129,6 +129,45 @@
   }
 }
 
+// realize like an independent block, if it still actual
+.decoration_type_expand-more() {
+  @parent-height: 44px;
+
+  position: relative;
+
+  &::before {
+    .material-icons();
+    font-size: 24px;
+
+    content: '\e5cf';
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: inline-block;
+    // vertical-align: middle;
+
+    width: @parent-height;
+    height: @parent-height;
+    line-height: @parent-height;
+
+    text-align: center;
+    // color: #colors[dark-shade-75];
+    color: inherit;
+    background-color: transparent;
+
+    box-sizing: border-box;
+  }
+}
+
+.decoration_type_arrow-forward() {
+  .decoration_type_expand-more();
+
+  &::before {
+    content: '\e5c8';
+  }
+}
+
 .default-styles-reset() {
   // outline:            none;
   -webkit-appearance: none;
