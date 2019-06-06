@@ -98,44 +98,7 @@
   box-sizing: border-box;
 }
 
-.input-styles() {
-  .body-text();
-  padding: 0;
-
-  width: 100%;
-  height: @text-field-height;
-  line-height: @text-field-height - 2 * @text-field-border-width;
-  padding-left: 15px;
-
-  color: #colors[dark-shade-75];
-  background-color: #fff;
-
-  border: 1px solid #colors[dark-shade-25];
-  border-radius: 4px;
-
-  box-sizing: border-box;
-
-  transition: border 0.25s ease;
-
-  &:hover,
-  &:focus {
-    border: 1px solid #colors[dark-shade-50];
-  }
-
-  &::-moz-placeholder {
-    // make firefox styles compatible
-    opacity: 1;
-  }
-
-  &::placeholder {
-    // it seems that this doesn't work
-    .default-styles-reset();
-
-    color: #colors[dark-shade-25];
-  }
-}
-
-// realize like a independent block, if it still actual
+// realize like an independent block, if it still actual
 .arrow() {
   @parent-height: 44px;
   @parent-border-width: 2px;

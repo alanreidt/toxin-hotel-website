@@ -1,0 +1,64 @@
+@input-field-height: 44px;
+@input-field-border-width: 1px;
+
+.input-field {
+  position: relative;
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: inline-block;
+    vertical-align: middle;
+    // width: @subscription-form-height - 2 * @subscription-form-border-width;
+    // height: @subscription-form-height - 2 * @subscription-form-border-width;
+    width: @input-field-height;
+    height: @input-field-height;
+    padding: 0;
+
+    cursor: pointer;
+    background: url(../blocks/common.blocks/subscription/subscription__arrow-forward.svg) no-repeat center;
+    background-color: transparent;
+    border: none;
+    // border-top-right-radius: 4px;
+    // border-bottom-right-radius: 4px;
+  }
+}
+
+.input-field__input {
+  .body-text();
+  padding: 0;
+
+  width: 100%;
+  height: @input-field-height;
+  line-height: @input-field-height - 2 * @input-field-border-width;
+  padding-left: 15px;
+
+  color: #colors[dark-shade-75];
+  background-color: #fff;
+
+  border: 1px solid #colors[dark-shade-25];
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+  transition: border 0.25s ease;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #colors[dark-shade-50];
+  }
+
+  &::-moz-placeholder {
+    // make firefox styles compatible
+    opacity: 1;
+  }
+
+  &::placeholder {
+    // it seems that this doesn't work
+    .default-styles-reset();
+
+    color: #colors[dark-shade-25];
+  }
+}

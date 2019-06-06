@@ -45,12 +45,14 @@ block body
   section.section
     h2.section__title text field
     .section__row
-      include ../../blocks/common.blocks/text-field/text-field.pug
+      +input-field(type='text' name='text' id='text' placeholder='Text' maxlength='24' autocomplete='' spellcheck='' required)
 
   section.section
     h2.section__title subscription field
     .section__row
-      include ../../blocks/common.blocks/subscription-field/subscription-field.pug
+      +input-field('subscription')(type='email' name='email' id='email' placeholder='Your email address' maxlength='24' autocomplete='email' spellcheck='false' required)
+        button.input-field__button(type='submit')
+
 
   section.section
     h2.section__title range slider
