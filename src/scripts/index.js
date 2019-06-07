@@ -1,7 +1,11 @@
-import $ from 'jquery';
+import '../../node_modules/jquery-ui-dist/jquery-ui.css';
+var jquery = require('jquery');
+window.$ = window.jQuery = jquery;
+require('jquery-ui-dist/jquery-ui');
 import wNumb from 'wnumb';
 import noUiSlider from 'nouislider';
 import '../../node_modules/nouislider/distribute/nouislider.css';
+
 
 /* noUiSlider */
 
@@ -54,5 +58,5 @@ rangeSlider.noUiSlider.on('update', function () {
 /* JQuery */
 
 $(document).ready(function() {
-  // There would be JQuery code;
+  $( "#date" ).datepicker();
 });
