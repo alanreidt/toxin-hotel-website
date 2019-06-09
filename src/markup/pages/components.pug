@@ -48,10 +48,14 @@ block body
       +input-field(type='text' name='text' id='text' placeholder='Text' maxlength='24' autocomplete='' spellcheck='' required)
 
   section.section
+    h2.section__title datepicker
+    .section__row
+      include ../../blocks/common.blocks/datepicker/datepicker.pug
+
+  section.section
     h2.section__title subscription field
     .section__row
       +input-field('subscription')(type='email' name='email' id='email' placeholder='Your email address' maxlength='24' autocomplete='email' spellcheck='false' required)
-        button.input-field__button(type='submit')
 
 
   section.section
