@@ -63,49 +63,27 @@ rangeSlider.noUiSlider.on('update', function () {
 $(document).ready(function () {
 
   $(function () {
-    $.datepicker.setDefaults( $.datepicker.regional[ 'ru' ] );
 
-    $.datepicker.setDefaults({
+    var datePickerOutput = $("#js-datepicker-output").datepicker({
       showOtherMonths: true,
       selectOtherMonths: true,
+      prevText: '',
+      nextText: '',
       showButtonPanel: true,
       closeText: 'Применить',
-      currentText: 'Очистить'
+      currentText: 'Очистить',
+      minDate: 0
+    }).hide();
+
+    $.datepicker.setDefaults( $.datepicker.regional[ 'ru' ] );
+
+    $(".datepicker__input").on("focus", function () {
+      datePickerOutput.show();
     });
 
-    var dateFormat = "dd.mm.yy",
-      from = $("#from-date")
-        .datepicker({
-          // showButtonPanel: true
-          /* firstDay: 1,
-          showOtherMonths: true,
-          selectOtherMonths: true,
-          showButtonPanel: true,
-          closeText: 'Применить',
-          currentText: 'Очистить',
-          dateFormat: dateFormat */
-
-          minDate: 0
-        })
-        .on("change", function () {
-          to.datepicker("option", "minDate", getDate(this));
-        }),
-      to = $("#to-date")
-        .datepicker({
-          // showButtonPanel: true
-          /* firstDay: 1,
-          showOtherMonths: true,
-          selectOtherMonths: true,
-          showButtonPanel: true,
-          closeText: 'Применить',
-          currentText: 'Очистить',
-          dateFormat: dateFormat */
-
-          minDate: 1
-        })
-        .on("change", function () {
-          from.datepicker("option", "maxDate", getDate(this));
-        });
+    datePickerOutput.on("change", function () {
+        // there would be code
+    });
 
     function getDate(element) {
       var date;

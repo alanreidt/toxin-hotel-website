@@ -16,7 +16,7 @@
     font-size: 19px;
     line-height: 1.26316; /* 24px = 19px * 1.26316 */
     font-family: #fonts[secondary];
-    // text-transform: uppercase;
+    text-transform: initial;
     color: #colors[dark-shade-100];
 
 }
@@ -130,8 +130,8 @@
 }
 
 // realize like an independent block, if it still actual
-.decoration_type_expand-more() {
-  @parent-height: 44px;
+.decoration(@parent-height: 44px) {
+  // @parent-height: 44px;
 
   position: relative;
 
@@ -139,7 +139,7 @@
     .material-icons();
     font-size: 24px;
 
-    content: '\e5cf';
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -160,8 +160,24 @@
   }
 }
 
-.decoration_type_arrow-forward() {
-  .decoration_type_expand-more();
+.decoration_type_expand-more(@parent-height: 44px) {
+  .decoration(@parent-height);
+
+  &::before {
+    content: '\e5cf';
+  }
+}
+
+.decoration_type_arrow-back(@parent-height: 44px) {
+  .decoration(@parent-height);
+
+  &::before {
+    content: '\e5c4';
+  }
+}
+
+.decoration_type_arrow-forward(@parent-height: 44px) {
+  .decoration(@parent-height);
 
   &::before {
     content: '\e5c8';

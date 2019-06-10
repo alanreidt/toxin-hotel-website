@@ -1,10 +1,195 @@
 .datepicker {
+  position: relative;
+  z-index: 100;
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
 
-  & .input-field {
+  &__input-field {
     width: 150px;
+  }
+
+  &__output {
+    position: absolute;
+    z-index: 200;
+    top: 50px;
+    left: 0;
+
+    display: block;
+    width: 100%;
+  }
+
+}
+
+.ui-widget {
+
+  &.ui-widget-content {
+    border: 1px solid #colors[dark-shade-25];
+    // border: 1px solid red;
+  }
+
+  &-header {
+    border: none;
+    background-color: transparent;
+  }
+
+  &-header .ui-icon {
+    width: 100%;
+    height: 100%;
+
+    background-image: none;
+  }
+
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover {
+	border: none;
+	background-color: transparent;
+	font-weight: normal;
+	color: #2b2b2b;
+}
+
+.ui-datepicker {
+  .h3-text();
+  text-transform: initial;
+  font-weight: 400;
+  color: #colors[dark-shade-50];
+
+  width: 100%;
+  padding: 20px;
+
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px #colors[dark-shade-5];
+  box-sizing: border-box;
+
+  & &-header {
+    padding: 0;
+    padding-bottom: 30px;
+  }
+
+  & &-prev,
+  & &-next {
+    width: 24px;
+    height: 24px;
+    top: 0;
+
+    color: #colors[primary];
+    cursor: pointer;
+  }
+
+  & &-prev-hover,
+  & &-next-hover {
+    top: 0;
+  }
+
+  & &-prev span,
+  & &-next span {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+    left: 0;
+    margin-left: 0;
+  }
+
+  &-prev .ui-icon {
+    .decoration_type_arrow-back(24px);
+  }
+
+  &-next .ui-icon {
+    .decoration_type_arrow-forward(24px);
+  }
+
+  & &-prev {
+    left: 0;
+  }
+
+  & &-next {
+    right: 0;
+  }
+
+  & &-prev-hover {
+    left: 0;
+  }
+
+  & &-next-hover {
+    right: 0;
+  }
+
+  & .ui-icon {
+    text-indent: initial;
+  }
+
+  & &-title {
+    .h2-text();
+  }
+
+  & table {
+    font-size: inherit;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  & th {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    color: #colors[primary];
+
+    box-sizing: border-box;
+  }
+
+  & td {
+    padding: 0;
+  }
+
+  & .ui-state-default {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+
+    border: none;
+    background-color: transparent;
+    // background-color: red;
+    color: inherit;
+  }
+
+  & td span,
+  & td a {
+    padding: 0;
+    text-align: center;
+  }
+
+  &-calendar .ui-state-disabled {
+    opacity: 1;
+  }
+
+  &-other-month {
+    color: #colors[dark-shade-25]
+  }
+
+  &-today .ui-state-highlight {
+    font-weight: 700;
+    background-image: @secondary-gradient;
+    color: #fff;
+    border-radius: 50%;
+  }
+
+  &-current-day .ui-state-active {
+    font-weight: 700;
+    background-image: @primary-gradient;
+    color: #fff;
+    border-radius: 50%;
+  }
+
+  & &-buttonpane {
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 }
