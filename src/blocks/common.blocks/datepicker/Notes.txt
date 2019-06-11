@@ -1,0 +1,17 @@
+TODO:
+
+  Setup:
+    + Language
+    + Buttons' text
+    + Disable dates before today
+    + Appearance of dates of the prev month
+    +- Position
+    +- Set up one calendar for two inputs
+    - Posibility to choose range between dates
+    - Buttons' functions
+
+  Styles:
+    - Use Theme Builder
+    - Change inner icons
+    - Add hover state (or use class .ui-state-hover) to .ui-datepicker-prev (-next) element
+    - Add Range styles
