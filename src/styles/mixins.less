@@ -130,26 +130,24 @@
 }
 
 // realize like an independent block, if it still actual
-.decoration(@parent-height: 44px) {
-  // @parent-height: 44px;
-
+.decoration(@size: 24px, @width: 44px, @parent-border-width: 0) {
   position: relative;
 
   &::before {
     .material-icons();
-    font-size: 24px;
+    font-size: @size;
 
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -1 * @parent-border-width;
+    right: -1 * @parent-border-width;
 
     display: inline-block;
     // vertical-align: middle;
 
-    width: @parent-height;
-    height: @parent-height;
-    line-height: @parent-height;
+    width: @width;
+    height: @width;
+    line-height: @width;
 
     text-align: center;
     // color: #colors[dark-shade-75];
@@ -160,24 +158,24 @@
   }
 }
 
-.decoration_type_expand-more(@parent-height: 44px) {
-  .decoration(@parent-height);
+.decoration_type_expand-more(@size: 24px, @width: 44px, @parent-border-width: 0) {
+  .decoration(@size, @width, @parent-border-width);
 
   &::before {
     content: '\e5cf';
   }
 }
 
-.decoration_type_arrow-back(@parent-height: 44px) {
-  .decoration(@parent-height);
+.decoration_type_arrow-back(@size: 24px, @width: 44px, @parent-border-width: 0) {
+  .decoration(@size, @width, @parent-border-width);
 
   &::before {
     content: '\e5c4';
   }
 }
 
-.decoration_type_arrow-forward(@parent-height: 44px) {
-  .decoration(@parent-height);
+.decoration_type_arrow-forward(@size: 24px, @width: 44px, @parent-border-width: 0) {
+  .decoration(@size, @width, @parent-border-width);
 
   &::before {
     content: '\e5c8';
