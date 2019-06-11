@@ -48,6 +48,39 @@ block body
       +input-field(type='text' name='text' id='text' placeholder='Text' maxlength='24' autocomplete='' spellcheck='' required)
 
   section.section
+    h2.section__title dropdown
+    .section__row
+      +input-field('dropdown, select')(type='text' name='facilities' id='facilities' placeholder='Выберите удобства' maxlength='24' autocomplete='' spellcheck='' required)
+        .dropdown#dropdown-facilities
+          .dropdown__row
+            //- label.dropdown__label
+            span.dropdown__text Спальни
+            //- input.dropdown__input(type='number' name='room-quantity' id='room-quantity' placeholder='' min='0' max='4' autocomplete='' spellcheck='')
+            div.dropdown__counter
+              i.material-icons.dropdown__button.dropdown__button_remove remove
+              span.dropdown__quantity 0
+              i.material-icons.dropdown__button.dropdown__button_add add
+          .dropdown__row
+            //- label.dropdown__label
+            span.dropdown__text Кровати
+            //- //- input.dropdown__input(type='number' name='bed-quantity' id='bed-quantity' placeholder='' min='0' max='4' autocomplete='' spellcheck='')
+            div.dropdown__counter
+              i.material-icons.dropdown__button.dropdown__button_remove remove
+              span.dropdown__quantity 0
+              i.material-icons.dropdown__button.dropdown__button_add add
+          .dropdown__row
+            //- label.dropdown__label
+            span.dropdown__text Ванные комнаты
+            //- input.dropdown__input(type='number' name='bath-quantity' id='bath-quantity' placeholder='' min='0' max='4' autocomplete='' spellcheck='')
+            div.dropdown__counter
+              i.material-icons.dropdown__button.dropdown__button_remove remove
+              span.dropdown__quantity 0
+              i.material-icons.dropdown__button.dropdown__button_add add
+          .dropdown__row.dropdown__buttonpane
+            +button('Очистить', 'reset')(href='#')
+            +button('Применить')(href='#')
+
+  section.section
     h2.section__title datepicker
     .section__row
       include ../../blocks/common.blocks/datepicker/datepicker.pug

@@ -63,7 +63,6 @@ rangeSlider.noUiSlider.on('update', function () {
 $(document).ready(function () {
 
   $(function () {
-
     var datePickerOutput = $("#js-datepicker-output").datepicker({
       showOtherMonths: true,
       selectOtherMonths: true,
@@ -94,6 +93,31 @@ $(document).ready(function () {
       }
 
       return date;
+    }
+  });
+
+  $(function () {
+    var dropDown = $('#dropdown-facilities');
+
+    $('#facilities').on('focusin', function () {
+      dropDown.toggleClass('dropdown_is-expanded');
+    });
+
+    $('#facilities').on('focusout', function () {
+      dropDown.toggleClass('dropdown_is-expanded');
+    });
+  });
+
+  $(function () {
+    var quantity = $('.dropdown__quantity').html();
+    var maxValue = '5';
+
+    if (quantity === '0') {
+      $('.dropdown__button_remove').addClass('dropdown__button_is-disabled');
+    }
+
+    if (quantity === maxValue) {
+      $('.dropdown__button_add').addClass('dropdown__button_is-disabled');
     }
   });
 });
