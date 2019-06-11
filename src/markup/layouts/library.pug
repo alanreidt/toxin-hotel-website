@@ -12,11 +12,11 @@ html(lang=ru)
   block head
     block title
       title Home Page
-    block main-styles
-      link(href='../../styles/base.less' rel='stylesheet')
     //- replace with local fonts later
     link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Quicksand&display=swap' rel='stylesheet')
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+    block main-styles
+      link(href='../../styles/base.less' rel='stylesheet')
 
   body(class='page')
     block body
