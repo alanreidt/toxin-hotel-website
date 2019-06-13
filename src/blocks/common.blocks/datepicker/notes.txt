@@ -12,6 +12,7 @@ TODO:
 
   Styles:
     - Use Theme Builder
+    - Use native classes and option property for customization
     - Change inner icons
     - Add hover state (or use class .ui-state-hover) to .ui-datepicker-prev (-next) element
     - Add Range styles
