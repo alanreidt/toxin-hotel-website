@@ -109,6 +109,18 @@ $(document).ready(function () {
   });
 
   $(function () {
+    var dropDown = $('#facilities-additional-dropdown');
+
+    $('#checkbox-dropdown').on('change', function () {
+      dropDown.toggleClass('checkbox-dropdown_is-expanded');
+    });
+/*
+    $('#checkbox-dropdown').on('focusout', function () {
+      dropDown.toggleClass('dropdown_is-expanded');
+    }); */
+  });
+
+  $(function () {
     var quantity = $('.dropdown__quantity').html();
     var maxValue = '5';
 

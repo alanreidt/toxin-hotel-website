@@ -1,0 +1,96 @@
+.checkbox-dropdown {
+
+  &__label {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__input {
+    // .default-styles-reset();
+    .visually-hidden();
+  }
+
+  &__text {
+    .h3-text();
+    .decoration_type_expand-more(24px, 44px, 0);
+    &::before {
+      height: 15px;
+      line-height: 15px;
+
+      color: #colors[dark-shade-50];
+      transition: transform 0.3s ease;
+    }
+
+    display: block;
+  }
+
+  &__body {
+    display: none;
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+  }
+
+  &_is-expanded &__body {
+    display: initial;
+    opacity: 1;
+  }
+
+  &_is-expanded &__text {
+    &::before {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.checkbox {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 11px;
+  }
+
+  &__input {
+    .default-styles-reset();
+    margin: 0;
+
+    float: left;
+
+    // if float isn't active the rules'd be useful
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    background-color: transparent;
+    // change to dark-shade-25 later
+    border: 1px solid #colors[dark-shade-25];
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+    &:checked {
+      background: url(../blocks/common.blocks/permission-form/permission-form__check.svg) no-repeat center;
+    }
+  }
+
+  &__text {
+    .body-text();
+
+    // this lets the element to not overlap a floated element,
+    // but to become narrower
+    display: block;
+    overflow: auto;
+
+    line-height: 1.29;
+    color: #colors[dark-shade-50];
+
+    // removes the ability to select text
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}

@@ -48,9 +48,14 @@ block body
       +input-field(type='text' name='text' id='text' placeholder='Text' maxlength='24' autocomplete='' spellcheck='' required)
 
   section.section
+    h2.section__title masked text field
+    .section__row
+      +input-field(type='text' name='text-masked' id='text-masked' placeholder='ДД.ММ.ГГГГ' maxlength='24' autocomplete='' spellcheck='' required)
+
+  section.section
     h2.section__title dropdown
     .section__row
-      +input-field('dropdown, select')(type='text' name='facilities' id='facilities' placeholder='Выберите удобства' maxlength='24' autocomplete='' spellcheck='' required)
+      +input-field('dropdown')(type='text' name='facilities' id='facilities' placeholder='Выберите удобства' maxlength='24' autocomplete='' spellcheck='' required)
         .dropdown#dropdown-facilities
           .dropdown__row
             //- label.dropdown__label
@@ -86,10 +91,19 @@ block body
       include ../../blocks/common.blocks/datepicker/datepicker.pug
 
   section.section
+    h2.section__title filter date dropdown
+    .section__row
+      +input-field('dropdown')(type='text' name='date-filter' id='date-filter' placeholder='Выберите дату' maxlength='24' autocomplete='' spellcheck='' required)
+
+  section.section
     h2.section__title subscription field
     .section__row
       +input-field('subscription')(type='email' name='email' id='email' placeholder='Your email address' maxlength='24' autocomplete='email' spellcheck='false' required)
 
+  section.section
+    h2.section__title expandable checkbox list
+    .section__row
+      include ../../blocks/common.blocks/checkbox-dropdown/checkbox-dropdown.pug
 
   section.section
     h2.section__title range slider
