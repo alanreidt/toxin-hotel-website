@@ -82,8 +82,8 @@ block body
               span.dropdown__quantity 0
               i.material-icons.dropdown__button.dropdown__button_add add
           .dropdown__row.dropdown__buttonpane
-            +button('Очистить', 'reset')(href='#')
-            +button('Применить')(href='#')
+            +button('Очистить', 'reset')
+            +button('Применить')
 
   section.section
     h2.section__title datepicker
@@ -141,3 +141,7 @@ block body
     h2.section__title pagination
     .section__row
       include ../../blocks/common.blocks/pagination/pagination.pug
+
+  section.section.section_block
+    h2.section__title block#1
+    include ../../blocks/common.blocks/card/card.pug

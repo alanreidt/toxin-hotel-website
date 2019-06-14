@@ -5,18 +5,35 @@
 @button-height: 44px;
 @button-border-width: 2px;
 
-a.button {
-  text-decoration: none;
-}
-
-button.button {
-  cursor: pointer;
-}
-
 .button {
   .h3-text();
 
+  // reset <button>, <input> styles
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  // reset <a> styles
+  text-decoration: none;
+
+  // add compatibility between html elements (<a>, <button>, <input>)
+  cursor: pointer;
+
+  // add standart behaviour of a <button> to compatibility with <a>
+  // isolate component's rules from external influence
+  display: inline-block;
+  vertical-align: middle;
+
+  // add standart behaviour of a <button> to compatibility with <a>
+  // isolate component's rules from external influence
+  box-sizing: border-box;
+
   color: #colors[primary];
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -30,9 +47,14 @@ button.button {
   &_secondary {
     .button_main();
 
+    // using substraction because of box-sizing: border-box
+    // now line-heigth equal to the content size of the button
+    line-height: @button-height - 2 * @button-border-width;
+
     color: #colors[primary];
     background-image: none;
     background-color: #fff;
+    border: @button-border-width solid #colors[primary];
 
     &:hover,
     &:focus {
@@ -43,41 +65,23 @@ button.button {
   &_full-width {
     .button_main();
     .decoration_type_arrow-forward();
-    &::before{
-      // styles for .decoration_type_arrow-forward();
-      top: -1 * @button-border-width;
-      bottom: -1 * @button-border-width;
-    }
 
     width: 100%;
   }
 }
 
 .button_main {
-  // add standart behaviour of a <button> to compatibility with <a>
-  // isolate component's rules from external influence
-  display: inline-block;
-  vertical-align: middle;
-
-  // add standart behaviour of a <button> to compatibility with <a>
-  // isolate component's rules from external influence
-  box-sizing: border-box;
-
   height: @button-height;
-  // using substraction because of box-sizing: border-box
-  // now line-heigth equal to the border-box of the button
-  line-height: @button-height - 2 * @button-border-width;
   padding-left: 20px;
   padding-right: 20px;
 
-  border: @button-border-width solid #colors[primary];
   border-radius: 22px;
 
   // probably, sets value to 1.2 (or 1.15, depending on browser (user agent))
   // doesn't work with <a>, but work with <button>,
   // because text in a <button> aligns in the middle
   // line-height: normal;
-  text-align: center;
+  line-height: @button-height;
   color: #fff;
   background-image: @primary-gradient;
 }

@@ -1,0 +1,33 @@
+.card {
+  padding: 40px 30px;
+
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+
+  &__row {
+    display: block;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    .h1-text();
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__input-text {
+    .h3-text();
+
+    display: block;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}
