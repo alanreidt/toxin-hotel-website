@@ -1,8 +1,18 @@
-.datepicker
-  .datepicker__col
-    span.card__input-text Прибытие
-    +input-field('dropdown', 'datepicker__input-field')(class='datepicker__input' type='text' name='from-date' id='from-date' placeholder='ДД.ММ.ГГГГ' maxlength='30' autocomplete='' spellcheck='')
-  .datepicker__col
-    span.card__input-text Выезд
-    +input-field('dropdown', 'datepicker__input-field')(class='datepicker__input' type='text' name='to-date' id='to-date' placeholder='ДД.ММ.ГГГГ' maxlength='30' autocomplete='' spellcheck='')
-  .datepicker__output#datepicker__output
+//- This is a modification of code from https://github.com/nicothin/NTH-start-project/
+//- Все примеси в этом файле должны начинаться c имени блока (datepicker)
+mixin datepicker(name)
+
+  //- Принимает:
+        name {string} — уникальное имя блока, которое задает значение для полей id, name
+
+  //- Вызов:
+        +datepicker('search-box') — создает блок datepicker с уникальным именем search-box
+
+  .datepicker
+    .datepicker__col
+      span.datepicker__input-text Прибытие
+      +input-field('dropdown')(class='js-' + name + '__date-input', type='text', name= name + '-date-from', id= name + '-date-from', placeholder='ДД.ММ.ГГГГ', maxlength='10', autocomplete='', spellcheck='')
+    .datepicker__col
+      span.datepicker__input-text Выезд
+      +input-field('dropdown')(class='js-' + name + '__date-input', type='text', name= name + '-date-to', id= name + '-date-to', placeholder='ДД.ММ.ГГГГ', maxlength='10', autocomplete='', spellcheck='')
+    .datepicker__date-output(id='js-' + name + '__date-output')

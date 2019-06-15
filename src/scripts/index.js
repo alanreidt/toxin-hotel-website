@@ -16,35 +16,11 @@ import '../../node_modules/nouislider/distribute/nouislider.css';
 $(document).ready(function () {
   // addition of blocks
   require('../blocks/common.blocks/datepicker/datepicker.js');
+  require('../blocks/common.blocks/dropdown-field/dropdown-field.js');
   require('../blocks/common.blocks/search-box/__datepicker/search-box__datepicker.js');
   require('../blocks/common.blocks/search-box/__dropdown/search-box__dropdown.js');
 
   $.datepicker.setDefaults($.datepicker.regional['ru']);
-
-  $(function () {
-    var dropDown = $('#dropdown-facilities');
-
-    $('#facilities').on('focusin', function () {
-      dropDown.toggleClass('dropdown_is-expanded');
-    });
-
-    $('#facilities').on('focusout', function () {
-      dropDown.toggleClass('dropdown_is-expanded');
-    });
-  });
-
-  $(function () {
-    var quantity = $('.dropdown__quantity').html();
-    var maxValue = '5';
-
-    if (quantity === '0') {
-      $('.dropdown__button_remove').addClass('dropdown__button_is-disabled');
-    }
-
-    if (quantity === maxValue) {
-      $('.dropdown__button_add').addClass('dropdown__button_is-disabled');
-    }
-  });
 
   $(function () {
     var dropDown = $('#facilities-additional-dropdown');

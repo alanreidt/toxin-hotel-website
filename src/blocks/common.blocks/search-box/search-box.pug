@@ -1,12 +1,13 @@
-.card
-  .card__row
-    h2.card__title Найдем номера под ваши пожелания
+.search-box
+  .search-box__row
+    h2.search-box__title Найдем номера под ваши пожелания
 
-  .card__row
-    include ../search-box/__datepicker/search-box__datepicker.pug
+  .search-box__row
+    +datepicker('search-box')
 
-  .card__row
-    include ../search-box/__dropdown/search-box__dropdown.pug
+  .search-box__row
+    span.search-box__input-text Гости
+    +dropdown-field('js-search-box__guests-dropdown', ['Взрослые', 'Дети', 'Младенцы'], true)(type='text' name='guests' id='search-box-guests-input' placeholder='Сколько гостей' maxlength='10' autocomplete='' spellcheck='' required)
 
-  .card__row
+  .search-box__row
     +button('Подобрать номер', 'full-width')

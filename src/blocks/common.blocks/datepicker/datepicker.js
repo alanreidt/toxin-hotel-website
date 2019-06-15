@@ -1,5 +1,5 @@
 $(function () {
-  var datePickerOutput = $("#datepicker__output").datepicker({
+  var datePickerOutput = $("#js-datepicker__date-output").datepicker({
     showOtherMonths: true,
     selectOtherMonths: true,
     prevText: '',
@@ -10,11 +10,11 @@ $(function () {
     minDate: 0
   }).hide();
 
-  $(".datepicker__input").on("focusin", function () {
+  $(".js-datepicker__date-input").on("focusin", function () {
     datePickerOutput.show();
   });
 
-  $(".datepicker__input").on("focusout", function () {
+  $(".js-datepicker__date-input").on("focusout", function () {
     datePickerOutput.hide();
   });
 

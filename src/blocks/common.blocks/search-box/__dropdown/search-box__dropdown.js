@@ -1,11 +1,11 @@
 $(function () {
-  var dropDown = $('#search-box__dropdown');
+  var dropDown = $('#js-search-box__guests-dropdown');
 
-  $('#search-box__guests-input').on('focusin', function () {
-    dropDown.toggleClass('dropdown_is-expanded');
+  $('#search-box-guests-input').on('focusin', function () {
+    dropDown.toggleClass('dropdown-field_is-expanded');
   });
 
-  $('#search-box__guests-input').on('focusout', function () {
-    dropDown.toggleClass('dropdown_is-expanded');
+  $('#search-box-guests-input').on('focusout', function () {
+    dropDown.toggleClass('dropdown-field_is-expanded');
   });
 });

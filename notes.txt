@@ -1,0 +1,3 @@
+Toxin template logs:
+  - fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
+  - changed value of unchecked like button in one of the comments for ambiguity escape

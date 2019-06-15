@@ -1,5 +1,5 @@
 $(function () {
-  var datePickerOutput = $("#search-box__output").datepicker({
+  var datePickerOutput = $("#js-search-box__date-output").datepicker({
     showOtherMonths: true,
     selectOtherMonths: true,
     prevText: '',

@@ -1,0 +1,28 @@
+//- This is a modification of code from https://github.com/nicothin/NTH-start-project/
+//- Все примеси в этом файле должны начинаться c имени блока (dropdown-field)
+mixin dropdown-field(id, optionTitles, buttonPane=false)
+
+  //- Принимает:
+        id {string} — id для dropdown'а
+        buttonPane {bool} — флаг для панели кнопок
+        optionsTitles {array} — массив названий для каждой строки dropdown'а
+
+  //- Вызов:
+        +dropdown-field('search-box__guests-dropdown', true, ['Спальни', 'Кровати', 'Ванные комнаты']) — создает блок datepicker с уникальным именем search-box
+  //- Результат:
+        +dropdown-field('search-box__guests-dropdown', true, ['Спальни', 'Кровати', 'Ванные комнаты']) — создает блок datepicker с уникальным именем search-box
+
+  +input-field('dropdown')&attributes(attributes)
+    .dropdown-field(id= id)
+      each item in optionTitles
+        .dropdown-field__row
+          span.dropdown-field__text= item
+          div.dropdown-field__counter
+            i.material-icons.dropdown-field__button.dropdown-field__button_remove remove
+            span.dropdown-field__quantity 0
+            i.material-icons.dropdown-field__button.dropdown-field__button_add add
+
+      if (typeof(buttonPane) !== 'undefined' && buttonPane)
+        .dropdown-field__row.dropdown-field__buttonpane
+          +button('Очистить', 'reset')
+          +button('Применить')
