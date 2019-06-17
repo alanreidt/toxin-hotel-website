@@ -4,9 +4,10 @@ var jquery = require('jquery');
 window.$ = window.jQuery = jquery;
 require('jquery-ui-dist/jquery-ui');
 // import datepicker's language packages
-require('../blocks/common.blocks/datepicker/i18n/datepicker-zh-CN.js');
-require('../blocks/common.blocks/datepicker/i18n/datepicker-fr.js');
-require('../blocks/common.blocks/datepicker/i18n/datepicker-ru.js');
+  require('../blocks/common.blocks/datepicker/i18n/datepicker-zh-CN.js');
+  require('../blocks/common.blocks/datepicker/i18n/datepicker-fr.js');
+  require('../blocks/common.blocks/datepicker/i18n/datepicker-ru.js');
+import 'cleave.js';
 import wNumb from 'wnumb';
 import noUiSlider from 'nouislider';
 import '../../node_modules/nouislider/distribute/nouislider.css';
@@ -28,7 +29,7 @@ $(document).ready(function () {
     $('#checkbox-dropdown').on('change', function () {
       dropDown.toggleClass('checkbox-dropdown_is-expanded');
     });
-/*
+    /*
     $('#checkbox-dropdown').on('focusout', function () {
       dropDown.toggleClass('dropdown_is-expanded');
     }); */
