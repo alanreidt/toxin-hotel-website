@@ -1,5 +1,6 @@
 TODO:
+  + Set up required behaviour of decoration expand more
   - Add functionality
   - Set up mixin
   - Input field with dropdown loses bottom border radiuses on focus
-  - Set up required behaviour of decoration expand more
+  - Apply jQuery function to particular element and add behaviour on hover

@@ -1,8 +1,28 @@
-.radio-button
-  label.radio-button__label(for='radio-button-man')
-    input.radio-button__input(id='radio-button-man' type='radio' name='sex' value='man' checked)
-    span.radio-button__text Мужчина
-.radio-button
-  label.radio-button__label(for='radio-button-woman')
-    input.radio-button__input(id='radio-button-woman' type='radio' name='sex' value='woman')
-    span.radio-button__text Женщина
+//- This is a modification of code from https://github.com/nicothin/NTH-start-project/
+//- Все примеси в этом файле должны начинаться c имени блока (radio-button)
+mixin radio-button(labelText, mods)
+
+  //- Принимает:
+        mods {string} — список модификаторов
+        labelText {string} — текст для label'а кнопки
+
+  //- Вызов:
+        +radio-button('Мужчина') — radio-button с текстом мужчина
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' button_' + modsList[i].trim();
+      }
+    }
+
+  .radio-button
+    label.radio-button__label(for!=attributes.id)
+      input.radio-button__input&attributes(attributes)
+      span.radio-button__text= labelText
+//- .toggle.regisration-box__item
+//-   label.toggle__label(for='toggle-mailing')
+//-     input.toggle__input(id='toggle-mailing' type='checkbox' name='mailing' value='on')
+//-     span.toggle__text Получать спецпредложения

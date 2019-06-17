@@ -1,3 +1,18 @@
+TODO:
+  - Provide regular expression patterns for Forms elements
+
+registration-box
+    radio button styles +
+    label-text (for all)
+  input-field
+    dropdown decoration +
+    input-field label +
+    masked input-field +
+    bithday input-field +
+  add content
+  add into form
+change input-field mixins
+
 Toxin template logs:
   - fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
   - changed value of unchecked like button in one of the comments for ambiguity escape

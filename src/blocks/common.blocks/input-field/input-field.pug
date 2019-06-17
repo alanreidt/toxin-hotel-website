@@ -1,0 +1,36 @@
+//- This is a modification of code from https://github.com/nicothin/NTH-start-project/
+//- Все примеси в этом файле должны начинаться c имени блока (input-field)
+mixin input-field(mods, inputFieldClasses='', labelText)
+
+  //- Принимает:
+        mods {string} — список модификаторов
+        inputFieldClasses {string} — список классов input-field элемента
+
+  //- Вызов:
+        +input-field('dropdown')
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' input-field_' + modsList[i].trim();
+      }
+    }
+
+    // список классов input-field'a
+    var allInputFieldClasses = '';
+    if(typeof(inputFieldClasses) !== 'undefined' && inputFieldClasses) {
+      var inputClassesList = inputFieldClasses.split(',');
+      for (var i = 0; i < inputClassesList.length; i++) {
+        allInputFieldClasses = allInputFieldClasses + ' ' + inputClassesList[i].trim();
+      }
+    }
+
+  .input-field(class = allMods + ' ' + allInputFieldClasses)
+    //- set up label, instead of placeholder
+    label.input-field__label(for!=attributes.id)
+      if (typeof(labelText) !== 'undefined' && labelText)
+        span.input-field__text= labelText
+      input.input-field__input&attributes(attributes)
+    block

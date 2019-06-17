@@ -15,7 +15,9 @@ block body
   section.section
     h2.section__title radio buttons
     .section__row
-      include ../../blocks/common.blocks/radio-button/radio-button.pug
+      +radio-button('Мужчина')(id='radio-button-sex-man' type='radio' name='sex' value='man' checked)
+      +radio-button('Женщина')(id='radio-button-sex-woman' type='radio' name='sex' value='woman')
+
 
   section.section
     h2.section__title toggle
@@ -118,3 +120,8 @@ block body
     .section__row
       h2.section__title block#1
       include ../../blocks/common.blocks/search-box/search-box.pug
+
+  section.section.section_block
+    .section__row
+      h2.section__title block#2
+      include ../../blocks/common.blocks/registration-box/registration-box.pug
