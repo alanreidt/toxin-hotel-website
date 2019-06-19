@@ -2,12 +2,22 @@
   .search-box__row
     h2.search-box__title Найдем номера под ваши пожелания
 
-  .search-box__row
-    +datepicker('search-box')
+  form(method='get' name='search-box-form' autocomplete='on')
+    .search-box__row
+      +datepicker('search-box')
 
-  .search-box__row
-    span.search-box__input-text Гости
-    +dropdown-field('js-search-box__guests-dropdown', ['Взрослые', 'Дети', 'Младенцы'], true)(type='text' name='guests' id='search-box-guests-input' placeholder='Сколько гостей' maxlength='10' autocomplete='' spellcheck='' required)
+    .search-box__row
+      span.search-box__input-text Гости
+      +dropdown-field('js-search-box__guests-dropdown', ['Взрослые', 'Дети', 'Младенцы'], true)(
+        type='text'
+        name='guests'
+        id='search-box-guests-input'
+        placeholder='Сколько гостей'
+        maxlength='10'
+        autocomplete=''
+        spellcheck=''
+        required
+      )
 
-  .search-box__row
-    +button('Подобрать номер', 'full-width')
+    .search-box__row
+      +button('Подобрать номер', 'full-width')
