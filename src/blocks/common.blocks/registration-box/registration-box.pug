@@ -2,26 +2,36 @@
   .registration-box__row
     h2.registration-box__title Регистрация аккаунта
 
-  .registration-box__row
-    +input-field('', 'registration-box__item')(type='text' name='fname' id='registration-box-fname' placeholder='Имя' maxlength='25' autocomplete='given-name' spellcheck='true' required)
-    +input-field('', 'registration-box__item')(type='text' name='lname' id='registration-box-lname' placeholder='Фамилия' maxlength='25' autocomplete='family-name' spellcheck='true' required)
-    .radio-button-group.registration-box__item
-      +radio-button('Мужчина')(id='registration-box-sex-man' type='radio' name='registration-box-sex' value='man' checked)
-      +radio-button('Женщина')(id='registration-box-sex-woman' type='radio' name='registration-box-sex' value='woman')
+  form.registration-box__form(method='get' name='registration-box-form' autocomplete='on')
+    .registration-box__row
+      .registration-box__item
+        +input-field(type='text' name='fname' id='registration-box-fname' placeholder='Имя' maxlength='25' autocomplete='given-name' spellcheck='true' required)
+      .registration-box__item
+        +input-field(type='text' name='lname' id='registration-box-lname' placeholder='Фамилия' maxlength='25' autocomplete='family-name' spellcheck='true' required)
+      .registration-box__item
+        +stateful-input('Мужчина')(id='registration-box-sex-man' type='radio' name='registration-box-sex' value='man' checked)
+        +stateful-input('Женщина')(id='registration-box-sex-woman' type='radio' name='registration-box-sex' value='woman')
 
-  .registration-box__row
-    //- set up cleave.js lib for compatibility with autocomplete or use smth else
-    +input-field('', '', 'Дата рождения')(class='js-input-masked-date' type='text' name='bday' placeholder='ДД.ММ.ГГГГ' maxlength='10' autocomplete='bday')
+    .registration-box__row
+      .registration-box__item
+        //- set up cleave.js lib for compatibility with autocomplete or use smth else
+        +input-field('', '', 'Дата рождения')(class='js-input-masked-date' type='text' name='bday' placeholder='ДД.ММ.ГГГГ' maxlength='10' autocomplete='bday')
 
-  .registration-box__row
-    span.registration-box__input-text Данные для входа в сервис
-    +input-field('', 'registration-box__item')(type='email' name='email' id='regisration-box-email' placeholder='Email' maxlength='24' autocomplete='email' spellcheck='false' required)
-    +input-field('', 'registration-box__item')(type='password' name='password' id='regisration-box-password' placeholder='Пароль' maxlength='20' autocomplete='new-password' spellcheck='false' required)
-    .toggle.regisration-box__item
-      label.toggle__label(for='toggle-mailing')
-        input.toggle__input(id='toggle-mailing' type='checkbox' name='mailing' value='on')
-        span.toggle__text Получать спецпредложения
+    .registration-box__row
+      .registration-box__item
+        span.registration-box__input-text Данные для входа в сервис
+        +input-field(type='email' name='email' id='registration-box-email' placeholder='Email' maxlength='24' autocomplete='email' spellcheck='false' required)
+      .registration-box__item
+        +input-field(type='password' name='password' id='registration-box-password' placeholder='Пароль' maxlength='20' autocomplete='new-password' spellcheck='false' required)
+      .registration-box__item
+        +stateful-input('Получать спецпредложения', 'type_toggle')(id='registration-box-mailing' type='checkbox' name='registration-box-mailing' value='on')
 
+    .registration-box__row
+      .registration-box__item
+        +button('Подобрать номер', 'full-width')
 
-  .registration-box__row
-    +button('Подобрать номер', 'full-width')
+    .registration-box__row
+      .registration-box__item
+        .registration-box__alternate-entry
+          p.registration-box__text Уже есть аккаунт на Toxin?
+          +button('Войти', 'secondary')(href='change-me')
