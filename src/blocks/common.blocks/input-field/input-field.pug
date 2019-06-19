@@ -5,9 +5,10 @@ mixin input-field(mods, inputFieldClasses='', labelText)
   //- Принимает:
         mods {string} — список модификаторов
         inputFieldClasses {string} — список классов input-field элемента
-
+        labelText {string} — текст внутри <label>
   //- Вызов:
-        +input-field('dropdown')
+        +input-field('dropdown') — вызывает input-field c модификатором dropdown
+        +input-field('', '', 'Дата рождения') — вызывает input-field c текстом дата рождения внутри <label>
   -
     // список модификаторов
     var allMods = '';
@@ -28,7 +29,6 @@ mixin input-field(mods, inputFieldClasses='', labelText)
     }
 
   .input-field(class = allMods + ' ' + allInputFieldClasses)
-    //- set up label, instead of placeholder
     label.input-field__label(for!=attributes.id)
       if (typeof(labelText) !== 'undefined' && labelText)
         span.input-field__text= labelText

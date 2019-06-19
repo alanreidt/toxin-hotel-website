@@ -53,7 +53,7 @@ block body
   section.section
     h2.section__title masked text field
     .section__row
-      +input-field(type='text' name='text-masked' id='text-masked' placeholder='ДД.ММ.ГГГГ' maxlength='24' autocomplete='' spellcheck='' required)
+      +input-field(class='js-input-masked-date' type='text' name='text-masked' id='text-masked' placeholder='ДД.ММ.ГГГГ' maxlength='24' autocomplete='' spellcheck='' required)
 
   section.section
     h2.section__title dropdown
@@ -119,10 +119,10 @@ block body
 
   section.section.section_block
     .section__row
-      h2.section__title block#1
+      h2.section__title search box
       include ../../blocks/common.blocks/search-box/search-box.pug
 
   section.section.section_block
     .section__row
-      h2.section__title block#2
+      h2.section__title registration box
       include ../../blocks/common.blocks/registration-box/registration-box.pug
