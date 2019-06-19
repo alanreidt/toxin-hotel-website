@@ -15,14 +15,15 @@ block body
   section.section
     h2.section__title radio buttons
     .section__row
-      +radio-button('Мужчина')(id='radio-button-sex-man' type='radio' name='sex' value='man' checked)
-      +radio-button('Женщина')(id='radio-button-sex-woman' type='radio' name='sex' value='woman')
+      +stateful-input('Мужчина')(id='radio-button-sex-man' type='radio' name='sex' value='man' checked)
+      +stateful-input('Женщина')(id='radio-button-sex-woman' type='radio' name='sex' value='woman')
 
 
   section.section
     h2.section__title toggle
     .section__row
-      include ../../blocks/common.blocks/toggle/toggle.pug
+      +stateful-input('Получать спецпредложения', 'type_toggle')(id='toggle-mailing' type='checkbox' name='mailing' value='on' checked)
+      +stateful-input('Получать спецпредложения', 'type_toggle')(id='toggle-mailing-unchecked' type='checkbox' name='mailing' value='on')
 
   section.section
     h2.section__title like button
