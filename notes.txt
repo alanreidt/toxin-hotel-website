@@ -1,18 +1,13 @@
 TODO:
+  - Styles for position have to be applied to separate element (that's <div> often)
   - Provide regular expression patterns for Forms elements
-
-registration-box
-    radio button styles +
-    label-text (for all)
-  input-field
-    dropdown decoration +
-    input-field label +
-    masked input-field +
-    bithday input-field +
-  add content
-  add into form
-change input-field mixins
+  - Add cursor:pointer to interactive elements
+  - Edit label text alignment in all files
+  - Set up input-field_dropdown to work with label text
+    - Change all occurances of input-field to new settings
 
 Toxin template logs:
-  - fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
-  - changed value of unchecked like button in one of the comments for ambiguity escape
+  - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
+  - Changed value of unchecked like button in one of the comments for ambiguity escape
+  - Changed toggle's label color in default (unchecked) state
+  - Added '?' symbol to a text in the bottom of a registation box
