@@ -16,6 +16,7 @@ import '../../node_modules/nouislider/distribute/nouislider.css';
 
 $(document).ready(function () {
   // addition of blocks
+  require('../blocks/common.blocks/input-field/input-field.js');
   require('../blocks/common.blocks/datepicker/datepicker.js');
   require('../blocks/common.blocks/dropdown-field/dropdown-field.js');
   require('../blocks/common.blocks/search-box/__datepicker/search-box__datepicker.js');
