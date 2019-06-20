@@ -5,9 +5,14 @@ TODO:
   - Edit label text alignment in all files
   - Set up input-field_dropdown to work with label text
     - Change all occurances of input-field to new settings
+  - Align-items property of flex container can fix child's vertical alignment
+    (text content, in particular)
 
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
   - Changed value of unchecked like button in one of the comments for ambiguity escape
   - Changed toggle's label color in default (unchecked) state
   - Added '?' symbol to a text in the bottom of a registation box
+
+  TODO:
+    - Divide text with different styles
