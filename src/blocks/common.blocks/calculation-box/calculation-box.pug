@@ -1,96 +1,55 @@
 .calculation-box
   .calculation-box__row
-    h2.calculation-box__title Регистрация аккаунта
+    .calculation-box__room-info
+      span.calculation-box__room-number
+        | №
+        span(class='calculation-box__room-digit') 888
+        span(class='calculation-box__room-rank') люкс
+      span.calculation-box__room-price
+        | 9 990₽
+        | #[span(class='calculation-box__room-text') в сутки]
 
   form.calculation-box__form(method='get' name='calculation-box-form' autocomplete='on')
     .calculation-box__row
-      .calculation-box__item
-        +input-field(
-          type='text'
-          name='fname'
-          id='calculation-box-fname'
-          placeholder='Имя'
-          maxlength='25'
-          autocomplete='given-name'
-          spellcheck='true'
-          required
-        )
-      .calculation-box__item
-        +input-field(
-          type='text'
-          name='lname'
-          id='calculation-box-lname'
-          placeholder='Фамилия'
-          maxlength='25'
-          autocomplete='family-name'
-          spellcheck='true'
-          required
-        )
-      .calculation-box__item
-        +stateful-input('Мужчина')(
-          id='calculation-box-sex-man'
-          type='radio'
-          name='calculation-box-sex'
-          value='man'
-          checked
-        )
-        +stateful-input('Женщина')(
-          id='calculation-box-sex-woman'
-          type='radio'
-          name='calculation-box-sex'
-          value='woman'
-        )
+      +datepicker('calculation-box')
+
+    .calculation-box__row
+      span.calculation-box__input-text Гости
+      +dropdown-field('js-calculation-box__guests-dropdown', ['Взрослые', 'Дети', 'Младенцы'], true)(
+        type='text'
+        name='guests'
+        id='calculation-box-guests-input'
+        placeholder='Сколько гостей'
+        maxlength='10'
+        autocomplete=''
+        spellcheck=''
+        required
+      )
 
     .calculation-box__row
       .calculation-box__item
-        //- set up cleave.js lib for compatibility with autocomplete or use smth else
-        +input-field('', '', 'Дата рождения')(
-          class='js-input-masked-date'
-          type='text'
-          name='bday'
-          placeholder='ДД.ММ.ГГГГ'
-          maxlength='10'
-          autocomplete='bday'
-        )
+        .calculation-box__service-info
+          span.calculation-box__service-text
+            | 9 990₽ x 4 суток
+          span.calculation-box__service-price
+            | 39 960₽
+      .calculation-box__item
+        .calculation-box__service-info
+          span.calculation-box__service-text
+            | Сбор за услуги: скидка 2 179₽
+            i(class='material-icons calculation-box__icon-info' title='change me — use jQuery') info_outline
+          span.calculation-box__service-price 0₽
+      .calculation-box__item
+        .calculation-box__service-info
+          span.calculation-box__service-text
+            | Сбор за дополнительные услуги
+            i(class='material-icons calculation-box__icon-info' title='change me — use jQuery') info_outline
+          span.calculation-box__service-price 300₽
 
     .calculation-box__row
+      .calculation-box__item.calculation-box__summary-group
+        .calculation-box__summary-info
+          span.calculation-box__summary-text Итого
+          span.calculation-box__summary-price 38 081₽
       .calculation-box__item
-        span.calculation-box__input-text Данные для входа в сервис
-        +input-field(
-          type='email'
-          name='email'
-          id='calculation-box-email'
-          placeholder='Email'
-          maxlength='24'
-          autocomplete='email'
-          spellcheck='false'
-          required
-        )
-      .calculation-box__item
-        +input-field(
-          type='password'
-          name='password'
-          id='calculation-box-password'
-          placeholder='Пароль'
-          maxlength='20'
-          autocomplete='new-password'
-          spellcheck='false'
-          required
-        )
-      .calculation-box__item
-        +stateful-input('Получать спецпредложения', 'type_toggle')(
-          id='calculation-box-mailing'
-          type='checkbox'
-          name='calculation-box-mailing'
-          value='on'
-        )
-
-    .calculation-box__row
-      .calculation-box__item
-        +button('Перейти к оплате', 'full-width')
-
-    .calculation-box__row
-      .calculation-box__item
-        .calculation-box__alternate-entry
-          p.calculation-box__text Уже есть аккаунт на Toxin?
-          +button('Войти', 'secondary')(href='change-me')
+        +button('Забронировать', 'full-width')

@@ -1,3 +1,114 @@
 .calculation-box {
+  #box.styles();
 
+  & .datepicker {
+    // lay out above .calculation-box__service-text
+    z-index: 200;
+  }
+
+  &__row {
+    #box.row();
+  }
+
+  &__item {
+    #box.item();
+  }
+
+  &__input-text {
+    #box.input-text();
+  }
+
+  &__room-info {
+    #box.space-between();
+
+    align-items: flex-end;
+  }
+
+  &__room-number {
+    .h2-text();
+
+    font-size: 14px;
+    line-height: 1.214; /* 17px = 14px * 1.214 */
+  }
+
+  &__room-digit {
+    font-size: 24px;
+    margin-right: 5px;
+    margin-left: 3px;
+  }
+
+  &__room-rank {
+    .h3-text();
+
+    color: #colors[primary];
+  }
+
+  &__room-price {
+    .body-text();
+
+    line-height: 1.29;
+    font-weight: bold;
+    color: #colors[dark-shade-50];
+  }
+
+  &__room-text {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  &__service-info {
+    #box.space-between();
+    .body-text();
+
+    align-items: flex-start;
+  }
+
+  &__service-text {
+    position: relative;
+    z-index: 100;
+
+    width: 100%;
+    max-width: 240px;
+    padding-right: 25px;
+
+    box-sizing: border-box;
+  }
+
+  &__icon-info {
+    position: absolute;
+    z-index: 200;
+    top: 0;
+    right: 0;
+
+    font-size: 20px;
+    color: #colors[dark-shade-25];
+
+    cursor: pointer;
+  }
+
+  &__summary-group {
+    margin-bottom: 20px;
+  }
+
+  &__summary-info {
+    #box.space-between();
+    .h2-text();
+
+    align-items: flex-start;
+
+    line-height: 0.7;
+    border-bottom: 1px dotted #colors[dark-shade-25];
+  }
+
+  &__summary-text {
+    padding-right: 5px;
+    margin-bottom: -1px;
+    background-color: #fff;
+  }
+
+  &__summary-price {
+    padding-left: 5px;
+    margin-bottom: -1px;
+    background-color: #fff;
+  }
 }

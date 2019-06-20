@@ -21,6 +21,8 @@ $(document).ready(function () {
   require('../blocks/common.blocks/dropdown-field/dropdown-field.js');
   require('../blocks/common.blocks/search-box/__datepicker/search-box__datepicker.js');
   require('../blocks/common.blocks/search-box/__dropdown/search-box__dropdown.js');
+  require('../blocks/common.blocks/calculation-box/__datepicker/calculation-box__datepicker.js');
+  require('../blocks/common.blocks/calculation-box/__dropdown/calculation-box__dropdown.js');
 
   $.datepicker.setDefaults($.datepicker.regional['ru']);
 
