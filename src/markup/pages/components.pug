@@ -32,8 +32,8 @@ block body
 
   section.section
     h2.section__title rate button
-    .section__row.section__rate-buttons
-      include ../../blocks/common.blocks/rate-button/rate-button.pug
+    .section__row
+      +rating()(id='rating' name='rating')
 
   section.section
     h2.section__title rich checkbox buttons

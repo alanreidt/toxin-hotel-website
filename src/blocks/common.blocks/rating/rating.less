@@ -1,4 +1,4 @@
-.rate-button {
+.rating {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -11,15 +11,8 @@
     .default-styles-reset();
     margin: 0;
 
-    // width: 24px;
-    // height: 24px;
-    // border: 1px solid red;
     display: inline-block;
     vertical-align: middle;
-
-    &:not(:last-of-type) {
-      // padding-left: 2px;
-    }
 
     &:hover::before  {
       content: '\e838';
@@ -49,5 +42,7 @@
 
     font-size: 24px;
     color: #colors[primary];
+
+    cursor: pointer;
   }
 }

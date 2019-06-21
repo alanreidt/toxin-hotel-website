@@ -1,0 +1,35 @@
+//- This is a modification of code from https://github.com/nicothin/NTH-start-project/
+//- Все примеси в этом файле должны начинаться c имени блока (rating)
+mixin rating(titles=['Gorgeous', 'Good', 'Normal', 'Bad', 'Terrible'])
+
+  //- Принимает:
+        titles {array} — массив значений атрибута title для каждого значка рейтинга
+
+  //- Вызов:
+        +rating() — создает блок rating с 5-ю значками и значением title по умолчанию
+  //- Результат:
+        +rating([
+          'Good',
+          'Normal',
+          'Bad',
+        ]) — создает блок c 3-мя значками и соответствующими значениями title
+
+  -
+    var value;
+
+  .rating
+    each title,index in titles
+      -
+        value = titles.length - index;
+      input.rating__input(
+        id!= attributes.id+ '-' +value
+        type='radio'
+        name!= attributes.name
+        value= value
+        title= title
+        tabindex=''
+        aria-label=''
+      )
+      label.rating__label(
+        for!= attributes.id+ '-' +value
+      ) 5 star
