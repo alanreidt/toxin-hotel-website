@@ -1,0 +1,23 @@
+.room-box
+  .room-box__header
+    .room-box__carousel
+      .room-box__carousel-lever
+        i.material-icons navigate_before
+      .room-box__carousel-lever.room-box__carousel-lever_next
+        i.material-icons navigate_before
+      ul.room-box__carousel-pagination
+        li.room-box__carousel-item
+          span.room-box__carousel-link.room-box__carousel-link_active
+        li.room-box__carousel-item
+          span.room-box__carousel-link
+        li.room-box__carousel-item
+          span.room-box__carousel-link
+        li.room-box__carousel-item
+          span.room-box__carousel-link
+
+  .room-box__content
+    .room-box__room-info
+      +room-info('840', '9 900₽')
+    .room-box__room-rating
+      form.room-box__form(method='get' name='room-box-form' autocomplete='on')
+        include ../room-rating/room-rating.pug
