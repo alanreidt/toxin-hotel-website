@@ -1,0 +1,20 @@
+//- This is a modification of code from https://github.com/nicothin/NTH-start-project/
+//- Все примеси в этом файле должны начинаться c имени блока (room-info)
+mixin room-info(number, price, isLuxe)
+
+  //- Принимает:
+        number {string} — номер комнаты отеля
+        price {string} — цена комнаты отеля
+        isLuxe {bool} — является ли комната класса люкс
+  //- Вызов:
+        +room-info('856', '9 999₽', true) — вызывает room-info c номером 856 класса люкс и ценой 9 999₽
+
+  .room-info
+    span.room-info__details
+      | №
+      span(class='room-info__digit')= number
+      if (typeof(isLuxe) !== 'undefined' && isLuxe)
+        span(class='room-info__rank') люкс
+    span.room-info__price
+      =price + ' '
+      | #[span(class='room-info__text') в сутки]

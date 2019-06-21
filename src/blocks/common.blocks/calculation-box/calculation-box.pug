@@ -1,13 +1,6 @@
 .calculation-box
   .calculation-box__row
-    .calculation-box__room-info
-      span.calculation-box__room-number
-        | №
-        span(class='calculation-box__room-digit') 888
-        span(class='calculation-box__room-rank') люкс
-      span.calculation-box__room-price
-        | 9 990₽
-        | #[span(class='calculation-box__room-text') в сутки]
+    +room-info('888', '9 990₽', true)
 
   form.calculation-box__form(method='get' name='calculation-box-form' autocomplete='on')
     .calculation-box__row
