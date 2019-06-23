@@ -42,13 +42,14 @@
     margin-left: 15px;
   }
 
-  &__user-fname {
-    @user-fname-height: 30px;
+  &__user-name {
+    @user-name-height: 30px;
+
     margin-top: 0;
     margin-bottom: 0;
 
-    height: @user-fname-height;
-    line-height: @user-fname-height;
+    height: @user-name-height;
+    line-height: @user-name-height;
 
     padding-left: 30px;
     border-left: 1px solid rgba(31, 32, 65, 0.1);
@@ -61,8 +62,10 @@
     height: @button-height;
     line-height: @button-height - 2 * @button-border-width;
 
-    &:last-child {
+    &_main {
       margin-left: 20px;
+
+      line-height: @button-height;
     }
   }
 }

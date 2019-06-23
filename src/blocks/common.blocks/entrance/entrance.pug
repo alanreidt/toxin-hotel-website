@@ -1,8 +1,14 @@
 .entrance.topline__entrance
   //- .entrance__item
   .entrance__item.entrance__item_active
-    +button('login', 'secondary')(href='#').topline__button
-    +button('register')(href='#').topline__button
+    +button('Войти', 'secondary')(
+      href='change-me'
+      class='topline__button'
+    )
+    +button('Зарегистрироваться', 'main')(
+      href='change-me'
+      class='topline__button topline__button_main'
+    )
   //- .entrance__item.entrance__item_active
   .entrance__item
-    p.entrance__user-fname.topline__user-fname cosmin negoita
+    p.entrance__user-name.topline__user-name cosmin negoita
