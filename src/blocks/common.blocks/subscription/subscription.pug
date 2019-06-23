@@ -1,8 +1,17 @@
-aside.section.subscription.footer__item
-  h3.section__title.subscription__title subscribe to our newsletter
+aside.section.subscription
+  h3.section__title.subscription__title Подписка
   p.subscription__description
-    | receive our latest news and
-    | promotions in your inbox!
-  form.subscription__form(action='' method='get' name='footer-form' autocomplete='on')
-    +input-field('subscription')(type='email' name='email' id='email' placeholder='Your email address' maxlength='24' autocomplete='email' spellcheck='false' required)
+    | Получайте специальные
+    | предложения и&nbsp;новости сервиса
+  form.subscription__form(method='get' name='footer-form' autocomplete='on')
+    +input-field('subscription')(
+      type='email'
+      name='email'
+      id='email'
+      placeholder='Email'
+      maxlength='24'
+      autocomplete='email'
+      spellcheck='false'
+      required
+    )
 
