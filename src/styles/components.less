@@ -2,10 +2,11 @@
 
 .section {
   width: 320px;
+  margin-bottom: 40px;
   // background-color: #999;
 
-  &:not(:last-child) {
-    margin-bottom: 40px;
+  &:last-of-type {
+    // margin-bottom: 0;
   }
 
   &__title {
@@ -17,26 +18,35 @@
 
   &__row {
     display: block;
-  }
-
-  &__row:not(:last-child) {
     margin-bottom: 30px;
   }
 
-  &__button:not(:last-child) {
-    margin-right: 20px;
+  &__row:last-child {
+    margin-bottom: 0;
   }
 
-  & .stateful-input_type_toggle:not(:last-child) {
+  &__button {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  & .stateful-input_type_toggle {
     margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  & .like-button:not(:last-child) {
+  & .like-button {
     margin-right: 10px;
-  }
 
-  & .rate-button:not(:last-child) {
-    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &_width_box {
