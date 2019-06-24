@@ -4,13 +4,17 @@ mixin dropdown-field(id, optionTitles, buttonPane=false)
 
   //- Принимает:
         id {string} — id для dropdown'а
-        buttonPane {bool} — флаг для панели кнопок
         optionsTitles {array} — массив названий для каждой строки dropdown'а
+        buttonPane {bool} — флаг для панели кнопок
 
   //- Вызов:
-        +dropdown-field('search-box__guests-dropdown', true, ['Спальни', 'Кровати', 'Ванные комнаты']) — создает блок datepicker с уникальным именем search-box
-  //- Результат:
-        +dropdown-field('search-box__guests-dropdown', true, ['Спальни', 'Кровати', 'Ванные комнаты']) — создает блок datepicker с уникальным именем search-box
+        +dropdown-field(
+          'js-search-box__guests-dropdown',
+          true,
+          ['Спальни', 'Кровати', 'Ванные комнаты']
+        ) — создает блок dropdown-field
+            с id js-search-box__guests-dropdown для dropdown'а
+            и 3-мя полями с соответствующим текстом
 
   +input-field('dropdown')&attributes(attributes)
     .dropdown-field(id= id)
