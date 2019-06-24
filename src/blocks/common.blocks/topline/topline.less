@@ -4,17 +4,13 @@
   *   -
   */
 
+@topline-height: 70px;
 @topline-horizontal-padding: @site-padding;
 @topline-vertical-padding: 15px;
 
 .topline {
-  position: absolute;
-  z-index: 200;
-  top: 0;
-  left: 0;
-
-  width: 100%;
   background-color: #fff;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
 
   &__inner {
     .container();
@@ -24,7 +20,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: @topline-height;
   }
 
   &__semantic-title {
