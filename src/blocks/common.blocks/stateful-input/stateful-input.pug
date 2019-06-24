@@ -1,13 +1,13 @@
 //- This is a modification of code from https://github.com/nicothin/NTH-start-project/
-//- Все примеси в этом файле должны начинаться c имени блока (radio-button)
+//- Все примеси в этом файле должны начинаться c имени блока (stateful-input)
 mixin stateful-input(labelText, mods)
 
   //- Принимает:
-        mods {string} — список модификаторов
         labelText {string} — текст для label'а кнопки
+        mods {string} — список модификаторов
 
   //- Вызов:
-        +stateful-input('Мужчина') — stateful-input с текстом мужчина
+        +stateful-input('Мужчина') — stateful-input с label текстом мужчина
   -
     // список модификаторов
     var allMods = '';
