@@ -1,6 +1,6 @@
 //- This is a modification of code from https://github.com/nicothin/NTH-start-project/
 //- Все примеси в этом файле должны начинаться c имени блока (checkbox)
-mixin checkbox(labelText, mods)
+mixin checkbox(labelText, mods, labelExplanation)
 
   //- Принимает:
         labelText {string} — текст для label'а кнопки
@@ -21,4 +21,9 @@ mixin checkbox(labelText, mods)
   .checkbox(class=allMods)
     label.checkbox__label(for!=attributes.id)
       input.checkbox__input(type='checkbox')&attributes(attributes)
-      span.checkbox__text!= labelText
+      .checkbox__text
+        if (typeof(labelExplanation) !== 'undefined' && labelExplanation)
+          span.checkbox__text-title!= labelText
+          span.checkbox__text-explanation!= labelExplanation
+        else
+          !=labelText

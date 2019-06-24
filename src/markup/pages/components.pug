@@ -50,7 +50,23 @@ block body
   section.section
     h2.section__title rich checkbox buttons
     .section__row
-      include ../../blocks/common.blocks/rich-checkbox/rich-checkbox.pug
+      fieldset.section__fieldset
+        +checkbox(
+          'Широкий коридор',
+          '',
+          'Ширина коридоров в&nbsp;номере не&nbsp;менее 91&nbsp;см.'
+        )(
+          name='accessibility'
+          value='wide-corridor'
+        )
+        +checkbox(
+          'Помощник для инвалидов',
+          '',
+          'На&nbsp;1&nbsp;этаже вас встретит специалист и&nbsp;проводит до&nbsp;номера.'
+        )(
+          name='accessibility'
+          value='assistant'
+        )
 
   section.section
     h2.section__title bullet list
@@ -70,7 +86,19 @@ block body
   section.section
     h2.section__title dropdown
     .section__row
-      +dropdown-field('js-dropdown-field__content', ['Спальни', 'Кровати', 'Ванные комнаты'])(type='text' name='dropdown-field-input' id='dropdown-field-input' placeholder='Выберите удобства' maxlength='24' autocomplete='' spellcheck='' required)
+      +dropdown-field(
+        'js-dropdown-field__content',
+        ['Спальни', 'Кровати', 'Ванные комнаты']
+      )(
+        type='text'
+        name='dropdown-field-input'
+        id='dropdown-field-input'
+        placeholder='Выберите удобства'
+        maxlength='24'
+        autocomplete=''
+        spellcheck=''
+        required
+      )
 
   section.section
     h2.section__title datepicker
