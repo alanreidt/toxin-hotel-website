@@ -1,0 +1,91 @@
+.search-panel
+  form(name='search-panel-form')
+    .search-panel__row
+      .search-panel__item
+        span.search-panel__input-text
+          | Даты пребывания в отеле
+        +input-field('dropdown')(
+          class='js-input-masked-date'
+          type='text'
+          name='date-filter'
+          id='date-filter'
+          placeholder='Выберите дату'
+          maxlength='24'
+          autocomplete=''
+          spellcheck=''
+          required
+        )
+      .search-panel__item
+        span.search-panel__input-text
+          | Гости
+        +dropdown-field('js-search__guests-dropdown', ['Взрослые', 'Дети', 'Младенцы'], true)(
+          type='text'
+          name='guests'
+          id='search-guests-input'
+          placeholder='Сколько гостей'
+          maxlength='30'
+          autocomplete=''
+          spellcheck=''
+          required
+        )
+
+    .search-panel__row
+      include ../../common.blocks/range-slider/range-slider.pug
+
+    .search-panel__row
+      span.search-panel__input-text.search-panel__input-text_for-checkbox
+        | Позволения номера
+      fieldset.search-panel__fieldset
+        +checkbox('Можно курить')(
+          name='permission'
+          value='smoke'
+        )
+        +checkbox('Можно с&nbsp;питомцами')(
+          name='permission'
+          value='pets'
+        )
+        +checkbox('Можно пригласить гостей (до&nbsp;10&nbsp;человек)')(
+          name='permission'
+          value='guests'
+        )
+
+    .search-panel__row
+      span.search-panel__input-text.search-panel__input-text_for-checkbox
+        | Доступность
+      fieldset.search-panel__fieldset
+        +checkbox(
+          'Широкий коридор',
+          '',
+          'Ширина коридоров в&nbsp;номере не&nbsp;менее 91&nbsp;см.'
+        )(
+          name='accessibility'
+          value='wide-corridor'
+        )
+        +checkbox(
+          'Помощник для инвалидов',
+          '',
+          'На&nbsp;1&nbsp;этаже вас встретит специалист и&nbsp;проводит до&nbsp;номера.'
+        )(
+          name='accessibility'
+          value='assistant'
+        )
+
+    .search-panel__row
+      span.search-panel__input-text
+        | Удобства номера
+      +dropdown-field(
+        'js-search__facilities-dropdown',
+        ['Спальни', 'Кровати', 'Ванные комнаты']
+      )(
+        type='text'
+        name='facilities'
+        id='search-facilities-input'
+        placeholder='Выберите удобства'
+        maxlength='30'
+        autocomplete=''
+        spellcheck=''
+        required
+      )
+
+    .search-panel__row
+      include ../../common.blocks/checkbox-dropdown/checkbox-dropdown.pug
