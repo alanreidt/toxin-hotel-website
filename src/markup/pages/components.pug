@@ -10,7 +10,19 @@ block body
   section.section
     h2.section__title checkbox buttons
     .section__row
-      include ../../blocks/common.blocks/permission-form/permission-form.pug
+      fieldset.section__fieldset
+        +checkbox('Можно курить')(
+          name='permission'
+          value='smoke'
+        )
+        +checkbox('Можно с&nbsp;питомцами')(
+          name='permission'
+          value='pets'
+        )
+        +checkbox('Можно пригласить гостей (до&nbsp;10&nbsp;человек)')(
+          name='permission'
+          value='guests'
+        )
 
   section.section
     h2.section__title radio buttons
@@ -68,7 +80,16 @@ block body
   section.section
     h2.section__title filter date dropdown
     .section__row
-      +input-field('dropdown')(type='text' name='date-filter' id='date-filter' placeholder='Выберите дату' maxlength='24' autocomplete='' spellcheck='' required)
+      +input-field('dropdown')(
+        type='text'
+        name='date-filter'
+        id='date-filter'
+        placeholder='Выберите дату'
+        maxlength='24'
+        autocomplete=''
+        spellcheck=''
+        required
+      )
 
   section.section
     h2.section__title subscription field
