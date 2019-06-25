@@ -1,7 +1,7 @@
 include ./mixins.pug
 
 doctype html
-html(lang=ru)
+html(class='page' lang='ru')
   head
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
@@ -19,13 +19,15 @@ html(lang=ru)
       link(href='../../styles/base.less' rel='stylesheet')
 
 
-  body(class='page')
-    include ../../blocks/common.blocks/topline/topline.pug
+  body(class='page__body')
+    .page__header
+      include ../../blocks/common.blocks/topline/topline.pug
 
-    main
+    main(class='page__content')
       block main
 
-    include ../../blocks/common.blocks/footer/footer.pug
+    .page__footer
+      include ../../blocks/common.blocks/footer/footer.pug
 
     block page-bottom
       script(src='../../scripts/index.js')
