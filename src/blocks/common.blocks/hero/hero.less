@@ -1,27 +1,32 @@
 .hero {
   width: 100%;
   height: calc(100vh - @topline-height);
-  padding-top: 140px;
 
   background: url(../images/index-bg.jpg) center/cover no-repeat;
 
   box-sizing: border-box;
 
-  &__inner {
-    .container;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  &__container {
+    .container();
     height: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-top: 70px;
+    height: 100%;
+
+    box-sizing: border-box;
   }
 
   &__tagline {
     .body-text();
 
-    margin-top: 0;
-    margin-bottom: 18px;
-
+    align-self: flex-end;
     text-align: right;
   }
 }
