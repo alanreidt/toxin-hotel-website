@@ -4,20 +4,8 @@ block title
   title Room Details Page
 
 block main
-  //- include ../../blocks/common.blocks/search/search.pug
   .room-details
     .room-details__media
       include ../../blocks/common.blocks/room-details-media/room-details-media.pug
-
     .room-details__content
-      .room-details-content
-        .room-details-content__container
-          .room-details-content__inner
-            .room-details-content__details
-              .room-details-content__section
-              .room-details-content__section
-              .room-details-content__section.room-details-content__section_size_full
-              .room-details-content__section
-              .room-details-content__section
-            .room-details-content__calculation-box
-              //- include
+      include ../../blocks/common.blocks/room-details-content/room-details-content.pug
