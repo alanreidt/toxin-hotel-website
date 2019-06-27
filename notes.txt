@@ -1,4 +1,12 @@
 TODO:
+  + Change properies with pseudo-class :not(:last-child)
+  - Height equals 100% must be declared (?) (on container, precicely)
+  - Use border-box wherever width or height 100% declared (?)
+  - Separate container and block styles (?)
+  - Edit inputs' attributes appearance
+  - Set up components imports for each page
+  - Rule out less variables work
+  - Put content text in Typograph
   - Styles for position have to be applied to separate element (that's <div> often)
   - Provide regular expression patterns for Forms elements
   - Add cursor:pointer to interactive elements
@@ -8,6 +16,8 @@ TODO:
   - Align-items property of flex container can fix child's vertical alignment
     (text content, in particular)
 
+TODO DOM:
+
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
   - Changed value of unchecked like button in one of the comments for ambiguity escape
@@ -16,3 +26,4 @@ Toxin template logs:
 
   TODO:
     - Divide text with different styles
+    - Remark copyright text
