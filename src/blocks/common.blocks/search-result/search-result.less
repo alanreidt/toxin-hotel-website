@@ -1,0 +1,29 @@
+.search-result {
+  display: flex;
+  flex-flow: column nowrap;
+  // justify-content: space-between;
+  height: 100%;
+
+  &__title {
+    .h1-text();
+
+    margin-top: 0;
+    margin-bottom: 0.875em;
+  }
+
+  &__grid {
+    display: grid;
+    // justify-content: flex-end;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    // without grid- prefix?
+    grid-gap: 20px 12px;
+
+    padding-bottom: 40px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+}
