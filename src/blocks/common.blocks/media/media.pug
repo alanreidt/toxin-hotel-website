@@ -1,5 +1,26 @@
-.media
-  .media__graphics
-  .media__content
-    span.media__title Комфорт
-    span.media__description Шумопоглошающие стены
+//- This is a modification of code from https://github.com/nicothin/NTH-start-project/
+//- Все примеси в этом файле должны начинаться c имени блока (media)
+mixin media(title, description)
+
+  //- Принимает:
+        title {string} — короткий текст, описывающий блок в общем
+        description {string} — более насыщенный текст,
+          предствляющий более подробное описание блока
+  //- Вызов:
+        +media('Комфорт', 'Шумопоглощающие стены') — медиа блок с соотв. текстом
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' media_' + modsList[i].trim();
+      }
+    }
+
+  .media&attributes(attributes)
+    .media__picture
+      block
+    .media__text
+      span.media__title!= title
+      span.media__description!= description
