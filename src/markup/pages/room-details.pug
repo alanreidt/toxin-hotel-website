@@ -7,22 +7,17 @@ block main
   //- include ../../blocks/common.blocks/search/search.pug
   .room-details
     .room-details__media
-      .room-media
-        .room-media__main-section
-          .room-media__row
-        .room-media__secondary-section
-          .room-media__row
-          .room-media__row
+      include ../../blocks/common.blocks/room-details-media/room-details-media.pug
 
     .room-details__content
-      .room-content
-        .room-content__container
-          .room-content__inner
-            .room-content__details
-              .room-content__section
-              .room-content__section
-              .room-content__section.room-content__section_size_full
-              .room-content__section
-              .room-content__section
-            .room-content__calculation-box
+      .room-details-content
+        .room-details-content__container
+          .room-details-content__inner
+            .room-details-content__details
+              .room-details-content__section
+              .room-details-content__section
+              .room-details-content__section.room-details-content__section_size_full
+              .room-details-content__section
+              .room-details-content__section
+            .room-details-content__calculation-box
               //- include
