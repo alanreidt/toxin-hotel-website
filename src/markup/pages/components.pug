@@ -109,6 +109,7 @@ block body
     h2.section__title filter date dropdown
     .section__row
       +input-field('dropdown')(
+        class='js-input-masked-date'
         type='text'
         name='date-filter'
         id='date-filter'
@@ -132,8 +133,8 @@ block body
   section.section
     h2.section__title cell-blocks
     .section__row
-      //- include ../../blocks/common.blocks/media/media.pug
-      include ../../blocks/common.blocks/cell-block/cell-block.pug
+      +cell-block('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
+      +cell-block('Удобство', 'Окно в&nbsp;каждой из&nbsp;спален', 'location_city')
 
   section.section
     h2.section__title comments

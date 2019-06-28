@@ -1,0 +1,26 @@
+//- This is a modification of code from https://github.com/nicothin/NTH-start-project/
+//- Все примеси в этом файле должны начинаться c имени блока (cell-block)
+mixin cell-block(title, description, materialIconName)
+
+  //- Принимает:
+        title {string} — короткий текст, описывающий блок в общем
+        description {string} — более насыщенный текст,
+          предствляющий более подробное описание блока
+        materialIconName {string} — название иконки material icon
+  //- Вызов:
+        +cell-block('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon') — медиа блок с соотв.
+          текстом и иконкой
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' cell-block_' + modsList[i].trim();
+      }
+    }
+
+  .cell-block&attributes(attributes)
+    +media(title, description)
+      i(class='material-icons cell-block__icon')
+        = materialIconName
