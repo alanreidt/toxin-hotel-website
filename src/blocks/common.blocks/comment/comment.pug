@@ -1,15 +1,44 @@
 .comment
-  .media.comment__header
-    .media__graphics
-      img.comment__avatar(src='../../images/man.png' alt='commentator\'s avatar' width='48')
-    .media__content
-      span.media__title Мурад Сарафанов
-      span.media__description 5 дней назад
+  .comment__head
+    +media('Мурад Сарафанов', '5 дней назад')
+      img(class='comment__avatar' src='../../images/man.png' alt='commentator\'s avatar' width='48')
   .comment__body
-    .like-button
-      input.like-button__input(id='toggle-like' type='checkbox' name='like' value='on' checked)
-    p.comment__text
-      | Великолепный матрас на&nbsp;кровати в&nbsp;основной спальне!
-      | А&nbsp;пуфик вообще потрясающий. И&nbsp;стены, действительно,
-      | шумоподавляющие. Выкрикивал комплименты повару&nbsp;&mdash;
-      | никто не&nbsp;жаловался из&nbsp;соседей.
+    .comment__button
+      +stateful-input(
+        'like button',
+        'type_like-button'
+      )(
+        id='like-button'
+        type='checkbox'
+        name='like'
+        value='on'
+      )
+
+    .comment__content
+      p.comment__text
+        | Великолепный матрас на&nbsp;кровати в&nbsp;основной спальне!
+        | А&nbsp;пуфик вообще потрясающий. И&nbsp;стены, действительно,
+        | шумоподавляющие. Выкрикивал комплименты повару&nbsp;&mdash;
+        | никто не&nbsp;жаловался из&nbsp;соседей.
+
+.comment
+  .comment__head
+    +media('Патрисия Стёклышкова', 'неделю назад')
+      img(class='comment__avatar' src='../../images/girl.png' alt='commentator\'s avatar' width='48')
+  .comment__body
+    .comment__button
+      +stateful-input(
+        'like button',
+        'type_like-button'
+      )(
+        id='like-button'
+        type='checkbox'
+        name='like'
+        value='on'
+      )
+
+    .comment__content
+      p.comment__text
+        | Обслуживание на&nbsp;высоте! Всё аккуратно, чисто.
+        | Завтраки в&nbsp;номер советую заказать,
+        | каждый день новое блюдо и&nbsp;десерт как комплимент

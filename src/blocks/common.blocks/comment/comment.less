@@ -1,14 +1,36 @@
 .comment {
   display: block;
+  width: 100%;
+  margin-bottom: 20px;
 
-  &__header {
+  box-sizing: border-box;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__head {
     margin-bottom: 12px;
+  }
+
+  &__avatar {
+    vertical-align: middle;
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+
+    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.1);
+    box-sizing: border-box;
   }
 
   &__body {
     display: flex;
-    flex-direction: row;
-    // align-content: flex-start;
+    flex-direction: row wrap;
+    // align-items: flex-start;
+  }
+
+  &__button {
+    margin-right: 15px;
   }
 
   &__text {
