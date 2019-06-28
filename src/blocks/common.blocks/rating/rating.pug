@@ -32,4 +32,4 @@ mixin rating(titles=['Gorgeous', 'Good', 'Normal', 'Bad', 'Terrible'])
       )
       label.rating__label(
         for!= attributes.id+ '-' +value
-      ) 5 star
+      )= value + ' star'
