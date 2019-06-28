@@ -1,0 +1,27 @@
+.room-details-body
+  .room-details-body__section
+    span.room-details-body__title
+      | Сведения о номере
+    .room-details-body__content
+      include ../room-details-info/room-details-info.pug
+
+  .room-details-body__section
+    span.room-details-body__title
+      | Впечатления от номера
+
+  .room-details-body__section.room-details-body__section_size_full
+    .room-details-body__header
+      span.room-details-body__title
+        | Отзывы посетителей номера
+      span.room-details-body__sub-title
+        | 2 отзыва
+    .room-details-body__content
+      include ../comment/comment.pug
+
+  .room-details-body__section
+    span.room-details-body__title
+      | Правила
+
+  .room-details-body__section
+    span.room-details-body__title
+      | Отмена

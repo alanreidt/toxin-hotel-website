@@ -1,0 +1,42 @@
+.room-details-body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  width: 100%;
+  padding-right: 5%;
+
+  box-sizing: border-box;
+
+  &__section {
+    // flex: 1 1 50%;
+
+    &_size_full {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__title {
+    .h2-text();
+
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__sub-title {
+    .body-text();
+
+    line-height: 1;
+    color: #colors[dark-shade-50];
+  }
+}
