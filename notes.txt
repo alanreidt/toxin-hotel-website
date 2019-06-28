@@ -1,22 +1,30 @@
 TODO:
   + Change properies with pseudo-class :not(:last-child)
+  - Add vertical-align: middle to material-icons styles
+  - Try to make bulleted list's icons via CSS
+  - Make according elements not selectable on the index (main) page (like logo, or nav link)
   - Height equals 100% must be declared (?) (on container, precicely)
   - Use border-box wherever width or height 100% declared (?)
   - Separate container and block styles (?)
   - Edit inputs' attributes appearance
   - Set up components imports for each page
   - Rule out less variables work
-  - Put content text in Typograph
+  - Put content text in Typograph (or use parcel plugin)
   - Styles for position have to be applied to separate element (that's <div> often)
   - Provide regular expression patterns for Forms elements
   - Add cursor:pointer to interactive elements
   - Edit label text alignment in all files
   - Set up input-field_dropdown to work with label text
-    - Change all occurances of input-field to new settings
+    - Change all occurances of input-field to new settings (ruine dropdown's icon)
   - Align-items property of flex container can fix child's vertical alignment
     (text content, in particular)
+    - Use align-items: baseline for text elements
 
 TODO DOM:
+  comment +
+  rename room-details-content to room-details-body and vice versa +
+  cell blocks (components.pug)
+  like-button
 
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
