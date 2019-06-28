@@ -9,6 +9,7 @@
   vertical-align: middle;
 
   margin-right: 20px;
+  box-sizing: border-box;
 
   &:last-child {
     margin-right: 0;
@@ -18,6 +19,8 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
+
+    cursor: pointer;
   }
 
   &__input {
@@ -37,6 +40,7 @@
     border: @stateful-input-border-width solid #colors[dark-shade-25];
     // border-radius: 50%;
     border-radius: 10px;
+    cursor: pointer;
 
     box-sizing: border-box;
 
@@ -54,6 +58,7 @@
     }
   }
 
+  &__input::after,
   &__input::before {
     content: '';
     position: absolute;
@@ -102,5 +107,60 @@
       // express through left for work of transition
       left: @stateful-input-toggle-width - @stateful-input-inner-elem-diameter - 2 * @stateful-input-border-width - @stateful-input-padding;
     }
+  }
+}
+
+.stateful-input_type_like-button {
+  margin-right: 0;
+
+  & .stateful-input__input {
+    width: @stateful-input-toggle-width;
+    margin-right: 0;
+
+    color: #colors[dark-shade-25];
+
+    &::after,
+    &::before {
+      color: inherit;
+
+      transform: translateY(-50%);
+      transition: all 0.15s ease;
+    }
+
+    &::before {
+      .material-icons();
+
+      content: '\e87e';
+
+      left: @stateful-input-padding;
+      font-size: 12px;
+      border-radius: 0;
+    }
+
+    &::after {
+      .body-text();
+
+      content: '12';
+      right: 10px;
+      width: auto;
+      height: auto;
+
+      font-size: 10px;
+      color: inherit;
+    }
+
+    &:checked {
+      color: #colors[primary];
+    }
+
+    &:checked::before {
+        content: '\e87d';
+
+        background-image: none;
+    }
+  }
+
+  & .stateful-input__text {
+    .visually-hidden();
   }
 }
