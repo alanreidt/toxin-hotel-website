@@ -34,13 +34,20 @@ block body
   section.section
     h2.section__title toggle
     .section__row
-      +stateful-input('Получать спецпредложения', 'type_toggle')(id='toggle-mailing' type='checkbox' name='mailing' value='on' checked)
-      +stateful-input('Получать спецпредложения', 'type_toggle')(id='toggle-mailing-unchecked' type='checkbox' name='mailing' value='on')
+      +stateful-input('Получать спецпредложения', 'type_toggle')(id='toggle-mailing' type='checkbox' name='mailing' value='on')
 
   section.section
     h2.section__title like button
     .section__row
-      include ../../blocks/common.blocks/like-button/like-button.pug
+      +stateful-input(
+        'like button',
+        'type_like-button'
+      )(
+        id='like-button'
+        type='checkbox'
+        name='like-button'
+        value='on'
+      )
 
   section.section
     h2.section__title rate button
