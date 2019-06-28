@@ -1,38 +1,42 @@
 .room-details-content {
-  display: block;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 
-  background-color: #fff;
+  width: 100%;
+  padding-right: 5%;
 
   box-sizing: border-box;
 
-  &__container {
-    .container();
+  &__section {
+    // flex: 1 1 50%;
 
-    height: 100%;
-    box-sizing: border-box;
+    &_size_full {
+      flex: 0 0 100%;
+    }
   }
 
-  &__inner {
+  &__header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: flex-start;
-
-    width: 100%;
-    height: 100%;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    box-sizing: border-box;
+    align-items: baseline;
   }
 
-  &__item {
-    flex: 1 1 0;
+  &__title {
+    .h2-text();
+
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
-  &__calculation-box {
-    width: 100%;
-    max-width: 380px;
+  &__sub-title {
+    .body-text();
+
+    line-height: 1;
+    color: #colors[dark-shade-50];
   }
 }

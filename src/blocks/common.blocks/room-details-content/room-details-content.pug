@@ -1,8 +1,27 @@
 .room-details-content
-  .room-details-content__container
-    .room-details-content__inner
-      .room-details-content__item
-        include ../room-details-body/room-details-body.pug
+  .room-details-content__section
+    span.room-details-content__title
+      | Сведения о номере
+    .room-details-content__content
+      include ../room-details-info/room-details-info.pug
 
-      .room-details-content__item.room-details-content__calculation-box
-        include ../calculation-box/calculation-box.pug
+  .room-details-content__section
+    span.room-details-content__title
+      | Впечатления от номера
+
+  .room-details-content__section.room-details-content__section_size_full
+    .room-details-content__header
+      span.room-details-content__title
+        | Отзывы посетителей номера
+      span.room-details-content__sub-title
+        | 2 отзыва
+    .room-details-content__content
+      include ../comment/comment.pug
+
+  .room-details-content__section
+    span.room-details-content__title
+      | Правила
+
+  .room-details-content__section
+    span.room-details-content__title
+      | Отмена
