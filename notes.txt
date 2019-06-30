@@ -1,5 +1,6 @@
 TODO:
   + Change properies with pseudo-class :not(:last-child)
+  - Get rid of ids for labels
   - Add vertical-align: middle to material-icons styles
   - Try to make bulleted list's icons via CSS
   - Make according elements not selectable on the index (main) page (like logo, or nav link)
@@ -21,10 +22,6 @@ TODO:
     - Use align-items: baseline for text elements
 
 TODO DOM:
-  comment +
-  rename room-details-content to room-details-body and vice versa +
-  cell blocks (components.pug)
-  like-button
 
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
@@ -35,3 +32,4 @@ Toxin template logs:
   TODO:
     - Divide text with different styles
     - Remark copyright text
+    - Divide text of the pie chart's legend list
