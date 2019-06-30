@@ -1,4 +1,17 @@
-ul.bullet-list
-  li.bullet-list__item Нельзя с питомцами
-  li.bullet-list__item Без вечеринок и мероприятий
-  li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00
+//- This is a modification of code from https://github.com/nicothin/NTH-start-project/
+//- Все примеси в этом файле должны начинаться c имени блока (bullet-list)
+mixin bullet-list(items)
+
+  //- Принимает:
+        items {array} — массив из текста для каждой строки списка
+
+  //- Вызов:
+        +bullet-list([
+          'Яблоки',
+          'Груши',
+          'Бананы',
+        ]) — создает блок 3-мя строками и соответствующим текстом
+
+  ul.bullet-list
+    each item in items
+      li.bullet-list__item!= item
