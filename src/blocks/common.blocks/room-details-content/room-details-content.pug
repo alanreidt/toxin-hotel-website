@@ -21,7 +21,20 @@
   .room-details-content__section
     span.room-details-content__title
       | Правила
+    .room-details-content__content
+      +bullet-list([
+        'Нельзя с&nbsp;питомцами',
+        'Без вечеринок и&nbsp;мероприятий',
+        'Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00'
+      ])
 
   .room-details-content__section
     span.room-details-content__title
       | Отмена
+    .room-details-content__content
+      p.room-details-content__text
+        | Бесплатная отмена в&nbsp;течение 48&nbsp;ч.
+        | После этого при отмене не&nbsp;позднее чем
+        | за&nbsp;5&nbsp;дн.&nbsp;до&nbsp;прибытия
+        | вы&nbsp;получите полный возврат за&nbsp;вычетом
+        | сбора за&nbsp;услуги.

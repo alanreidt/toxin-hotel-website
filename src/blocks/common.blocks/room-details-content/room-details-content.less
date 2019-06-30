@@ -4,12 +4,12 @@
   justify-content: space-between;
 
   width: 100%;
-  padding-right: 5%;
+  padding-right: 10%;
 
   box-sizing: border-box;
 
   &__section {
-    // flex: 1 1 50%;
+    flex: 1 1 50%;
 
     &_size_full {
       flex: 0 0 100%;
@@ -38,5 +38,12 @@
 
     line-height: 1;
     color: #colors[dark-shade-50];
+  }
+
+  &__text {
+    .body-text();
+
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
