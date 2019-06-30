@@ -1,3 +1,4 @@
 TODO:
   - Realize like a mixin
-    - Rule out problem with likes' quantity
+    - Rule out problem with likes' quantity text
+    and attributes uniqeness
