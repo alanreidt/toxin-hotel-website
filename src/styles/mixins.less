@@ -71,6 +71,14 @@
 
 /*  */
 
+.block-default-styles() {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+}
+
 .visually-hidden() {
 	position: absolute;
 
@@ -88,14 +96,12 @@
 }
 
 .container() {
-  width: 100%;
-  // max-width: @site-width - 2 * @site-padding;
+  .block-default-styles();
+
   max-width: @site-width;
   margin: auto;
   padding-left: @site-padding;
   padding-right: @site-padding;
-
-  box-sizing: border-box;
 }
 
 // realize like an independent block, if it still actual
@@ -192,6 +198,13 @@
   &::-ms-check {
     display: none;
   }
+}
+
+.list-styles-reset() {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 .fieldset-styles-reset() {
