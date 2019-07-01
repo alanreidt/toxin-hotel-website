@@ -1,24 +1,24 @@
-//- maybe page__topline must be separate element (html tag)
 header.topline
-  //- or use prepproc capabilities instead of general class
-  .topline__inner
-    //- or use prepproc capabilities instead of general class (no)
-    h1.topline__semantic-title toxin
+  .topline__container
+    .topline__inner
+      h1.topline__semantic-title toxin
 
-    //- take into account footer's logo and interactive logo (not from index page)
-    //- maybe topline__logo must be separate element (html tag)
+      //- take into account footer's logo and interactive logo (not from index page)
+      //- maybe topline__logo must be separate element (html tag)
 
-    .logo
-      //- add styles for alt atr (using logo__img class for that)
-      img(
-        class='logo__img'
-        src='../../blocks/common.blocks/logo/logo.svg'
-        alt='toxin'
-        width='106'
-        height='40'
-      )
+      .logo
+        //- add styles for alt atr (using logo__img class for that)
+        img(
+          class='logo__img'
+          src='../../blocks/common.blocks/logo/logo.svg'
+          alt='toxin'
+          width='106'
+          height='40'
+        )
 
-    //- reception — a place where you can find navigation, entrance (login, register), profile info (Full Name and etc.)
-    .topline__reception
-      include ../topline-nav/topline-nav.pug
-      include ../entrance/entrance.pug
+      //- reception — a place where you can find navigation, entrance (login, register), profile info (Full Name and etc.)
+      .topline__reception
+        .topline__topline-nav
+          include ../topline-nav/topline-nav.pug
+        .topline__entrance
+          include ../entrance/entrance.pug

@@ -1,16 +1,48 @@
+@username-height: 30px;
+
 .entrance {
+
   &__item {
     display: none;
+
+    &_is-active {
+      display: block;
+    }
   }
 
-  &__item_active {
-    display: block;
+  &__button {
+    @button-height: 34px;
+
+    height: @button-height;
+    line-height: @button-height - 2 * @button-border-width;
+
+    &_main {
+      margin-left: 20px;
+
+      line-height: @button-height;
+    }
   }
 
-  &__user-name {
+  &__username {
     .body-text();
 
-    line-height: 1.21429; /* 17px = 14px * 1.21429 */
+    display: block;
+    height: @username-height;
+    padding-left: 30px;
+
+    border-left: 1px solid rgba(31, 32, 65, 0.1);
+
+    box-sizing: border-box;
+
+  }
+
+  &__username-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    line-height: @username-height;
     color: #colors[dark-shade-50];
     text-transform: capitalize;
   }

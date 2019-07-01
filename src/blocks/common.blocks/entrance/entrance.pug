@@ -1,14 +1,16 @@
-.entrance.topline__entrance
-  //- .entrance__item
-  .entrance__item.entrance__item_active
+-
+  var userName = 'cosmin negoita';
+
+.entrance
+  .entrance__item.entrance__item_is-active
     +button('Войти', 'secondary')(
       href='/sign-in'
-      class='topline__button'
+      class='entrance__button'
     )
     +button('Зарегистрироваться', 'main')(
       href='/registration'
-      class='topline__button topline__button_main'
+      class='entrance__button entrance__button_main'
     )
-  //- .entrance__item.entrance__item_active
   .entrance__item
-    p.entrance__user-name.topline__user-name cosmin negoita
+    .entrance__username
+      span.entrance__username-text= userName

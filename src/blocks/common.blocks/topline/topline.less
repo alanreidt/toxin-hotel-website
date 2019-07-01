@@ -5,22 +5,25 @@
   */
 
 @topline-height: 70px;
-@topline-horizontal-padding: @site-padding;
-@topline-vertical-padding: 15px;
 
 .topline {
+  .block-default-styles();
+
   position: relative;
   z-index: 700;
 
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
 
-  &__inner {
+  &__container {
     .container();
+  }
+
+  &__inner {
+    .block-default-styles();
 
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     height: @topline-height;
@@ -32,39 +35,11 @@
 
   &__reception {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: inherit;
+    flex-flow: row nowrap;
+    align-items: center;
   }
 
   &__entrance {
     margin-left: 15px;
-  }
-
-  &__user-name {
-    @user-name-height: 30px;
-
-    margin-top: 0;
-    margin-bottom: 0;
-
-    height: @user-name-height;
-    line-height: @user-name-height;
-
-    padding-left: 30px;
-    border-left: 1px solid rgba(31, 32, 65, 0.1);
-    box-sizing: border-box;
-  }
-
-  &__button {
-    @button-height: 34px;
-
-    height: @button-height;
-    line-height: @button-height - 2 * @button-border-width;
-
-    &_main {
-      margin-left: 20px;
-
-      line-height: @button-height;
-    }
   }
 }
