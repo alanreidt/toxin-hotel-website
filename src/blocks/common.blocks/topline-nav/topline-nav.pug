@@ -1,6 +1,5 @@
 //- take into account footer's nav (with several sections) and simple lists (lists without nav)
 nav.topline-nav
-  //- visually hidden usually
   h2.topline-nav__semantic-title main navigation
 
   ul.topline-nav__list
@@ -18,7 +17,10 @@ nav.topline-nav
       a(
         href='change-me'
         class='topline-nav__link'
-      ) Услуги
+      )
+        | Услуги
+        i(class='material-icons topline-nav__link-icon' aria-hidden='true')
+          | expand_more
     li.topline-nav__item
       a(
         href='change-me'
@@ -33,4 +35,7 @@ nav.topline-nav
       a(
         href='change-me'
         class='topline-nav__link'
-      ) Соглашения
+      )
+        | Соглашения
+        i(class='material-icons topline-nav__link-icon' aria-hidden='true')
+          | expand_more

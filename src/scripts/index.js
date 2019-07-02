@@ -27,6 +27,21 @@ $(document).ready(function () {
   $.datepicker.setDefaults($.datepicker.regional['ru']);
 
   $(function () {
+    var menu = $('#menu');
+    var menuButton = $('#menu-button');
+
+    $('.page').on('click', function () {
+      // menu.removeClass('topline__reception_is-active');
+      // menuButton.removeClass('topline__menu_is-active');
+    });
+
+    $(menuButton).on('click', function () {
+      menu.toggleClass('topline__reception_is-active');
+      menuButton.toggleClass('topline__menu_is-active');
+    });
+  });
+
+  $(function () {
     var dropDown = $('#facilities-additional-dropdown');
 
     $('#checkbox-dropdown').on('change', function () {

@@ -3,14 +3,17 @@
 
 .entrance
   .entrance__item.entrance__item_is-active
-    +button('Войти', 'secondary')(
-      href='/sign-in'
-      class='entrance__button'
-    )
-    +button('Зарегистрироваться', 'main')(
-      href='/registration'
-      class='entrance__button entrance__button_main'
-    )
+    .entrance__button-group
+      .entrance__button-wrapper
+        +button('Войти', 'secondary')(
+          href='/sign-in'
+          class='entrance__button'
+        )
+      .entrance__button-wrapper
+        +button('Зарегистрироваться', 'main')(
+          href='/registration'
+          class='entrance__button entrance__button_main'
+        )
   .entrance__item
-    .entrance__username
-      span.entrance__username-text= userName
+    .entrance__username-wrapper
+      span.entrance__username= userName

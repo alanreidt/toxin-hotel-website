@@ -16,8 +16,12 @@ header.topline
           height='40'
         )
 
+      .topline__menu#menu-button
+        button(type='button').topline__menu-button
+          i.material-icons.topline__menu-icon menu
+
       //- reception — a place where you can find navigation, entrance (login, register), profile info (Full Name and etc.)
-      .topline__reception
+      .topline__reception#menu
         .topline__topline-nav
           include ../topline-nav/topline-nav.pug
         .topline__entrance

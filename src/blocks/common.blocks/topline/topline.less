@@ -33,13 +33,84 @@
     .visually-hidden();
   }
 
+  &__menu {
+    display: none;
+
+    @media (max-width: 1050px) {
+      display: block;
+
+      &_is-active {
+        position: fixed;
+        z-index: 900;
+        top: 18px;
+        right: 15px;
+      }
+    }
+  }
+
+  &__menu-button {
+    .not-selectable();
+
+    // reset <button>, <input> styles
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+
+    // add standart behaviour of a <button> to compatibility with <a>
+    // isolate component's rules from external influence
+    display: inline-block;
+    vertical-align: middle;
+
+    // add standart behaviour of a <button> to compatibility with <a>
+    // isolate component's rules from external influence
+    box-sizing: border-box;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &__menu-icon {
+    vertical-align: middle;
+    color: #colors[dark-shade-50];
+  }
+
   &__reception {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+
+    background-color: #fff;
+
+    @media (max-width: 1050px) {
+      position: fixed;
+      z-index: 800;
+      top: 0;
+      right: 0;
+
+      display: none;
+
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: stretch;
+      width: 40vw;
+      min-width: 260px;
+      height: 100vh;
+
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+
+      &_is-active {
+        display: flex;
+      }
+    }
   }
 
   &__entrance {
     margin-left: 15px;
+
+    @media (max-width: 1050px) {
+      margin-left: 0;
+      margin-top: 20px;
+    }
   }
 }
