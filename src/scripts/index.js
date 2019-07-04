@@ -23,23 +23,9 @@ $(document).ready(function () {
   require('../blocks/common.blocks/search-box/__dropdown/search-box__dropdown.js');
   require('../blocks/common.blocks/calculation-box/__datepicker/calculation-box__datepicker.js');
   require('../blocks/common.blocks/calculation-box/__dropdown/calculation-box__dropdown.js');
+  require('../blocks/common.blocks/topline/topline.js');
 
   $.datepicker.setDefaults($.datepicker.regional['ru']);
-
-  $(function () {
-    var menu = $('#menu');
-    var menuButton = $('#menu-button');
-
-    $('.page').on('click', function () {
-      // menu.removeClass('topline__reception_is-active');
-      // menuButton.removeClass('topline__menu_is-active');
-    });
-
-    $(menuButton).on('click', function () {
-      menu.toggleClass('topline__reception_is-active');
-      menuButton.toggleClass('topline__menu_is-active');
-    });
-  });
 
   $(function () {
     var dropDown = $('#facilities-additional-dropdown');

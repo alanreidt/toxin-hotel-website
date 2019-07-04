@@ -1,0 +1,5 @@
+TODO:
+  - Change menu-button to animated one
+  - Made menu to close when page is clicked
+  - Made menu full-screen on small devices
+  - Edit appearance on mobile devices
