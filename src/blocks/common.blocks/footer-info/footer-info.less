@@ -1,0 +1,36 @@
+.footer-info {
+  .block-default-styles();
+
+  border-top: 1px solid rgba(31, 32, 65, 0.1);
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+
+  &__container {
+    .container();
+  }
+
+  &__inner {
+    .block-default-styles();
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__item {
+    flex: 0 0 260px;
+    margin-right: 60px;
+
+    text-align: left;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__footer-nav {
+    flex: 1 1 485px;
+  }
+}

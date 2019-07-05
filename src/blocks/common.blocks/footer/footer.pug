@@ -1,23 +1,5 @@
 footer.footer
-  .footer__main
-    .footer__item
-      .logo
-        img(
-          class='logo__img'
-          src='../../blocks/common.blocks/logo/logo.svg'
-          alt='toxin logo'
-          width='106'
-          height='40'
-        )
-        p.logo__description
-          | Бронирование номеров в&nbsp;лучшем
-          | отеле 2019 года по&nbsp;версии
-          | ассоциации &laquo;Отельные взгляды&raquo;
-
-    .footer__item.footer__footer-nav
-      include ../footer-nav/footer-nav.pug
-
-    .footer__item
-      include ../subscription/subscription.pug
-
-  include ../footer-titres/footer-titres.pug
+  .footer__footer-info
+    include ../footer-info/footer-info.pug
+  .footer__copyright
+    include ../footer-titres/footer-titres.pug
