@@ -29,6 +29,11 @@ TODO:
   - Provide regular expression patterns for Forms elements
 
 TODO DOM:
+  footer rv
+    refactoring
+      footer-info +
+      footer-titres
+    rv
 
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
