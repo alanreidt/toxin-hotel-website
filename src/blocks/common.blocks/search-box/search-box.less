@@ -1,16 +1,16 @@
 .search-box {
   #box.styles();
 
-  width: 100%;
-  max-width: 380px;
-  box-sizing: border-box;
-
   &__row {
     #box.row();
   }
 
   &__title {
     #box.title();
+
+    @media (max-width: 340px) {
+      text-align: center;
+    }
   }
 
   &__input-text {

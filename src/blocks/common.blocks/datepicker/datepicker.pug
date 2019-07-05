@@ -8,10 +8,31 @@ mixin datepicker(name)
         +datepicker('search-box') — создает блок datepicker с уникальным именем search-box
 
   .datepicker
-    .datepicker__col
-      span.datepicker__input-text Прибытие
-      +input-field('dropdown')(class='js-' + name + '__date-input' + ' js-input-masked-date', type='text', name= name + '-date-from', id= name + '-date-from', placeholder='ДД.ММ.ГГГГ', maxlength='10', autocomplete='', spellcheck='' required)
-    .datepicker__col
-      span.datepicker__input-text Выезд
-      +input-field('dropdown')(class='js-' + name + '__date-input' + ' js-input-masked-date', type='text', name= name + '-date-to', id= name + '-date-to', placeholder='ДД.ММ.ГГГГ', maxlength='10', autocomplete='', spellcheck='' required)
+    .datepicker__date-input
+      .datepicker__col
+        span.datepicker__input-text Прибытие
+        +input-field('dropdown')(
+          class='js-' + name + '__date-input' + ' js-input-masked-date'
+          type='text'
+          name= name + '-date-from'
+          id= name + '-date-from'
+          placeholder='ДД.ММ.ГГГГ'
+          maxlength='10'
+          autocomplete=''
+          spellcheck=''
+          required
+        )
+      .datepicker__col
+        span.datepicker__input-text Выезд
+        +input-field('dropdown')(
+          class='js-' + name + '__date-input' + ' js-input-masked-date'
+          type='text'
+          name= name + '-date-to'
+          id= name + '-date-to'
+          placeholder='ДД.ММ.ГГГГ'
+          maxlength='10'
+          autocomplete=''
+          spellcheck=''
+          required
+        )
     .datepicker__date-output(id='js-' + name + '__date-output')

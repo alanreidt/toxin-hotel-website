@@ -1,4 +1,6 @@
 TODO:
+  - Edit position of date-output on mobile devices
+  - Edit appearance on mobile devices
 
   Setup:
     + Language

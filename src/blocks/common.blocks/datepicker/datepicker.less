@@ -2,13 +2,32 @@
   position: relative;
   z-index: 100;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  &__date-input {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    @media (max-width: 380px - 4px + 2 * @site-padding) {
+      flex-flow: column nowrap;
+    }
+  }
 
   &__col {
-    width: 150px;
+    flex: 1 0 0;
+    margin-right: 15px;
+
+    @media (max-width: 380px - 4px + 2 * @site-padding) {
+      margin-right: 0;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__input-text {
