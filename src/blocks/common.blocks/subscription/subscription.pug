@@ -1,17 +1,18 @@
 aside.section.subscription
-  h3.section__title.subscription__title Подписка
-  p.subscription__description
-    | Получайте специальные
-    | предложения и&nbsp;новости сервиса
-  form.subscription__form(method='get' name='footer-form' autocomplete='on')
-    +input-field('subscription')(
-      type='email'
-      name='email'
-      id='email'
-      placeholder='Email'
-      maxlength='24'
-      autocomplete='email'
-      spellcheck='false'
-      required
-    )
+  .section.subscription__inner
+    h3.section__title.subscription__title Подписка
+    p.subscription__description
+      | Получайте специальные
+      | предложения и&nbsp;новости сервиса
+    form.subscription__form(name='footer-form' autocomplete='on')
+      +input-field('subscription')(
+        type='email'
+        name='email'
+        id='email'
+        placeholder='Email'
+        maxlength='24'
+        autocomplete='email'
+        spellcheck='false'
+        required
+      )
 

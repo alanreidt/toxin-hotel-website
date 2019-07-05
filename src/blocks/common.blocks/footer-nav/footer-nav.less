@@ -1,14 +1,18 @@
 .footer-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  .block-default-styles();
+  .not-selectable();
+
+  &__inner {
+    .block-default-styles();
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 
   &__semantic-title {
     .visually-hidden();
   }
-
-  &__section {}
 
   &__title {
     .h3-text();
@@ -18,10 +22,7 @@
   }
 
   &__list {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style-type: none;
+    .list-styles-reset();
   }
 
   &__link {
@@ -36,7 +37,6 @@
 
     line-height: 1.21429; /* 17px = 14px * 1.21429 */
     color: #colors[dark-shade-50];
-    // text-transform: capitalize;
 
     &:hover,
     &:focus {
