@@ -8,6 +8,47 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+
+    @media (max-width: 825px) {
+      justify-content: space-around;
+    }
+
+    @media (max-width: 490px) {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__section {
+    margin-right: 30px;
+
+    &_for_navigation {
+      @media (max-width: 360px) {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+      }
+    }
+
+    &_for_about-us {
+      @media (max-width: 490px) {
+        margin-right: 0;
+      }
+
+      @media (max-width: 360px) {
+        margin-top: 30px;
+        text-align: center;
+      }
+    }
+
+    &_for_support {
+      margin-right: 0;
+
+      @media (max-width: 490px) {
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
 
   &__semantic-title {

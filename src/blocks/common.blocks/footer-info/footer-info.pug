@@ -1,7 +1,7 @@
 .footer-info
   .footer-info__container
     .footer-info__inner
-      .footer-info__item
+      .footer-info__item.footer-info__item_for_logo
         .logo
           img(
             class='logo__img'
@@ -13,9 +13,11 @@
             | Бронирование номеров в&nbsp;лучшем
             | отеле 2019 года по&nbsp;версии
             | ассоциации &laquo;Отельные взгляды&raquo;
+        .footer-info__socials
+          include ../socials/socials.pug
 
-      .footer-info__item.footer-info__footer-nav
+      .footer-info__item.footer-info__item_for_footer-nav
         include ../footer-nav/footer-nav.pug
 
-      .footer-info__item
+      .footer-info__item.footer-info__item_for_subscription
         include ../subscription/subscription.pug
