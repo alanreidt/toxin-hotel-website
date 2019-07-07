@@ -23,13 +23,13 @@
       padding-bottom: 90px;
     }
 
-    @media (max-width: 1174px) {
+    @media (max-width: 1157px) {
       justify-content: space-evenly;
       padding-top: 75px;
       padding-bottom: 75px;
     }
 
-    @media (max-width: 825px) {
+    @media (max-width: 833px) {
       padding-top: 65px;
       padding-bottom: 65px;
     }
@@ -39,7 +39,7 @@
       padding-bottom: 55px;
     }
 
-    @media (max-width: 490px) {
+    @media (max-width: 517px) {
       padding-top: 45px;
       padding-bottom: 45px;
     }
@@ -48,74 +48,81 @@
   &__item {
     flex: 0 0 260px;
     margin-right: 60px;
+  }
 
-    text-align: left;
+  &__item_for_logo {
+    @media (max-width: 1157px) {
+      flex: 0 1 560px;
+      order: 3;
+      margin: 40px auto 0;
+    }
 
-    &:last-child {
+    @media (max-width: 833px) {
+      flex: 1 1 260px;
+      order: 2;
+      max-width: 320px;
+      margin: 0;
+      margin-right: 5%;
+    }
+
+    @media (max-width: 577px) {
+      flex: 1 1 100%;
+      order: 3;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item_for_footer-nav {
+    flex: 1 1 auto;
+    max-width: 540px;
+
+    @media (max-width: 1157px) {
+      margin-right: 7%;
+    }
+
+    @media (max-width: 833px) {
+      flex-basis: 100%;
+      max-width: 100%;
       margin-right: 0;
+      margin-bottom: 50px;
     }
 
-    &_for_logo {
-      @media (max-width: 1174px) {
-        flex: 0 1 560px;
-        order: 3;
-        margin: 40px auto 0;
-        text-align: center;
-      }
+    @media (max-width: 577px) {
+      margin-bottom: 40px;
+    }
+  }
 
-      @media (max-width: 825px) {
-        flex: 1 1 260px;
-        max-width: 320px;
-        order: 2;
-        margin: 0;
-        margin-right: 5%;
-        text-align: left;
-      }
+  &__item_for_subscription {
+    margin-right: 0;
 
-      @media (max-width: 577px) {
-        flex: 1 1 100%;
-        max-width: 500px;
-        order: 3;
-        margin: 0 auto;
-        text-align: center;
-      }
+    @media (max-width: 1157px) {
+      flex: 1 1 260px;
+      max-width: 320px;
     }
 
-    &_for_footer-nav {
-      flex: 1 1 480px;
-      max-width: 540px;
-
-      @media (max-width: 1174px) {
-        margin-right: 7%;
-      }
-
-      @media (max-width: 825px) {
-        flex-basis: 100%;
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 50px;
-      }
-
-      @media (max-width: 577px) {
-        margin-bottom: 40px;
-      }
+    @media (max-width: 833px) {
+      order: 3;
     }
 
-    &_for_subscription {
-      @media (max-width: 1174px) {
-        flex: 1 1 260px;
-        max-width: 320px;
-      }
+    @media (max-width: 577px) {
+      order: 2;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
 
-      @media (max-width: 825px) {
-        order: 3;
-      }
+  &__logo {
+    @media (max-width: 1157px) {
+      text-align: center;
+    }
 
-      @media (max-width: 577px) {
-        order: 2;
-        margin-bottom: 40px;
-        text-align: center;
-      }
+    @media (max-width: 833px) {
+      text-align: left;
+    }
+
+    @media (max-width: 577px) {
+      text-align: center;
     }
   }
 

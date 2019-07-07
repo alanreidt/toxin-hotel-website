@@ -6,14 +6,15 @@ header.topline
       //- take into account footer's logo and interactive logo (not from index page)
       //- maybe topline__logo must be separate element (html tag)
 
-      .logo
-        //- add styles for alt atr (using logo__img class for that)
-        img(
-          class='logo__img'
-          src='../../blocks/common.blocks/logo/logo.svg'
-          alt='toxin'
-          height='40'
-        )
+      .topline__logo
+        .logo
+          //- add styles for alt atr (using logo__img class for that)
+          img(
+            class='logo__img'
+            src='../../blocks/common.blocks/logo/logo.svg'
+            alt='toxin'
+            height='40'
+          )
 
       .topline__menu#menu-button
         button(type='button').topline__menu-button
