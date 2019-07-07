@@ -1,12 +1,17 @@
 .socials {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style-type: none;
+  .block-default-styles();
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  &__inner {
+    .block-default-styles();
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  &__list {
+    .list-styles-reset();
+  }
 
   &__item {
     display: inline-block;
