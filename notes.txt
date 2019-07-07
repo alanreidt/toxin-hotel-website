@@ -1,6 +1,7 @@
 TODO:
   + Change properies with pseudo-class :not(:last-child)
 
+  - Replace less variables with css custom properies
   - Rule out less variables work
   - Add cursor:pointer to interactive elements
   - Make blocks' text not selectable where neaded
@@ -32,8 +33,20 @@ TODO DOM:
   footer rv
     refactoring
       footer-info +
-      footer-titres
+      footer-titres +
     rv
+      footer-info
+        rv code +
+        refactor code
+          logo + ///
+          nav
+          subscription
+        change paddings
+        isolate topline-nav block
+        rule out flex basis
+      footer-titres
+        rv code +
+        refactor code
 
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
@@ -45,3 +58,4 @@ Toxin template logs:
     - Divide text with different styles
     - Remark copyright text
     - Divide text of the pie chart's legend list
+    - Fix copyright date
