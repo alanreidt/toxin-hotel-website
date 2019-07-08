@@ -1,0 +1,5 @@
+TODO:
+  - Think about arrangement on @media (max-width: 833px) —
+    maybe it's better to use space-evenly
+  - Think about arrangement on @media (max-width: 517px) —
+    maybe it's better to wrap elements in a column

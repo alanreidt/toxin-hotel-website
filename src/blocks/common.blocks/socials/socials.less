@@ -13,6 +13,10 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 20px;
+
+    @media (max-width: 640px) {
+      margin-right: 15px;
+    }
   }
 
   &__item:last-child {
@@ -39,8 +43,16 @@
 
     background: no-repeat center;
 
+    @media (max-width: 640px) {
+      background-size: 20px 20px;
+    }
+
     &_tw {
       background-image: url(../blocks/common.blocks/socials/socials__icon_tw.svg);
+
+      @media (max-width: 640px) {
+        background-size: 22px 18px;
+      }
     }
 
     &_fb {

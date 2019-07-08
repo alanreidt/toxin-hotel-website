@@ -1,0 +1,5 @@
+TODO:
+  - Think about arrangement on @media (max-width: 1157px) —
+  if a gap between footer-nav and footer-subscription would be
+  annoying, then align elements using flex-start and margin: auto
+  on sides

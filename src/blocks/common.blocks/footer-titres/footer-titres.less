@@ -1,7 +1,11 @@
 .footer-titres {
   .block-default-styles();
 
-  height: 70px;
+  height: var(--topline-height);
+
+  @media (max-width: 577px) {
+    height: auto;
+  }
 
   &__container {
     .container();
@@ -18,16 +22,25 @@
     @media (max-width: 577px) {
       justify-content: center;
       text-align: center;
+
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
   }
 
   &__copyright {
     .body-text();
 
-    line-height: 1.21429; /* 17px = 14px * 1.21429 */
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+
+    @media (max-width: 640px) {
+      font-size: 13px;
+    }
   }
 
-  &__socials{
+  &__socials {
     @media (max-width: 577px) {
       display: none;
     }
