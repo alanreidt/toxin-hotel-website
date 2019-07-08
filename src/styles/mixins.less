@@ -90,7 +90,10 @@
 
 	white-space: nowrap;
 
-	clip-path: inset(100%);
+  clip-path: inset(100%);
+  // when the rule is off — input's
+  // visibility is broken (without .default-styles-reset)
+  // clip: rect(0 0 0 0);
 	overflow: hidden;
 }
 
