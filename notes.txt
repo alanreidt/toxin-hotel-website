@@ -3,6 +3,7 @@ TODO:
 
   - Replace less variables with css custom properies
   - Rule out less variables work
+  - Rule out flex basis work
   - Add cursor:pointer to interactive elements
   - Make blocks' text not selectable where neaded
   - Edit blocks (ids and names attrs) taking into account imports
@@ -30,23 +31,7 @@ TODO:
   - Provide regular expression patterns for Forms elements
 
 TODO DOM:
-  footer rv
-    refactoring
-      footer-info +
-      footer-titres +
-    rv
-      footer-info
-        rv code +
-        refactor code
-          logo + ///
-          nav
-          subscription
-        change paddings
-        isolate topline-nav block
-        rule out flex basis
-      footer-titres
-        rv code +
-        refactor code
+
 
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius

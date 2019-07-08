@@ -3,6 +3,10 @@
 
   height: 70px;
 
+  @media (max-width: 577px) {
+    height: auto;
+  }
+
   &__container {
     .container();
   }
@@ -24,10 +28,17 @@
   &__copyright {
     .body-text();
 
-    line-height: 1.21429; /* 17px = 14px * 1.21429 */
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+
+    @media (max-width: 577px) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
 
-  &__socials{
+  &__socials {
     @media (max-width: 577px) {
       display: none;
     }
