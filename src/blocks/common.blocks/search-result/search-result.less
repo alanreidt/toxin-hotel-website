@@ -1,8 +1,13 @@
 .search-result {
+  .block-default-styles();
+
   display: flex;
   flex-flow: column nowrap;
   // justify-content: space-between;
-  height: 100%;
+
+  &__content {
+    margin-bottom: 40px;
+  }
 
   &__title {
     .h1-text();
@@ -13,12 +18,8 @@
 
   &__grid {
     display: grid;
-    // justify-content: flex-end;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    // without grid- prefix?
     grid-gap: 20px 12px;
-
-    padding-bottom: 40px;
   }
 
   &__pagination {

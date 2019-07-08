@@ -1,12 +1,11 @@
 .pagination-display {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style-type: none;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  &__list {
+    .list-styles-reset();
+
+    display: flex;
+    flex-flow: row nowrap;
+  }
 
   &__link {
     .body-text();

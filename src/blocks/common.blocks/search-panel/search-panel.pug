@@ -1,5 +1,5 @@
 .search-panel
-  form(name='search-panel-form')
+  form(name='search-panel-form' autocomplete='on')
     .search-panel__row
       .search-panel__item
         span.search-panel__input-text
@@ -33,7 +33,7 @@
       include ../../common.blocks/range-slider/range-slider.pug
 
     .search-panel__row
-      span.search-panel__input-text.search-panel__input-text_for-checkbox
+      span.search-panel__input-text.search-panel__input-text_for_checkbox
         | Позволения номера
       fieldset.search-panel__fieldset
         +checkbox('Можно курить')(
@@ -50,7 +50,7 @@
         )
 
     .search-panel__row
-      span.search-panel__input-text.search-panel__input-text_for-checkbox
+      span.search-panel__input-text.search-panel__input-text_for_checkbox
         | Доступность
       fieldset.search-panel__fieldset
         +checkbox(
