@@ -78,7 +78,11 @@ block body
   section.section
     h2.section__title bullet list
     .section__row
-      include ../../blocks/common.blocks/bullet-list/bullet-list.pug
+      +bullet-list([
+        'Нельзя с&nbsp;питомцами',
+        'Без вечеринок и&nbsp;мероприятий',
+        'Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00'
+      ])
 
   section.section
     h2.section__title text field
