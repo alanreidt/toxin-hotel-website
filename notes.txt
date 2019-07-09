@@ -4,8 +4,10 @@ TODO:
   - Replace less variables with css custom properies
   - Rule out less variables work
   - Rule out flex basis work
+  - Rule out when .block-default-styles is needed
+  - Rule out when inner wrapper is needed
   - Add cursor:pointer to interactive elements
-  - Make blocks' text not selectable where neaded
+  - Make blocks' text not selectable where needed
   - Edit blocks (ids and names attrs) taking into account imports
     to different pages and data from a server
   - Align-items property of flex container can fix child's vertical alignment
@@ -31,7 +33,13 @@ TODO:
   - Provide regular expression patterns for Forms elements
 
 TODO DOM:
-
+  search rv
+    refactoring +
+      search-panel +
+      search-result +
+    rv
+      search-panel
+      search-result
 
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
