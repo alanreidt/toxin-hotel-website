@@ -1,7 +1,20 @@
+:root {
+  --search-top-padding: 30px;
+  --search-bottom-padding: 70px;
+
+  @media (max-width: @site-width) {
+    --search-bottom-padding: 60px;
+  }
+}
+
 .search {
   .block-default-styles();
 
+  position: relative;
+  z-index: 100;
+
   background-color: #fff;
+  overflow: hidden;
 
   &__container {
     .container();
@@ -10,21 +23,97 @@
   &__inner {
     .block-default-styles();
 
+    position: relative;
+    z-index: 100;
+
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
 
-    padding-top: 30px;
-    padding-bottom: 70px;
+    background-color: red;
   }
 
-  &__search-panel {
-    flex-basis: 25%;
-    min-width: 255px;
+  &__item {
+    padding-top: var(--search-top-padding);
+    padding-bottom: var(--search-bottom-padding);
+    background-color: #fff;
+
+    &_is-closed {
+      transform: translate3d(calc(-1 * 100%), 0, 0);
+    }
+  }
+
+  &__item_for_search-panel {
+    flex: 0 1 auto;
+    width: 27%;
+    min-width: 300px;
     padding-right: 5%;
+
+    box-sizing: border-box;
+
+    @media (max-width: 880px) {
+      position: absolute;
+      z-index: 200;
+      top: 0;
+      left: calc(-1 * var(--site-padding));
+
+      width: 40%;
+      height: 100%;
+      padding-right: 20px;
+      padding-left: 20px;
+
+      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+      will-change: transform;
+      transition: transform 0.3s ease-out;
+
+      box-sizing: border-box;
+    }
   }
 
-  &__search-result {
-    flex-basis: 75%;
+  &__item_for_search-result {
+    flex: 1 1 auto;
+  }
+
+  &__search-panel-button {
+    .not-selectable();
+
+    // reset <button>, <input> styles
+    padding: 0;
+    border: none;
+
+    // add compatibility between html elements (<a>, <button>, <input>)
+    cursor: pointer;
+
+    position: absolute;
+    z-index: 100;
+    top: 20%;
+    left: 100%;
+
+    display: none;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+
+    background-color: #colors[dark-shade-75];
+    color: #fff;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+    box-sizing: border-box;
+
+    @media (max-width: 880px) {
+      display: inline-block;
+    }
+
+    .material-icons {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
   }
 }

@@ -38,6 +38,12 @@ $(document).ready(function () {
       dropDown.toggleClass('dropdown_is-expanded');
     }); */
   });
+
+  $(function () {
+    $('#search-panel-button').on('click', function () {
+      $('#search-panel').toggleClass('search__item_is-closed');
+    });
+  });
 });
 
 /* noUiSlider */

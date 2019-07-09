@@ -1,8 +1,11 @@
 .search
   .search__container
     .search__inner
-      .search__search-panel
-        include ../search-panel/search-panel.pug
+      .search__item.search__item_for_search-panel#search-panel
+        .search__search-panel
+          include ../search-panel/search-panel.pug
+        button.search__search-panel-button#search-panel-button
+          i.material-icons navigate_next
 
-      .search__search-result
+      .search__item.search__item_for_search-result
         include ../search-result/search-result.pug
