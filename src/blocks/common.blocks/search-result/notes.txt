@@ -1,0 +1,2 @@
+TODO:
+  - Restrict max-width of the search-result__item to 320px

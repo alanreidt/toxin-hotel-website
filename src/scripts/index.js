@@ -41,7 +41,7 @@ $(document).ready(function () {
 
   $(function () {
     $('#search-panel-button').on('click', function () {
-      $('#search-panel').toggleClass('search__item_is-closed');
+      $('#search-panel').toggleClass('search__search-panel_is-open');
     });
   });
 });

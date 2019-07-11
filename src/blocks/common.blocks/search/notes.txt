@@ -1,0 +1,2 @@
+TODO:
+  - Move search-panel-button into "search-panel" block
