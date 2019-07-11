@@ -1,18 +1,22 @@
 TODO:
   + Change properies with pseudo-class :not(:last-child)
+  - Make the page not clickable when expanding block
+    is opened (topline__reception or search__search-panel)
 
-  - Replace less variables with css custom properies
-  - Rule out less variables work
-  - Rule out flex basis work
+  - Rule out how less variables work
+    - Replace less variables with css custom properies
+  - Rule out how flex basis works
   - Rule out when .block-default-styles is needed
   - Rule out when inner wrapper is needed
+  - Rule out how to include (or add mixin) that
+    its layout position can be manipulated (look at "search__search-panel" block)
   - Add cursor:pointer to interactive elements
   - Make blocks' text not selectable where needed
   - Edit blocks (ids and names attrs) taking into account imports
     to different pages and data from a server
   - Align-items property of flex container can fix child's vertical alignment
     (text content, in particular)
-    - Use align-items: baseline for text elements
+    - Use align-items: baseline for text elements (that's not so simple)
   - Edit label text alignment in all files
   - Get rid of ids for labels
   - Set up input-field_dropdown to work with label text
@@ -33,13 +37,19 @@ TODO:
   - Provide regular expression patterns for Forms elements
 
 TODO DOM:
-  search rv
+  room-details rv
     refactoring +
-      search-panel +
-      search-result +
+      room-details-head
+      room-details-body
+        room-details-content
     rv
-      search-panel
-      search-result
+      room-details-head
+      room-details-body
+        room-details-content
+      refactoring
+        room-details-head
+        room-details-body
+          room-details-content
 
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
