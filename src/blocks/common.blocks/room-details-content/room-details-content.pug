@@ -1,42 +1,44 @@
 .room-details-content
-  .room-details-content__section
-    span.room-details-content__title
-      | Сведения о номере
-    .room-details-content__content
-      include ../cell-block-group/cell-block-group.pug
+  .room-details-content__inner
+    .room-details-content__section
+      span.room-details-content__section-title
+        | Сведения о номере
+      .room-details-content__section-content
+        include ../cell-block-group/cell-block-group.pug
 
-  .room-details-content__section
-    span.room-details-content__title
-      | Впечатления от номера
-    .room-details-content__content
-      include ../pie-chart/pie-chart.pug
+    .room-details-content__section
+      span.room-details-content__section-title
+        | Впечатления от номера
+      .room-details-content__section-content
+        include ../pie-chart/pie-chart.pug
 
-  .room-details-content__section.room-details-content__comment-section
-    .room-details-content__header
-      span.room-details-content__title
-        | Отзывы посетителей номера
-      span.room-details-content__sub-title
-        | 2 отзыва
-    .room-details-content__content
-      include ../comment/comment.pug
+    .room-details-content__section.room-details-content__comment-section
+      .room-details-content__section-header
+        span.room-details-content__section-title
+          | Отзывы посетителей номера
+        //- must be renamed
+        span.room-details-content__section-sub-title
+          | 2 отзыва
+      .room-details-content__section-content
+        include ../comment/comment.pug
 
-  .room-details-content__section
-    span.room-details-content__title
-      | Правила
-    .room-details-content__content
-      +bullet-list([
-        'Нельзя с&nbsp;питомцами',
-        'Без вечеринок и&nbsp;мероприятий',
-        'Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00'
-      ])
+    .room-details-content__section
+      span.room-details-content__section-title
+        | Правила
+      .room-details-content__section-content
+        +bullet-list([
+          'Нельзя с&nbsp;питомцами',
+          'Без вечеринок и&nbsp;мероприятий',
+          'Время прибытия&nbsp;&mdash; после 13:00, а&nbsp;выезд до&nbsp;12:00'
+        ])
 
-  .room-details-content__section
-    span.room-details-content__title
-      | Отмена
-    .room-details-content__content
-      p.room-details-content__text
-        | Бесплатная отмена в&nbsp;течение 48&nbsp;ч.
-        | После этого при отмене не&nbsp;позднее чем
-        | за&nbsp;5&nbsp;дн.&nbsp;до&nbsp;прибытия
-        | вы&nbsp;получите полный возврат за&nbsp;вычетом
-        | сбора за&nbsp;услуги.
+    .room-details-content__section
+      span.room-details-content__section-title
+        | Отмена
+      .room-details-content__section-content
+        p.room-details-content__section-text
+          | Бесплатная отмена в&nbsp;течение 48&nbsp;ч.
+          | После этого при отмене не&nbsp;позднее чем
+          | за&nbsp;5&nbsp;дн.&nbsp;до&nbsp;прибытия
+          | вы&nbsp;получите полный возврат за&nbsp;вычетом
+          | сбора за&nbsp;услуги.

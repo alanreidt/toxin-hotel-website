@@ -1,38 +1,30 @@
 .room-details-body {
-  display: block;
-  width: 100%;
-  height: 100%;
+  .block-default-styles();
 
   background-color: #fff;
 
-  box-sizing: border-box;
-
   &__container {
     .container();
-
-    height: 100%;
-    box-sizing: border-box;
   }
 
   &__inner {
+    .block-default-styles();
+
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
 
-    width: 100%;
-    height: 100%;
     padding-top: 70px;
     padding-bottom: 70px;
-    box-sizing: border-box;
   }
 
-  &__item {
+  &__room-details-content {
     flex: 1 1 0;
   }
 
   &__calculation-box {
-    width: 100%;
+    flex: 1 1 0;
     max-width: 380px;
 
     box-sizing: border-box;
