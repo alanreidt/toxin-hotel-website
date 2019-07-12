@@ -1,5 +1,11 @@
+415px
+
 TODO:
   + Change properies with pseudo-class :not(:last-child)
+  - Change media queries:
+    - Use min and max values (for mobile and desktop accordingly)
+    - Choose main breakpoints
+    - And add specific ones
   - Make the page not clickable when expanding block
     is opened (topline__reception or search__search-panel)
 
@@ -39,11 +45,11 @@ TODO:
 TODO DOM:
   room-details rv
     refactoring +
-      room-details-head
-      room-details-body
-        room-details-content
+      room-details-head +
+      room-details-body +
+        room-details-content +
     rv
-      room-details-head
+      room-details-head +
       room-details-body
         room-details-content
       refactoring
@@ -62,3 +68,10 @@ Toxin template logs:
     - Remark copyright text
     - Divide text of the pie chart's legend list
     - Fix copyright date
+
+Learn:
+  - Flexbox (flex-basis, in particular)
+  - Grid (how to limit min and max width (look at search-result__grid))
+  - Display (none, in particular)
+  - Difference between hiding properties (via display, visibility, opacity, visually-hidden mixin)
+  - Custom properties (scope)
