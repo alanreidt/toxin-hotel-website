@@ -7,6 +7,8 @@
 
   &__title {
     #box.title();
+
+    margin-bottom: 0.8333em;
   }
 
   &__input-text {
@@ -19,9 +21,22 @@
 
   &__alternate-entry {
     #box.space-between();
+
+    align-items: center;
+
+    @media (max-width: 375px) {
+      flex-direction: column;
+    }
   }
 
   &__text {
     #box.text();
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media (max-width: 375px) {
+      margin-bottom: 10px;
+    }
   }
 }
