@@ -93,4 +93,7 @@
       .registration-box__item
         .registration-box__alternate-entry
           p.registration-box__text Уже есть аккаунт на Toxin?
-          +button('Войти', 'secondary')(href='./sign-in.pug')
+          //- proper links break scripts,
+          //- don't change them until import's division
+          //- didn't set up.
+          +button('Войти', 'secondary')(href='/sign-in')
