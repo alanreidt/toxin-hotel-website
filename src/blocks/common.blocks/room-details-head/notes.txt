@@ -1,0 +1,4 @@
+TODO:
+  - Made it to become carousel on mobiles
+  - Or made it like gallery on mobiles
+  - Limit size on medium screens
