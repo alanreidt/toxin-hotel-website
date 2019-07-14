@@ -1,29 +1,24 @@
 .sign-in {
-  display: block;
-  width: 100%;
-  height: 100%;
-
+  .block-default-styles();
   background: url(../images/registration-bg.jpg) #333 bottom/cover no-repeat;
-  box-sizing: border-box;
+
+  &__container {
+    .container();
+  }
 
   &__inner {
+    .block-default-styles();
+
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 
-    width: 100%;
-    height: 100%;
-    padding-top: 163px;
-    padding-bottom: 163px;
-
-    box-sizing: border-box;
+    padding-top: 160px;
+    padding-bottom: 160px;
   }
 
   &__entry-box {
-    width: 100%;
+    .block-default-styles();
     max-width: 380px;
-    height: 100%;
-
-    box-sizing: border-box;
   }
 }
