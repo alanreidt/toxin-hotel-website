@@ -1,5 +1,9 @@
 .entry-box {
-  #box.styles();
+  #box();
+
+  &__inner {
+    #box.inner();
+  }
 
   &__row {
     #box.row();
@@ -14,7 +18,7 @@
   }
 
   &__alternate-entry {
-    #box.space-between();
+    #box.alternate-entry();
   }
 
   &__text {

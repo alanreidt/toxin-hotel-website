@@ -1,48 +1,49 @@
 .calculation-box
-  .calculation-box__row
-    +room-info('888', '9 990₽', true)
-
-  form.calculation-box__form(method='get' name='calculation-box-form' autocomplete='on')
+  .calculation-box__inner
     .calculation-box__row
-      +datepicker('calculation-box')
+      +room-info('888', '9 990₽', true)
 
-    .calculation-box__row
-      span.calculation-box__input-text Гости
-      +dropdown-field('js-calculation-box__guests-dropdown', ['Взрослые', 'Дети', 'Младенцы'], true)(
-        type='text'
-        name='guests'
-        id='calculation-box-guests-input'
-        placeholder='Сколько гостей'
-        maxlength='10'
-        autocomplete=''
-        spellcheck=''
-        required
-      )
+    form(name='calculation-box-form' autocomplete='on')
+      .calculation-box__row
+        +datepicker('calculation-box')
 
-    .calculation-box__row
-      .calculation-box__item
-        .calculation-box__service-info
-          span.calculation-box__service-text
-            | 9 990₽ x 4 суток
-          span.calculation-box__service-price
-            | 39 960₽
-      .calculation-box__item
-        .calculation-box__service-info
-          span.calculation-box__service-text
-            | Сбор за услуги: скидка 2 179₽
-            i(class='material-icons calculation-box__icon-info' title='change me — use jQuery') info_outline
-          span.calculation-box__service-price 0₽
-      .calculation-box__item
-        .calculation-box__service-info
-          span.calculation-box__service-text
-            | Сбор за дополнительные услуги
-            i(class='material-icons calculation-box__icon-info' title='change me — use jQuery') info_outline
-          span.calculation-box__service-price 300₽
+      .calculation-box__row
+        span.calculation-box__input-text Гости
+        +dropdown-field('js-calculation-box__guests-dropdown', ['Взрослые', 'Дети', 'Младенцы'], true)(
+          type='text'
+          name='guests'
+          id='calculation-box-guests-input'
+          placeholder='Сколько гостей'
+          maxlength='10'
+          autocomplete=''
+          spellcheck=''
+          required
+        )
 
-    .calculation-box__row
-      .calculation-box__item.calculation-box__summary-group
-        .calculation-box__summary-info
-          span.calculation-box__summary-text Итого
-          span.calculation-box__summary-price 38 081₽
-      .calculation-box__item
-        +button('Забронировать', 'full-width')
+      .calculation-box__row
+        .calculation-box__item
+          .calculation-box__service-info
+            span.calculation-box__service-text
+              | 9 990₽ x 4 суток
+            span.calculation-box__service-price
+              | 39 960₽
+        .calculation-box__item
+          .calculation-box__service-info
+            span.calculation-box__service-text
+              | Сбор за услуги: скидка 2 179₽
+              i(class='material-icons calculation-box__icon-info' title='change me — use jQuery') info_outline
+            span.calculation-box__service-price 0₽
+        .calculation-box__item
+          .calculation-box__service-info
+            span.calculation-box__service-text
+              | Сбор за дополнительные услуги
+              i(class='material-icons calculation-box__icon-info' title='change me — use jQuery') info_outline
+            span.calculation-box__service-price 300₽
+
+      .calculation-box__row
+        .calculation-box__item.calculation-box__summary-group
+          .calculation-box__summary-info
+            span.calculation-box__summary-text Итого
+            span.calculation-box__summary-price 38 081₽
+        .calculation-box__item
+          +button('Забронировать', 'full-width')

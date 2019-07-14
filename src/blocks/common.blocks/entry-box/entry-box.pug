@@ -1,41 +1,42 @@
 .entry-box
-  .entry-box__row
-    h2.entry-box__title Войти
-
-  form.entry-box__form(name='entry-box-form' autocomplete='on')
+  .entry-box__inner
     .entry-box__row
-      .entry-box__item
-        +input-field(
-          type='email'
-          name='email'
-          id='entry-box-email'
-          placeholder='Email'
-          maxlength='24'
-          autocomplete='email'
-          spellcheck='false'
-          required
-        )
-      .entry-box__item
-        +input-field(
-          type='password'
-          name='password'
-          id='entry-box-password'
-          placeholder='Пароль'
-          maxlength='20'
-          autocomplete='current-password'
-          spellcheck='false'
-          required
-        )
+      h2.entry-box__title Войти
 
-    .entry-box__row
-      .entry-box__item
-        +button('Войти', 'full-width')
+    form(name='entry-box-form' autocomplete='on')
+      .entry-box__row
+        .entry-box__item
+          +input-field(
+            type='email'
+            name='email'
+            id='entry-box-email'
+            placeholder='Email'
+            maxlength='24'
+            autocomplete='email'
+            spellcheck='false'
+            required
+          )
+        .entry-box__item
+          +input-field(
+            type='password'
+            name='password'
+            id='entry-box-password'
+            placeholder='Пароль'
+            maxlength='20'
+            autocomplete='current-password'
+            spellcheck='false'
+            required
+          )
 
-    .entry-box__row
-      .entry-box__item
-        .entry-box__alternate-entry
-          p.entry-box__text Нет аккаунта на Toxin?
-          //- proper links break scripts,
-          //- don't change them until import's division
-          //- didn't set up.
-          +button('Создать', 'secondary')(href='/registration')
+      .entry-box__row
+        .entry-box__item
+          +button('Войти', 'full-width')
+
+      .entry-box__row
+        .entry-box__item
+          .entry-box__alternate-entry
+            p.entry-box__text Нет аккаунта на Toxin?
+            //- proper links break scripts,
+            //- don't change them until import's division
+            //- didn't set up.
+            +button('Создать', 'secondary')(href='/registration')

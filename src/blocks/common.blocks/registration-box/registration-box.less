@@ -1,5 +1,9 @@
 .registration-box {
-  #box.styles();
+  #box();
+
+  &__inner {
+    #box.inner();
+  }
 
   &__row {
     #box.row();
@@ -18,23 +22,10 @@
   }
 
   &__alternate-entry {
-    #box.space-between();
-
-    align-items: center;
-
-    @media (max-width: 375px) {
-      flex-direction: column;
-    }
+    #box.alternate-entry();
   }
 
   &__text {
     #box.text();
-
-    margin-top: 0;
-    margin-bottom: 0;
-
-    @media (max-width: 375px) {
-      margin-bottom: 10px;
-    }
   }
 }
