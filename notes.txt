@@ -1,5 +1,3 @@
-415px
-
 TODO:
   + Change properies with pseudo-class :not(:last-child)
   - Change media queries:
@@ -43,19 +41,15 @@ TODO:
   - Provide regular expression patterns for Forms elements
 
 TODO DOM:
-  room-details rv
+  registration box +
+  entry box rv
     refactoring +
-      room-details-head +
-      room-details-body +
-        room-details-content +
-    rv
-      room-details-head +
-      room-details-body
-        room-details-content
-      refactoring
-        room-details-head
-        room-details-body
-          room-details-content
+    rv +
+  box styles +
+  page paddings' media +
+    edit elements with site paddings
+  variables' replacement
+  use normalize?
 
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
@@ -73,5 +67,6 @@ Learn:
   - Flexbox (flex-basis, in particular)
   - Grid (how to limit min and max width (look at search-result__grid))
   - Display (none, in particular)
-  - Difference between hiding properties (via display, visibility, opacity, visually-hidden mixin)
+  - Difference between hiding properties (via display, visibility, opacity, .visually-hidden mixin)
   - Custom properties (scope)
+  - BEM

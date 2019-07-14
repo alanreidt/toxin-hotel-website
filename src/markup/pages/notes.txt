@@ -1,3 +1,4 @@
 TODO:
   - Set up masked text field
   - Set up inputs' attributes appropriately
+  - "room-details" page: stopped on "room-details-content" block's grid
