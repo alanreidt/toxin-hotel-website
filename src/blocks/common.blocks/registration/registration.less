@@ -1,12 +1,11 @@
 .registration {
   .block-default-styles();
-
   background: url(../images/registration-bg.jpg) #333 bottom/cover no-repeat;
 
   &__container {
     .container();
 
-    @media (max-width: 360px) {
+    @media (max-width: 365px) {
       padding-right: 10px;
       padding-left: 10px;
     }
@@ -27,7 +26,7 @@
       padding-bottom: 20px;
     }
 
-    @media (max-width: 360px) {
+    @media (max-width: 365px) {
       padding-top: 15px;
       padding-bottom: 15px;
     }
@@ -39,7 +38,6 @@
 
     @media ( max-width: calc(380px + 2 * @site-padding) ) {
       .registration-box {
-        // padding: 40px 30px 30px;
         padding: 30px 20px 20px;
       }
 
@@ -48,15 +46,21 @@
       }
     }
 
-    @media (max-width: 370px) {
-      .registration-box__title {
-        font-size: 22px;
-      }
-    }
-
-    @media (max-width: 360px) {
+    @media (max-width: 365px) {
       .registration-box {
-        padding: 20px 15px 15px;
+        padding: 22px 15px 15px;
+
+        &__row {
+          margin-bottom: 18px;
+        }
+
+        &__row:last-child {
+          margin-bottom: 0;
+        }
+
+        &__title {
+          font-size: 22px;
+        }
       }
     }
   }

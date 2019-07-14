@@ -1,7 +1,8 @@
 .registration-box
-  h2.registration-box__title Регистрация аккаунта
+  .registration-box__row
+    h2.registration-box__title Регистрация аккаунта
 
-  form.registration-box__form(method='get' name='registration-box-form' autocomplete='on')
+  form.registration-box__form(name='registration-box-form' autocomplete='on')
     .registration-box__row
       .registration-box__item
         +input-field(
