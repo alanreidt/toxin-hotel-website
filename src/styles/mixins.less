@@ -102,8 +102,8 @@
 
   max-width: @site-width;
   margin: auto;
-  padding-left: @site-padding;
-  padding-right: @site-padding;
+  padding-left: var(--site-padding);
+  padding-right: var(--site-padding);
 }
 
 // realize like an independent block, if it still actual
@@ -240,7 +240,7 @@
 
     padding: 40px 30px 30px;
 
-    @media ( max-width: calc(380px + 2 * @site-padding) ) {
+    @media ( max-width: calc(380px + 2 * @site-paddings[small]) ) {
       padding: 30px 20px 20px;
     }
 
@@ -277,7 +277,7 @@
     margin-top: 0;
     margin-bottom: 0;
 
-    @media ( max-width: calc(380px + 2 * @site-padding) ) {
+    @media ( max-width: calc(380px + 2 * @site-paddings[small]) ) {
       text-align: center;
     }
 

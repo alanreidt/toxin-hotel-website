@@ -1,3 +1,33 @@
+:root {
+  --site-padding: @site-paddings[xlarge];
+
+  @media (max-width: 1024px) {
+    --site-padding: @site-paddings[large];
+  }
+
+  @media (max-width: 740px) {
+    --site-padding: @site-paddings[medium];
+  }
+
+  @media (max-width: 670px) {
+    --site-padding: @site-paddings[small];
+  }
+
+  @media (max-width: 365px) {
+    --site-padding: @site-paddings[xsmall];
+  }
+}
+
+@site-paddings: {
+  xlarge: 30px;
+  large: 25px;
+  medium: 20px;
+  small: 15px;
+  xsmall: 10px;
+}
+
+@site-width: 1280px;
+
 #colors() {
   dark-shade-100: hsl(238, 35%, 19%);
   dark-shade-75: lighten(hsl(238, 35%, 19%), 25%);
@@ -20,6 +50,3 @@
 
 @primary-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 @secondary-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-
-@site-width: 1280px;
-@site-padding: 15px;
