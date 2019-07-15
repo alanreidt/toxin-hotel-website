@@ -17,12 +17,34 @@
     min-height: 500px;
   }
 
+  @media (orientation: portrait) {
+    @media (max-height: 1200px) {
+      height: 65vh;
+    }
+
+    @media (max-height: 900px) {
+      height: 70vh;
+    }
+
+    @media (max-height: 750px) {
+      height: 80vh;
+    }
+
+    @media (max-height: 675px) {
+      height: calc( 100vh - var(--topline-height) );
+    }
+  }
+
   @media (max-width: 500px) {
     min-height: 520px;
   }
 
   @media (max-width: 380px + 2 * @site-paddings[small]) {
-    min-height: 580px;
+    min-height: 530px;
+  }
+
+  @media (max-width: 365px) {
+    min-height: 515px;
   }
 
   &__container {
