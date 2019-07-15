@@ -16,9 +16,12 @@ header.topline
             height='40'
           )
 
-      .topline__menu#menu-button
-        button(type='button').topline__menu-button
-          i.material-icons.topline__menu-icon menu
+      button(type='button' id='menu-button' class='menu-button')
+        div.menu-button__icon
+          span(class='menu-button__stripe')
+          span(class='menu-button__stripe menu-button__stripe_rotating')
+          span(class='menu-button__stripe menu-button__stripe_rotating')
+          span(class='menu-button__stripe')
 
       //- reception — a place where you can find navigation, entrance (login, register), profile info (Full Name and etc.)
       .topline__reception#menu
@@ -26,3 +29,5 @@ header.topline
           include ../topline-nav/topline-nav.pug
         .topline__entrance
           include ../entrance/entrance.pug
+
+      div(class='menu-overlay' id='menu-overlay')
