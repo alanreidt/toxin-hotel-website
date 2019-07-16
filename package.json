@@ -11,7 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "less": "^3.9.0",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "scroll-lock": "^2.1.2"
   },
   "dependencies": {
     "cleave.js": "^1.5.0",
