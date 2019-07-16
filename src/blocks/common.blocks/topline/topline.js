@@ -1,20 +1,19 @@
-$(function () {
-  var menu = $('#menu');
-  var menuButton = $('#menu-button');
-  var menuOverlay = $('#menu-overlay');
-  var page = $('#page');
+const menu = document.querySelector('#menu');
+const menuButton = document.querySelector('#menu-button');
+const menuOverlay = document.querySelector('#menu-overlay');
 
-  $(menuButton).on('click', function () {
-    menu.toggleClass('topline__reception_is-active');
-    menuButton.toggleClass('menu-button_is-clicked');
-    menuOverlay.toggleClass('menu-overlay_is-active');
-    page.toggleClass('page_is-unscrollable');
-  });
+menuButton.addEventListener('click', function(e) {
+  menu.classList.toggle('topline__reception_is-active');
+  menuButton.classList.toggle('topline-hamburger_is-clicked');
+  menuOverlay.classList.toggle('menu-overlay_is-active');
+  scrollLock.disablePageScroll(menu);
+  e.stopPropagation();
+});
 
-  $(menuOverlay).on('click', function () {
-    menu.toggleClass('topline__reception_is-active');
-    menuButton.toggleClass('menu-button_is-clicked');
-    menuOverlay.toggleClass('menu-overlay_is-active');
-    page.toggleClass('page_is-unscrollable');
-  });
+menuOverlay.addEventListener('click', function(e) {
+  menu.classList.toggle('topline__reception_is-active');
+  menuButton.classList.toggle('topline-hamburger_is-clicked');
+  menuOverlay.classList.toggle('menu-overlay_is-active');
+  scrollLock.enablePageScroll(menu);
+  e.stopPropagation();
 });
