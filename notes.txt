@@ -1,5 +1,6 @@
 TODO:
   + Change properies with pseudo-class :not(:last-child)
+  + Turn on scroll-lock library
   - Change media queries:
     - Use min and max values (for mobile and desktop accordingly)
     - Choose main breakpoints
@@ -47,7 +48,14 @@ TODO DOM:
     rv +
   box styles +
   page paddings' media +
-    edit elements with site paddings
+    edit elements with site paddings +
+      refactoring -
+  edit uncompleted elements
+    topline__reception
+      add styles +
+        for mobiles
+      divide code
+      refactore code
   variables' replacement
   use normalize?
 
