@@ -1,12 +1,18 @@
 TODO:
   + Change properies with pseudo-class :not(:last-child)
   + Turn on scroll-lock library
+  + Make the page not clickable when expanding block
+    is opened (topline__reception)
+
+  - Remove shadow of input in iOS
+  - Desktop and mobile menus must be separate elements
+    for avoiding jump throughout media queries' change,
+    more convenient work with overlay (handling z-indexes),
+    more capabilities allowed (?)
   - Change media queries:
     - Use min and max values (for mobile and desktop accordingly)
     - Choose main breakpoints
     - And add specific ones
-  - Make the page not clickable when expanding block
-    is opened (topline__reception or search__search-panel)
 
   - Rule out how less variables work
     - Replace less variables with css custom properies
@@ -42,22 +48,14 @@ TODO:
   - Provide regular expression patterns for Forms elements
 
 TODO DOM:
-  registration box +
-  entry box rv
-    refactoring +
-    rv +
-  box styles +
-  page paddings' media +
-    edit elements with site paddings +
-      refactoring -
   edit uncompleted elements
     topline__reception
       add styles +
-        for mobiles
-      divide code
-      refactore code
+        for mobiles -
+      divide code -
+      refactore code +
   variables' replacement
-  use normalize?
+  use normalize? (no) +
 
 Toxin template logs:
   - Fixed facilities dropdown's behaviour in default state: color of expand more icon and botom borders radius
