@@ -2,23 +2,17 @@
   .not-selectable();
 
   // reset <button>, <input> styles
-  padding: var(--menu-button-padding);
   border: none;
   background-color: transparent;
 
-  // add standart behaviour of a <button> to compatibility with <a>
-  // isolate component's rules from external influence
-  // vertical-align: middle;
-
-  // add standart behaviour of a <button> to compatibility with <a>
-  // isolate component's rules from external influence
-  box-sizing: border-box;
-
-  display: none;
-
   text-overflow: ellipsis;
   overflow: hidden;
+
+  display: none;
+  padding: var(--menu-button-padding);
+
   cursor: pointer;
+  box-sizing: border-box;
 
   @media (max-width: 1050px) {
     position: relative;
@@ -77,6 +71,9 @@
   }
 
   &__stripe:nth-child(3) {
+    // hide stripe behind prev one
+    // the only alternative here is absolute positioning
+    // but that approach is shorter
     margin-top: -6px;
   }
 }
