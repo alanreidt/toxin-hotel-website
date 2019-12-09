@@ -5,19 +5,13 @@
   .entrance__item.entrance__item_is-active
     .entrance__button-group
       .entrance__button-wrapper
-        //- proper links break scripts,
-        //- don't change them until import's division
-        //- didn't set up.
         +button('Войти', 'secondary')(
-          href='/sign-in'
+          href='../../../src/markup/pages/sign-in.pug'
           class='entrance__button'
         )
       .entrance__button-wrapper
-        //- proper links break scripts,
-        //- don't change them until import's division
-        //- didn't set up.
         +button('Зарегистрироваться', 'main')(
-          href='/registration'
+          href='../../../src/markup/pages/sign-in.pug'
           class='entrance__button entrance__button_main'
         )
   .entrance__item
