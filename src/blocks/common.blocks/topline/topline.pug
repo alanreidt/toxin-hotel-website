@@ -9,12 +9,8 @@ header.topline
       .topline__logo
         .logo
           //- add styles for alt atr (using logo__img class for that)
-          img(
-            class='logo__img'
-            src='../../blocks/common.blocks/logo/logo.svg'
-            alt='toxin'
-            height='40'
-          )
+          svg(class="logo__img" width="106" height="40" alt="Toxin logo")
+            use(href="../../blocks/common.blocks/logo/logo.svg")
 
       include ../topline-hamburger/topline-hamburger.pug
 
