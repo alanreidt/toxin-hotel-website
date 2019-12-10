@@ -13,6 +13,8 @@
   "devDependencies": {
     "cssnano": "^4.1.10",
     "less": "^3.9.0",
+    "parcel-plugin-imagemin": "^3.0.0",
+    "parcel-plugin-svg-sprite": "^1.4.1",
     "pug": "^2.0.3",
     "scroll-lock": "^2.1.2"
   },
