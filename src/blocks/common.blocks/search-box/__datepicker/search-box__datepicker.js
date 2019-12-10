@@ -1,3 +1,5 @@
+require("../../datepicker/datepicker.js");
+
 $(function () {
   var datePickerOutput = $("#js-search-box__date-output").datepicker({
     showOtherMonths: true,
