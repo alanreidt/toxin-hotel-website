@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/markup/pages/index.pug --open"
+    "dev": "parcel src/markup/pages/index.pug --open",
+    "build": "rm -rf prod/* && parcel build src/markup/pages/index.pug -d ./prod/ --public-url ./"
   },
   "keywords": [],
   "author": "",
