@@ -1,3 +1,8 @@
+var jquery = require('jquery');
+window.$ = window.jQuery = jquery;
+import 'cleave.js';
+
+
 $(function () {
   var inputField = $('.input-field_dropdown');
 
