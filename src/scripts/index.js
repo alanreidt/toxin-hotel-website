@@ -1,8 +1,4 @@
 /* Additon of 3rd party labraries */
-var jquery = require('jquery');
-window.$ = window.jQuery = jquery;
-require('jquery-ui-dist/jquery-ui.js');
-import 'cleave.js';
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 require('../blocks/common.blocks/input-field/input-field.js');
 require('../blocks/common.blocks/dropdown-field/dropdown-field.js');
