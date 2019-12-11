@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/markup/pages/index.pug --open",
-    "build": "rm -rf prod/* && parcel build src/markup/pages/index.pug -d ./prod/ --public-url ./prod",
-    "postbuild": "mv prod/index.html ./index.html"
+    "build": "rm -rf prod && parcel build src/markup/pages/index.pug -d ./prod/ --public-url ./"
   },
   "keywords": [],
   "author": "",
