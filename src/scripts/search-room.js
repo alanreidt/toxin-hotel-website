@@ -1,6 +1,5 @@
 import wNumb from 'wnumb';
 import noUiSlider from 'nouislider';
-import '../../node_modules/nouislider/distribute/nouislider.css';
 import '../blocks/common.blocks/input-field/input-field.js';
 import '../blocks/common.blocks/dropdown-field/dropdown-field.js';
 import '../blocks/common.blocks/search-box/__dropdown/search-box__dropdown.js';
