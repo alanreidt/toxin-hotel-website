@@ -1,3 +1,7 @@
+var jquery = require('jquery');
+window.$ = window.jQuery = jquery;
+
+
 $(function () {
   var dropDown = $('#js-dropdown-field__content');
 
