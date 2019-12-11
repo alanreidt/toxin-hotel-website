@@ -3,12 +3,9 @@
     .footer-info__inner
       .footer-info__item.footer-info__item_for_logo
         .logo.footer-info__logo
-          img(
-            class='logo__img'
-            src='../../blocks/common.blocks/logo/logo.svg'
-            alt='toxin logo'
-            height='40'
-          )
+          svg(class="logo__img" width="106" height="40" alt="Toxin logo")
+            use(href="../../blocks/common.blocks/logo/logo.svg")
+
           p.logo__description
             | Бронирование номеров в&nbsp;лучшем
             | отеле 2019 года по&nbsp;версии
