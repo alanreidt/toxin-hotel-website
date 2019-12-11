@@ -12,12 +12,12 @@ html(class='page' id='page' lang='ru')
   block head
     block title
       title Home Page
+
     //- replace with local fonts later
     link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Quicksand:400,700&display=swap&subset=latin-ext' rel='stylesheet')
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
-    block main-styles
-      link(href='../../markup/pages/index.less' rel='stylesheet')
 
+    block main-styles
 
   body(class='page__body')
     .page__header
@@ -30,4 +30,3 @@ html(class='page' id='page' lang='ru')
       include ../../blocks/common.blocks/footer/footer.pug
 
     block page-bottom
-      script(src='../../scripts/index.js')
