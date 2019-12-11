@@ -1,5 +1,11 @@
 extends ../layouts/base.pug
 
 
+block main-styles
+  link(href='../../markup/pages/index.less' rel='stylesheet')
+
 block main
   include ../../blocks/common.blocks/hero/hero.pug
+
+block page-bottom
+  script(src='../../scripts/index.js')
