@@ -1,4 +1,10 @@
 .topline-hamburger {
+  --topline-center: calc(
+    ( var(--topline-height) -
+    ( var(--menu-button-height) +
+      2 * var(--menu-button-padding) )
+    ) / 2 );
+
   .not-selectable();
 
   // reset <button>, <input> styles
@@ -23,7 +29,7 @@
 
     &_is-clicked {
       position: fixed;
-      top: calc( (var(--topline-height) - (var(--menu-button-height) + 2 * var(--menu-button-padding)) ) / 2);
+      top: var(--topline-center);
       right: var(--site-padding);
     }
   }
