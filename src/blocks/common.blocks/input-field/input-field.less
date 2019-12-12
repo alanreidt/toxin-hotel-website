@@ -35,28 +35,10 @@
     }
   }
 
-  // maybe dropdown decoration'd move here, later
   &__label {
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-
-    &_dropdown {
-      .decoration_type_expand-more();
-      &::before {
-        // styles for .decoration_type_arrow-forward();
-        color: #colors[dark-shade-50];
-      }
-    }
-
-    &_dropdown:hover,
-    &_dropdown:focus {
-      .decoration_type_expand-more();
-      &::before {
-        // styles for .decoration_type_arrow-forward();
-        color: #colors[dark-shade-75];
-      }
-    }
   }
 
   &__text {
