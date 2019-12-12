@@ -1,36 +1,24 @@
 //- This is a modification of code from https://github.com/nicothin/NTH-start-project/
-//- Все примеси в этом файле должны начинаться c имени блока (input-field)
-mixin input-field(mods, inputFieldClasses='', labelText)
 
-  //- Принимает:
-        mods {string} — список модификаторов
-        inputFieldClasses {string} — список классов input-field элемента
-        labelText {string} — текст внутри <label>
-  //- Вызов:
-        +input-field('dropdown') — вызывает input-field c модификатором dropdown
-        +input-field('', '', 'Дата рождения') — вызывает input-field c текстом дата рождения внутри <label>
+mixin input-field(modifierList, labelText)
+  //- Accepts:
+        modifierList {string} — list of modifiers
+        labelText {string} — text inside <label> tag
+  //- Examples:
+        +input-field('dropdown, subscription') — creates input-field
+          with dropdown & subscription modifiers
+        +input-field('', 'Date of birth') — create input-field
+          with according label tag text
   -
-    // список модификаторов
-    var allMods = '';
-    if(typeof(mods) !== 'undefined' && mods) {
-      var modsList = mods.split(',');
-      for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' input-field_' + modsList[i].trim();
-      }
-    }
+    const ELEMENT_CLASS_NAME = "input-field_";
+    const classList = !modifierList ? '' :
+      ELEMENT_CLASS_NAME + modifierList
+        .split(', ')
+        .join(ELEMENT_CLASS_NAME);
 
-    // список классов input-field'a
-    var allInputFieldClasses = '';
-    if(typeof(inputFieldClasses) !== 'undefined' && inputFieldClasses) {
-      var inputClassesList = inputFieldClasses.split(',');
-      for (var i = 0; i < inputClassesList.length; i++) {
-        allInputFieldClasses = allInputFieldClasses + ' ' + inputClassesList[i].trim();
-      }
-    }
-
-  .input-field(class = allMods + ' ' + allInputFieldClasses)
-    label.input-field__label(for!=attributes.id)
-      if (typeof(labelText) !== 'undefined' && labelText)
+  .input-field(class = classList)
+    label.input-field__label(for != attributes.id)
+      if ( labelText )
         span.input-field__text= labelText
       input.input-field__input&attributes(attributes)
     block
