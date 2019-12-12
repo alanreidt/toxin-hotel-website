@@ -1,23 +1,14 @@
-var jquery = require('jquery');
-window.$ = window.jQuery = jquery;
 import 'cleave.js';
 
 
-$(function () {
-  var inputField = $('.input-field_dropdown');
+const maskedDateInputs = document.querySelectorAll(".js-input-masked-date");
 
-  $('.input-field__input').on('focusin focusout', function () {
-    // apply to particular element
-    inputField.toggleClass('input-field_dropdown_focus');
-  });
-
-  $('.js-input-masked-date').toArray().forEach(function(field) {
-    new Cleave(field, {
-      date: true,
-      delimiter: '.',
-      dateMin: '2019-01-01',
-      dateMax: '2022-12-31',
-      datePattern: ['d', 'm', 'Y']
-    });
+maskedDateInputs.forEach( (maskedDateInput) => {
+  new Cleave(maskedDateInput, {
+    date: true,
+    delimiter: '.',
+    dateMin: '2019-01-01',
+    dateMax: '2022-12-31',
+    datePattern: ['d', 'm', 'Y'],
   });
 });
