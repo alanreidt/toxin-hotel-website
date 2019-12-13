@@ -12,7 +12,7 @@ mixin dropdown-field( {optionNames, hasButtonPane = false} = {} )
         ) — создает блок dropdown-field
             с id js-search-box__guests-dropdown для dropdown'а
             и 3-мя полями с соответствующим текстом
-  .dropdown-field
+  .dropdown-field.js-dropdown-field
     +input-field("dropdown")&attributes(attributes)
     .dropdown-field__dropdown
       each optionName in optionNames
