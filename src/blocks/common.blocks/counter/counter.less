@@ -1,0 +1,56 @@
+.counter {
+  position: relative;
+  z-index: 100;
+
+  width: 92px;
+
+  text-align: center;
+  user-select: none;
+
+  // background-color: red;
+
+  &__button {
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+
+    text-align: center;
+    font-size: 18px;
+    color: #colors[dark-shade-50];
+    border: 1px solid #colors[dark-shade-50];
+    border-radius: 50%;
+
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &_remove {
+      left: 0;
+    }
+
+    &_add {
+      right: 0;
+    }
+
+    &_is-disabled {
+      color: #colors[dark-shade-5];
+      // border: 1px solid #colors[dark-shade-5];
+      border-color: #colors[dark-shade-5];
+      cursor: initial;
+    }
+  }
+
+  &__quantity {
+    display: inline-block;
+    vertical-align: middle;
+
+    padding: 0 10px;
+  }
+}
