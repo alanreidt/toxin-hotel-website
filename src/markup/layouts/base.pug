@@ -1,5 +1,6 @@
 include ./mixins.pug
 
+
 doctype html
 html(class='page' id='page' lang='ru')
   head
@@ -20,13 +21,14 @@ html(class='page' id='page' lang='ru')
     block main-styles
 
   body(class='page__body')
-    .page__header
-      include ../../blocks/common.blocks/topline/topline.pug
+    block body
+      .page__header
+        include ../../blocks/common.blocks/topline/topline.pug
 
-    main(class='page__content')
-      block main
+      main(class='page__content')
+        block main
 
-    .page__footer
-      include ../../blocks/common.blocks/footer/footer.pug
+      .page__footer
+        include ../../blocks/common.blocks/footer/footer.pug
 
-    block page-bottom
+      block page-bottom
