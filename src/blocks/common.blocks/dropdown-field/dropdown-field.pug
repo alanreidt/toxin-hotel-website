@@ -12,9 +12,9 @@ mixin dropdown-field( {optionNames, hasButtonPane = false} = {} )
         ) — создает блок dropdown-field
             с id js-search-box__guests-dropdown для dropdown'а
             и 3-мя полями с соответствующим текстом
-
-  +input-field("dropdown")&attributes(attributes)
-    .dropdown-field
+  .dropdown-field
+    +input-field("dropdown")&attributes(attributes)
+    .dropdown-field__dropdown
       each optionName in optionNames
         .dropdown-field__row
           span.dropdown-field__text= optionName
@@ -23,7 +23,7 @@ mixin dropdown-field( {optionNames, hasButtonPane = false} = {} )
             span.dropdown-field__quantity 0
             i.material-icons.dropdown-field__button.dropdown-field__button_add add
 
-      if ( hasButtonPane )
-        .dropdown-field__row.dropdown-field__button-pane
-          +button("Очистить", "reset")
-          +button("Применить")
+        if ( hasButtonPane )
+          .dropdown-field__row.dropdown-field__button-pane
+            +button("Очистить", "reset")
+            +button("Применить")
