@@ -23,7 +23,7 @@ mixin dropdown-field( {optionNames, hasButtonPane = false} = {} )
             span.dropdown-field__quantity 0
             i.material-icons.dropdown-field__button.dropdown-field__button_add add
 
-        if ( hasButtonPane )
-          .dropdown-field__row.dropdown-field__button-pane
-            +button("Очистить", "reset")
-            +button("Применить")
+      if ( hasButtonPane )
+        .dropdown-field__row.dropdown-field__button-pane
+          +button("Очистить", "reset")
+          +button("Применить")
