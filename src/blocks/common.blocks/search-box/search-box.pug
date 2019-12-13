@@ -9,7 +9,10 @@
 
       .search-box__row
         span.search-box__input-text Гости
-        +dropdown-field('js-search-box__guests-dropdown', ['Взрослые', 'Дети', 'Младенцы'], true)(
+        +dropdown-field({
+          optionNames: ['Взрослые', 'Дети', 'Младенцы'],
+          hasButtonPane: true
+        })(
           type='text'
           name='guests'
           id='search-box-guests-input'

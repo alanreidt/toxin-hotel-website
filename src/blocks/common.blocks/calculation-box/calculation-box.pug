@@ -9,7 +9,10 @@
 
       .calculation-box__row
         span.calculation-box__input-text Гости
-        +dropdown-field('js-calculation-box__guests-dropdown', ['Взрослые', 'Дети', 'Младенцы'], true)(
+        +dropdown-field({
+          optionNames: ['Взрослые', 'Дети', 'Младенцы'],
+          hasButtonPane: true
+        })(
           type='text'
           name='guests'
           id='calculation-box-guests-input'

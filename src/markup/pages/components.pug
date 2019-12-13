@@ -97,17 +97,15 @@ block body
   section.section
     h2.section__title dropdown
     .section__row
-      +dropdown-field(
-        'js-dropdown-field__content',
-        ['Спальни', 'Кровати', 'Ванные комнаты']
-      )(
+      +dropdown-field({
+        optionNames: ['Спальни', 'Кровати', 'Ванные комнаты'],
+      })(
         type='text'
         name='dropdown-field-input'
         id='dropdown-field-input'
         placeholder='Выберите удобства'
         maxlength='24'
-        autocomplete=''
-        spellcheck=''
+        autocomplete='off'
         required
       )
 

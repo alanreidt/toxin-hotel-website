@@ -18,7 +18,10 @@
       .search-panel__item
         span.search-panel__input-text
           | Гости
-        +dropdown-field('js-search__guests-dropdown', ['Взрослые', 'Дети', 'Младенцы'], true)(
+        +dropdown-field({
+          optionNames: ['Взрослые', 'Дети', 'Младенцы'],
+          hasButtonPane: true
+        })(
           type='text'
           name='guests'
           id='search-guests-input'
@@ -73,10 +76,9 @@
     .search-panel__row
       span.search-panel__input-text
         | Удобства номера
-      +dropdown-field(
-        'js-search__facilities-dropdown',
-        ['Спальни', 'Кровати', 'Ванные комнаты']
-      )(
+      +dropdown-field({
+          optionNames: ['Спальни', 'Кровати', 'Ванные комнаты'],
+      })(
         type='text'
         name='facilities'
         id='search-facilities-input'
