@@ -1,1 +1,1 @@
-import "../blocks/common.blocks/dropdown-field/dropdown-field.js";
+import "../blocks/common.blocks/dropdown-field/dropdownField.init.js";
