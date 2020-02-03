@@ -1,10 +1,11 @@
 import { DropdownField } from "./dropdown-field";
 
+window.addEventListener("load", handleWindowLoad());
 
-window.onload = function() {
+function handleWindowLoad() {
   const dropdownFields = document.querySelectorAll(".js-dropdown-field");
 
-  dropdownFields.forEach( (dropdownField) => {
+  dropdownFields.forEach((dropdownField) => {
     new DropdownField(dropdownField);
   });
 };
