@@ -1,6 +1,8 @@
 import { Counter } from "./Counter";
 
-window.onload = function() {
+window.addEventListener("load", handleWindowLoad());
+
+function handleWindowLoad() {
   const counters = document.querySelectorAll(".js-counter");
 
   counters.forEach((counter) => {
