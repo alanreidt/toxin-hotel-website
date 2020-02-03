@@ -1,11 +1,11 @@
 export class DropdownField {
-  constructor($parent) {
-    this.$parent = $parent;
+  constructor($host) {
+    this.$host = $host;
 
-    $parent.addEventListener( "focusin", this.handleParentFocusIn.bind(this) );
+    $host.addEventListener( "focusin", this.handleParentFocusIn.bind(this) );
   }
 
   handleParentFocusIn() {
-    this.$parent.classList.add("dropdown-field_is-expanded");
+    this.$host.classList.add("dropdown-field_is-expanded");
   }
 }
