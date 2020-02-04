@@ -1,28 +1,26 @@
 export class DropdownField {
+  constructor($host) {
+    this.$host = $host;
 
-  constructor($parent) {
-    this.$parent = $parent;
-    this.$optionList = $parent.querySelector(".dropdown-field__dropdown");
-    this.$removeButton = $parent.querySelector(".dropdown-field__button_remove");
-    this.$addButton = $parent.querySelector(".dropdown-field__button_add");
-    this.$quantity = $parent.querySelector(".dropdown-field__quantity");
-
-    $parent.addEventListener( "focusin", this.handleParentFocusIn.bind(this) );
+    this._addHostEventListener();
   }
 
-
-  handleParentFocusIn() {
-    this.$parent.classList.add("dropdown-field_is-expanded");
-
-    this.$optionList.addEventListener( "click", this.handleOptionListClick.bind(this) );
+  _addHostEventListener() {
+    this.$host.addEventListener("focusin", this._handleParentFocusIn.bind(this));
+    document.addEventListener("click", this._handleDocumentClick.bind(this));
   }
 
-
-  handleOptionListClick(event) {
-    let quantity = parseFloat( this.$quantity.textContent );
-
-    this.$quantity.textContent = ( event.target === this.$addButton ) ? ++quantity :
-      ( event.target === this.$removeButton ) ? --quantity : quantity;
+  _handleParentFocusIn() {
+    this.$host.classList.add("dropdown-field_is-expanded");
   }
 
+  _handleDocumentClick(event) {
+    const target = event.target.closest(".js-dropdown-field");
+
+    console.log(target);
+
+    if (target !== this.$host) {
+      this.$host.classList.remove("dropdown-field_is-expanded");
+    }
+  }
 }

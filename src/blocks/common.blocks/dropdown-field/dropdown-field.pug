@@ -1,4 +1,6 @@
-//- This is a modification of code from https://github.com/nicothin/NTH-start-project/
+include ../input-field/input-field.pug
+include ../counter/counter.pug
+
 
 mixin dropdown-field( {optionNames, hasButtonPane = false} = {} )
   //- Принимает:
@@ -18,11 +20,8 @@ mixin dropdown-field( {optionNames, hasButtonPane = false} = {} )
       each optionName in optionNames
         .dropdown-field__row
           span.dropdown-field__text= optionName
-          div.dropdown-field__counter
-            i.material-icons.dropdown-field__button.dropdown-field__button_is-disabled.dropdown-field__button_remove remove
-            span.dropdown-field__quantity 0
-            i.material-icons.dropdown-field__button.dropdown-field__button_add add
-
+          .dropdown-field__counter
+            +counter()
       if ( hasButtonPane )
         .dropdown-field__row.dropdown-field__button-pane
           +button("Очистить", "reset")
