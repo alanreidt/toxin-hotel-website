@@ -9,6 +9,56 @@ block main-styles
 
 block body
   section.section
+    h2.section__title text field
+    .section__row
+      +input-field(type='text' name='text' placeholder='Text' maxlength='24' required)
+
+  section.section
+    h2.section__title masked text field
+    .section__row
+      +input-field(class='js-input-masked-date' type='text' name='text-masked' placeholder='ДД.ММ.ГГГГ' maxlength='24' required)
+
+  section.section
+    h2.section__title dropdown
+    .section__row
+      +dropdown-field({
+        optionNames: ['Спальни', 'Кровати', 'Ванные комнаты'],
+      })(
+        type='text'
+        name='dropdown-field-input'
+        id='dropdown-field-input'
+        placeholder='Выберите удобства'
+        maxlength='24'
+        autocomplete='off'
+        required
+      )
+
+  section.section
+    h2.section__title datepicker
+    .section__row
+      +datepicker('datepicker')
+
+  section.section
+    h2.section__title filter date dropdown
+    .section__row
+      +input-field('dropdown')(
+        class='js-input-masked-date'
+        type='text'
+        name='date-filter'
+        id='date-filter'
+        placeholder='Выберите дату'
+        maxlength='24'
+        autocomplete=''
+        spellcheck=''
+        required
+      )
+
+  section.section
+    h2.section__title subscription field
+    .section__row
+      +input-field('subscription')(type='email' name='email' id='email' placeholder='Your email address' maxlength='24' autocomplete='email' spellcheck='false' required)
+
+  section.section
     h2.section__title checkbox buttons
     .section__row
       fieldset.section__fieldset
@@ -86,75 +136,9 @@ block body
       ])
 
   section.section
-    h2.section__title text field
-    .section__row
-      +input-field(type='text' name='text' placeholder='Text' maxlength='24' required)
-
-  section.section
-    h2.section__title masked text field
-    .section__row
-      +input-field(class='js-input-masked-date' type='text' name='text-masked' placeholder='ДД.ММ.ГГГГ' maxlength='24' required)
-
-  section.section
-    h2.section__title dropdown
-    .section__row
-      +dropdown-field({
-        optionNames: ['Спальни', 'Кровати', 'Ванные комнаты'],
-      })(
-        type='text'
-        name='dropdown-field-input'
-        id='dropdown-field-input'
-        placeholder='Выберите удобства'
-        maxlength='24'
-        autocomplete='off'
-        required
-      )
-
-  section.section
-    h2.section__title datepicker
-    .section__row
-      +datepicker('datepicker')
-
-  section.section
-    h2.section__title filter date dropdown
-    .section__row
-      +input-field('dropdown')(
-        class='js-input-masked-date'
-        type='text'
-        name='date-filter'
-        id='date-filter'
-        placeholder='Выберите дату'
-        maxlength='24'
-        autocomplete=''
-        spellcheck=''
-        required
-      )
-
-  section.section
-    h2.section__title subscription field
-    .section__row
-      +input-field('subscription')(type='email' name='email' id='email' placeholder='Your email address' maxlength='24' autocomplete='email' spellcheck='false' required)
-
-  section.section
     h2.section__title expandable checkbox list
     .section__row
       include ../../blocks/common.blocks/checkbox-dropdown/checkbox-dropdown.pug
-
-  section.section
-    h2.section__title cell-blocks
-    .section__row
-      +cell-block('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
-      +cell-block('Удобство', 'Окно в&nbsp;каждой из&nbsp;спален', 'location_city')
-
-  section.section
-    h2.section__title comments
-    .section__row
-      include ../../blocks/common.blocks/comment/comment.pug
-
-  section.section
-    h2.section__title range slider
-    .section__row
-      include ../../blocks/common.blocks/range-slider/range-slider.pug
 
   section.section
     h2.section__title buttons
@@ -171,6 +155,22 @@ block body
       +button('click me', 'reset')(href='#').section__button
     .section__row
       +button('перейти к оплате', 'full-width').section__button
+
+  section.section
+    h2.section__title cell-blocks
+    .section__row
+      +cell-block('Комфорт', 'Шумопоглощающие стены', 'insert_emoticon')
+      +cell-block('Удобство', 'Окно в&nbsp;каждой из&nbsp;спален', 'location_city')
+
+  section.section
+    h2.section__title comments
+    .section__row
+      include ../../blocks/common.blocks/comment/comment.pug
+
+  section.section
+    h2.section__title range slider
+    .section__row
+      include ../../blocks/common.blocks/range-slider/range-slider.pug
 
   section.section
     h2.section__title pagination
