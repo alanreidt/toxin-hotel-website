@@ -16,7 +16,7 @@ block body
   section.section
     h2.section__title masked text field
     .section__row
-      +input-field(class='js-input-masked-date' type='text' name='text-masked' placeholder='ДД.ММ.ГГГГ' maxlength='24' required)
+      +input-field(class='js-date-mask' type='text' name='text-masked' placeholder='ДД.ММ.ГГГГ' maxlength='24' required)
 
   section.section
     h2.section__title dropdown
@@ -42,7 +42,7 @@ block body
     h2.section__title filter date dropdown
     .section__row
       +input-field('dropdown')(
-        class='js-input-masked-date'
+        class='js-date-mask'
         type='text'
         name='date-filter'
         id='date-filter'

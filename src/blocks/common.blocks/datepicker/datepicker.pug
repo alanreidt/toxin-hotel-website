@@ -12,7 +12,7 @@ mixin datepicker(name)
       .datepicker__col
         span.datepicker__input-text Прибытие
         +input-field('dropdown')(
-          class='js-' + name + '__date-input' + ' js-input-masked-date'
+          class='js-' + name + '__date-input' + ' js-date-mask'
           type='text'
           name= name + '-date-from'
           id= name + '-date-from'
@@ -25,7 +25,7 @@ mixin datepicker(name)
       .datepicker__col
         span.datepicker__input-text Выезд
         +input-field('dropdown')(
-          class='js-' + name + '__date-input' + ' js-input-masked-date'
+          class='js-' + name + '__date-input' + ' js-date-mask'
           type='text'
           name= name + '-date-to'
           id= name + '-date-to'
