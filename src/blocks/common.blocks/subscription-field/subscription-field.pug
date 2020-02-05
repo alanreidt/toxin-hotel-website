@@ -1,0 +1,15 @@
+mixin subscription-field()
+  .subscription-field
+    form.subscription-field__form(name='subscription-field-form' autocomplete='on')
+      +input-field(
+        type='email'
+        name='email'
+        id='email'
+        placeholder='Email'
+        maxlength='24'
+        autocomplete='email'
+        spellcheck='false'
+        required
+      )
+      button.subscription-field__button
+
