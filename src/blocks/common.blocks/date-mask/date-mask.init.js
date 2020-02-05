@@ -1,10 +1,9 @@
-import 'cleave.js';
+import Cleave from 'cleave.js';
 
+const dateMasks = document.querySelectorAll(".js-date-mask");
 
-const maskedDateInputs = document.querySelectorAll(".js-input-masked-date");
-
-maskedDateInputs.forEach( (maskedDateInput) => {
-  new Cleave(maskedDateInput, {
+dateMasks.forEach((dateMask) => {
+  new Cleave(dateMask, {
     date: true,
     delimiter: '.',
     dateMin: '2019-01-01',
