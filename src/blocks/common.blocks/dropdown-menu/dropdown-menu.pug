@@ -4,11 +4,11 @@ include ../../library.blocks/button/button.pug
 mixin dropdown-menu({ optionNames, hasButtonPane = false } = {})
   .dropdown-menu
     each optionName in optionNames
-      .dropdown-menu__row
-        span.dropdown-menu__text= optionName
+      .dropdown-menu__option
+        span.dropdown-menu__option-text= optionName
         .dropdown-menu__counter
           +counter()
     if (hasButtonPane)
-      .dropdown-menu__row.dropdown-menu__button-pane
+      .dropdown-menu__button-pane
         +button("Очистить", "reset")
         +button("Применить")
