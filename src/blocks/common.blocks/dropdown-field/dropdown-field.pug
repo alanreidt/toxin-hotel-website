@@ -1,8 +1,7 @@
 include ../input-field/input-field.pug
-include ../counter/counter.pug
-include ../../library.blocks/button/button.pug
+include ../dropdown-menu/dropdown-menu.pug
 
-mixin dropdown-field( {optionNames, hasButtonPane = false} = {} )
+mixin dropdown-field()
   //- Принимает:
         optionNames {String[]} — массив названий для каждой строки dropdown'а
         hasButtonPane {bool} — флаг для панели кнопок
@@ -17,12 +16,6 @@ mixin dropdown-field( {optionNames, hasButtonPane = false} = {} )
   .dropdown-field.js-dropdown-field
     +input-field("dropdown")&attributes(attributes)
     .dropdown-field__dropdown
-      each optionName in optionNames
-        .dropdown-field__row
-          span.dropdown-field__text= optionName
-          .dropdown-field__counter
-            +counter()
-      if ( hasButtonPane )
-        .dropdown-field__row.dropdown-field__button-pane
-          +button("Очистить", "reset")
-          +button("Применить")
+      +dropdown-menu({
+        optionNames: ["Спальни", "Кровати", "Ванные комнаты"],
+      })
