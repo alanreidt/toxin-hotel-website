@@ -1,18 +1,9 @@
+include ../subscription-field/subscription-field.pug
+
 aside.footer-subscription
   .footer-subscription__inner
     h3.footer-subscription__title Подписка
     p.footer-subscription__description
       | Получайте специальные
       | предложения и&nbsp;новости сервиса
-    form.footer-subscription__form(name='footer-subscription-form' autocomplete='on')
-      +input-field('subscription')(
-        type='email'
-        name='email'
-        id='email'
-        placeholder='Email'
-        maxlength='24'
-        autocomplete='email'
-        spellcheck='false'
-        required
-      )
-
+    +subscription-field()
