@@ -11,16 +11,14 @@ export class DropdownField {
   }
 
   _handleParentFocusIn() {
-    this.$host.classList.add("dropdown-field_is-expanded");
+    this.$host.classList.add("dropdown_is-expanded");
   }
 
   _handleDocumentClick(event) {
-    const target = event.target.closest(".js-dropdown-field");
-
-    console.log(target);
+    const target = event.target.closest(".js-dropdown");
 
     if (target !== this.$host) {
-      this.$host.classList.remove("dropdown-field_is-expanded");
+      this.$host.classList.remove("dropdown_is-expanded");
     }
   }
 }

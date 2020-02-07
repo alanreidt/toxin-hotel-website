@@ -1,21 +1,21 @@
 include ../input-field/input-field.pug
 include ../dropdown-menu/dropdown-menu.pug
 
-mixin dropdown-field()
+mixin dropdown()
   //- Принимает:
         optionNames {String[]} — массив названий для каждой строки dropdown'а
         hasButtonPane {bool} — флаг для панели кнопок
 
   //- Вызов:
-        +dropdown-field(
+        +dropdown(
           ["Спальни", "Кровати", "Ванные комнаты"],
           true
-        ) — создает блок dropdown-field
+        ) — создает блок dropdown
             с id js-search-box__guests-dropdown для dropdown'а
             и 3-мя полями с соответствующим текстом
-  .dropdown-field.js-dropdown-field
+  .dropdown.js-dropdown
     +input-field("dropdown")&attributes(attributes)
-    .dropdown-field__menu
+    .dropdown__menu
       +dropdown-menu({
         optionNames: ["Спальни", "Кровати", "Ванные комнаты"],
       })

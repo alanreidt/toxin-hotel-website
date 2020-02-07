@@ -18,7 +18,7 @@
       .search-panel__item
         span.search-panel__input-text
           | Гости
-        +dropdown-field({
+        +dropdown({
           optionNames: ['Взрослые', 'Дети', 'Младенцы'],
           hasButtonPane: true
         })(
@@ -76,7 +76,7 @@
     .search-panel__row
       span.search-panel__input-text
         | Удобства номера
-      +dropdown-field({
+      +dropdown({
           optionNames: ['Спальни', 'Кровати', 'Ванные комнаты'],
       })(
         type='text'

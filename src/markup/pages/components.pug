@@ -21,9 +21,7 @@ block body
   section.section
     h2.section__title dropdown
     .section__row
-      +dropdown-field({
-        optionNames: ['Спальни', 'Кровати', 'Ванные комнаты'],
-      })(
+      +dropdown()(
         type='text'
         name='dropdown-field-input'
         id='dropdown-field-input'
