@@ -4,9 +4,11 @@
     - change params order (modifierList should be at the end)
 
 //-
-  Params:
+  Parameters:
     modifierList {string} — list of modifiers
     labelText {string} — text inside <label> tag
+  Attributes
+    type=['text']
 mixin input-field(modifierList, labelText)
   -
     const ELEMENT_CLASS_NAME = 'input-field_';
@@ -19,5 +21,5 @@ mixin input-field(modifierList, labelText)
     label.input-field__label(for != attributes.id)
       if ( labelText )
         span.input-field__text= labelText
-      input.input-field__input&attributes(attributes)
+      input.input-field__input(type='text')&attributes(attributes)
     block
