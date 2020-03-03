@@ -1,12 +1,8 @@
+//-
+  Params:
+    modifierList {string} — list of modifiers
+    labelText {string} — text inside <label> tag
 mixin input-field(modifierList, labelText)
-  //- Accepts:
-        modifierList {string} — list of modifiers
-        labelText {string} — text inside <label> tag
-  //- Examples:
-        +input-field('dropdown, subscription') — creates input-field
-          with dropdown & subscription modifiers
-        +input-field('', 'Date of birth') — create input-field
-          with according label tag text
   -
     const ELEMENT_CLASS_NAME = "input-field_";
     const classList = !modifierList ? '' :
