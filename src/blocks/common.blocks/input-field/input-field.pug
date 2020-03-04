@@ -1,17 +1,17 @@
 //-
   TODO:
-    - check block necessity
     - check for modifierList necessity
-    - change params order (modifierList should be at the end)
 
 //-
   Parameters:
-    modifierList {string} — list of modifiers
     labelText {string} — text inside <label> tag
+    modifierList {string} — list of modifiers
   Attributes
     type=['text']
-mixin input-field(modifierList, labelText)
+    id !required
+mixin input-field({ labelText, modifierList } = {})
   -
+    const isLabelText = labelText !== undefined;
     const ELEMENT_CLASS_NAME = 'input-field_';
     const classList = !modifierList ? '' :
       ELEMENT_CLASS_NAME + modifierList
@@ -19,8 +19,6 @@ mixin input-field(modifierList, labelText)
         .join(ELEMENT_CLASS_NAME);
 
   .input-field(class = classList)
-    label.input-field__label(for != attributes.id)
-      if ( labelText )
-        span.input-field__text= labelText
-      input.input-field__input(type='text')&attributes(attributes)
-    block
+    if (isLabelText)
+      label.input-field__label(for != attributes.id)= labelText
+    input.input-field__input(type='text')&attributes(attributes)
