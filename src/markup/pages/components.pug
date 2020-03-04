@@ -21,11 +21,13 @@ block body
   section.section
     h2.section__title dropdown
     .section__row
-      +dropdown()(
-        type='text'
+      +dropdown({
+        optionNames: ['Взрослые', 'Дети', 'Младенцы'],
+        hasButtonPane: true,
+      })(
         name='dropdown-field-input'
         id='dropdown-field-input'
-        placeholder='Выберите удобства'
+        value='Сколько гостей'
         maxlength='24'
         autocomplete='off'
         required
