@@ -7,7 +7,7 @@ include ../dropdown-menu/dropdown-menu.pug
     options.hasButtonPane {Boolean} [false] — adds button panel
 mixin dropdown({ optionNames, hasButtonPane } = {})
   .dropdown.js-dropdown
-    +input-field('dropdown')&attributes(attributes)
+    +input-field('', 'dropdown')&attributes(attributes)
     .dropdown__menu
       +dropdown-menu({
         optionNames,
