@@ -1,18 +1,10 @@
 include ../input-field/input-field.pug
 include ../dropdown-menu/dropdown-menu.pug
 
+//-
+  Parameters:
+    optionNames {String[]} — array with options names
 mixin dropdown()
-  //- Принимает:
-        optionNames {String[]} — массив названий для каждой строки dropdown'а
-        hasButtonPane {bool} — флаг для панели кнопок
-
-  //- Вызов:
-        +dropdown(
-          ["Спальни", "Кровати", "Ванные комнаты"],
-          true
-        ) — создает блок dropdown
-            с id js-search-box__guests-dropdown для dropdown'а
-            и 3-мя полями с соответствующим текстом
   .dropdown.js-dropdown
     +input-field("dropdown")&attributes(attributes)
     .dropdown__menu
