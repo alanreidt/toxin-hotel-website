@@ -10,5 +10,6 @@ mixin dropdown({ optionNames, hasButtonPane })
     +input-field('dropdown')&attributes(attributes)
     .dropdown__menu
       +dropdown-menu({
-        optionNames: ['Спальни', 'Кровати', 'Ванные комнаты'],
+        optionNames,
+        hasButtonPane,
       })
