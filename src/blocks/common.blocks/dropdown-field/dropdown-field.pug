@@ -6,8 +6,8 @@ include ../dropdown-menu/dropdown-menu.pug
     optionNames {String[]} — array with options names
 mixin dropdown()
   .dropdown.js-dropdown
-    +input-field("dropdown")&attributes(attributes)
+    +input-field('dropdown')&attributes(attributes)
     .dropdown__menu
       +dropdown-menu({
-        optionNames: ["Спальни", "Кровати", "Ванные комнаты"],
+        optionNames: ['Спальни', 'Кровати', 'Ванные комнаты'],
       })
