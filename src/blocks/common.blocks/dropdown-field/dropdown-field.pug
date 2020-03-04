@@ -10,7 +10,7 @@ include ../dropdown-menu/dropdown-menu.pug
     value !required
 mixin dropdown({ optionNames, hasButtonPane } = {})
   .dropdown.js-dropdown
-    +input-field('', 'dropdown')(value='Change me' readonly='true')&attributes(attributes)
+    +input-field()(value='Change me' readonly='true')&attributes(attributes)
     .dropdown__menu
       +dropdown-menu({
         optionNames,

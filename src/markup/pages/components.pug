@@ -11,12 +11,29 @@ block body
   section.section
     h2.section__title text field
     .section__row
-      +input-field('', 'text field')(name='text' placeholder='Text' maxlength='24' required)
+      +input-field({
+        labelText: 'text field',
+      })(
+        name='text'
+        id='text'
+        placeholder='Text'
+        maxlength='24'
+        required='true'
+      )
 
   section.section
     h2.section__title masked text field
     .section__row
-      +input-field('', 'masked text field')(class='js-date-mask' name='text-masked' placeholder='ДД.ММ.ГГГГ' maxlength='24' required)
+      +input-field({
+        labelText: 'masked text field',
+      })(
+        class='js-date-mask'
+        name='masked-text'
+        id='masked-text'
+        placeholder='ДД.ММ.ГГГГ'
+        maxlength='24'
+        required='true'
+      )
 
   section.section
     h2.section__title dropdown
@@ -41,7 +58,7 @@ block body
   section.section
     h2.section__title filter date dropdown
     .section__row
-      +input-field('dropdown')(
+      +input-field()(
         class='js-date-mask'
         name='date-filter'
         id='date-filter'

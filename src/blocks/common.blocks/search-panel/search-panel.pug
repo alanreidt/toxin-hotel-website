@@ -4,7 +4,7 @@
       .search-panel__item
         span.search-panel__input-text
           | Даты пребывания в отеле
-        +input-field('dropdown')(
+        +input-field()(
           class='js-date-mask'
           type='text'
           name='date-filter'
@@ -13,7 +13,7 @@
           maxlength='24'
           autocomplete=''
           spellcheck=''
-          required
+          required='true'
         )
       .search-panel__item
         span.search-panel__input-text

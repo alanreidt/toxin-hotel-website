@@ -6,7 +6,7 @@
     form(name='entry-box-form' autocomplete='on')
       .entry-box__row
         .entry-box__item
-          +input-field(
+          +input-field()(
             type='email'
             name='email'
             id='entry-box-email'
@@ -14,10 +14,10 @@
             maxlength='24'
             autocomplete='email'
             spellcheck='false'
-            required
+            required='true'
           )
         .entry-box__item
-          +input-field(
+          +input-field()(
             type='password'
             name='password'
             id='entry-box-password'
@@ -25,7 +25,7 @@
             maxlength='20'
             autocomplete='current-password'
             spellcheck='false'
-            required
+            required='true'
           )
 
       .entry-box__row

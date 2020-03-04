@@ -3,14 +3,14 @@ include ../input-field/input-field.pug
 mixin subscription-field()
   .subscription-field
     form.subscription-field__form(name='subscription-field-form' autocomplete='on')
-      +input-field(
+      +input-field()(
         type='email'
         name='email'
         placeholder='Email'
         maxlength='24'
         autocomplete='email'
         spellcheck='false'
-        required
+        required='true'
       )
       button.subscription-field__button
 
