@@ -5,9 +5,12 @@ include ../dropdown-menu/dropdown-menu.pug
   Parameters:
     options.optionNames {String[]} !required — array with options names
     options.hasButtonPane {Boolean} [false] — adds button panel
+  Attributes:
+    type=['text']
+    value !required
 mixin dropdown({ optionNames, hasButtonPane } = {})
   .dropdown.js-dropdown
-    +input-field('', 'dropdown')&attributes(attributes)
+    +input-field('', 'dropdown')(value='Change me' readonly='true')&attributes(attributes)
     .dropdown__menu
       +dropdown-menu({
         optionNames,
