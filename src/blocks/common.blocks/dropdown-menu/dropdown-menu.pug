@@ -1,6 +1,10 @@
 include ../counter/counter.pug
 include ../../library.blocks/button/button.pug
 
+//-
+  Parameters:
+    options.optionNames {String[]} !required — array with options names
+    options.hasButtonPane {Boolean} [false] — adds button panel
 mixin dropdown-menu({ optionNames, hasButtonPane = false } = {})
   .dropdown-menu
     each optionName in optionNames
