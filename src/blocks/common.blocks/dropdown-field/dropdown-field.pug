@@ -3,8 +3,8 @@ include ../dropdown-menu/dropdown-menu.pug
 
 //-
   Parameters:
-    options.optionNames {String[]} — array with options names
-    options.hasButtonPane {Boolean} — adds button panel
+    options.optionNames {String[]} !required — array with options names
+    options.hasButtonPane {Boolean} [false] — adds button panel
 mixin dropdown({ optionNames, hasButtonPane })
   .dropdown.js-dropdown
     +input-field('dropdown')&attributes(attributes)
