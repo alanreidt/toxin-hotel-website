@@ -1,24 +1,24 @@
 export class DropdownField {
-  constructor($host) {
-    this.$host = $host;
+  constructor(anchorElement) {
+    this.anchorElement = anchorElement;
 
     this._addHostEventListener();
   }
 
   _addHostEventListener() {
-    this.$host.addEventListener("focusin", this._handleParentFocusIn.bind(this));
+    this.anchorElement.addEventListener("focusin", this._handleParentFocusIn.bind(this));
     document.addEventListener("click", this._handleDocumentClick.bind(this));
   }
 
   _handleParentFocusIn() {
-    this.$host.classList.add("dropdown_is-expanded");
+    this.anchorElement.classList.add("dropdown_is-expanded");
   }
 
   _handleDocumentClick(event) {
     const target = event.target.closest(".js-dropdown");
 
-    if (target !== this.$host) {
-      this.$host.classList.remove("dropdown_is-expanded");
+    if (target !== this.anchorElement) {
+      this.anchorElement.classList.remove("dropdown_is-expanded");
     }
   }
 }
