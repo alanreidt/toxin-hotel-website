@@ -1,13 +1,13 @@
 export class Counter {
-  constructor($host) {
-    this.$host = $host;
+  constructor(anchorElement) {
+    this.anchorElement = anchorElement;
 
     this._addHostEventListener();
     this._assignElements();
   }
 
   _addHostEventListener() {
-    this.$host.addEventListener("click", this._handleHostClick.bind(this));
+    this.anchorElement.addEventListener("click", this._handleHostClick.bind(this));
   }
 
   _handleHostClick(event) {
@@ -18,8 +18,8 @@ export class Counter {
   }
 
   _assignElements() {
-    this.$subtractionButton = this.$host.querySelector(".counter__button_type_subtraction");
-    this.$additionButton = this.$host.querySelector(".counter__button_type_addition");
-    this.$quantityDisplay = this.$host.querySelector(".counter__quantity-display");
+    this.$subtractionButton = this.anchorElement.querySelector(".counter__button_type_subtraction");
+    this.$additionButton = this.anchorElement.querySelector(".counter__button_type_addition");
+    this.$quantityDisplay = this.anchorElement.querySelector(".counter__quantity-display");
   }
 }
