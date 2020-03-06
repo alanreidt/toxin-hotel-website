@@ -1,4 +1,4 @@
 # utilities
 Set of Math and helper functions.
 
-See in action on [Slider plugin page](https://alanreidt.github.io/slider/).
+See in action in [Slider plugin repository](https://github.com/alanreidt/slider).
