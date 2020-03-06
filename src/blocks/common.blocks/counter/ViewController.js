@@ -1,4 +1,4 @@
-export class Counter {
+export class ViewController {
   constructor(anchorElement) {
     this.anchorElement = anchorElement;
 
