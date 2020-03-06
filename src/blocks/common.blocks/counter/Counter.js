@@ -8,7 +8,7 @@ export class Counter {
   }
 
   _assignElements() {
-    this.counter = this.anchorElement.querySelector('.js-counter');
+    this.counter = this.anchorElement.querySelector('.js-counter') || this.anchorElement;
     this.subtractionButton = this.anchorElement.querySelector('.counter__button_type_subtraction');
     this.additionButton = this.anchorElement.querySelector('.counter__button_type_addition');
     this.quantityDisplay = this.anchorElement.querySelector('.counter__quantity-display');
