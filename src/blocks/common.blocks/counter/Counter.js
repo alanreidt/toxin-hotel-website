@@ -14,10 +14,10 @@ export class Counter {
   }
 
   _addEventListeners() {
-    this.anchorElement.addEventListener('click', this._handleHostClick.bind(this));
+    this.$counter.addEventListener('click', this._handleCounterClick.bind(this));
   }
 
-  _handleHostClick(event) {
+  _handleCounterClick(event) {
     let quantity = parseFloat(this.$quantityDisplay.textContent);
 
     this.$quantityDisplay.textContent = (event.target === this.$additionButton) ? quantity + 1 :
