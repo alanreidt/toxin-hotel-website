@@ -65,7 +65,7 @@ class Model {
 
   _setValue(value) {
     const [min, max] = this._options.boundaries;
-    const currentValue = this._options._value;
+    const currentValue = this._options.value;
 
     const validate = flow(
       parseFloat,
