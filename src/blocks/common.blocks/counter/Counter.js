@@ -7,20 +7,20 @@ export class Counter {
   }
 
   _assignElements() {
-    this.$counter = this.anchorElement.querySelector('.js-counter');
-    this.$subtractionButton = this.anchorElement.querySelector('.counter__button_type_subtraction');
-    this.$additionButton = this.anchorElement.querySelector('.counter__button_type_addition');
-    this.$quantityDisplay = this.anchorElement.querySelector('.counter__quantity-display');
+    this.counter = this.anchorElement.querySelector('.js-counter');
+    this.subtractionButton = this.anchorElement.querySelector('.counter__button_type_subtraction');
+    this.additionButton = this.anchorElement.querySelector('.counter__button_type_addition');
+    this.quantityDisplay = this.anchorElement.querySelector('.counter__quantity-display');
   }
 
   _addEventListeners() {
-    this.$counter.addEventListener('click', this._handleCounterClick.bind(this));
+    this.counter.addEventListener('click', this._handleCounterClick.bind(this));
   }
 
   _handleCounterClick(event) {
-    let quantity = parseFloat(this.$quantityDisplay.textContent);
+    let quantity = parseFloat(this.quantityDisplay.textContent);
 
-    this.$quantityDisplay.textContent = (event.target === this.$additionButton) ? quantity + 1 :
-      (event.target === this.$subtractionButton) ? quantity - 1: quantity;
+    this.quantityDisplay.textContent = (event.target === this.additionButton) ? quantity + 1 :
+      (event.target === this.subtractionButton) ? quantity - 1: quantity;
   }
 }
