@@ -25,6 +25,7 @@
     "deep-equal": "^2.0.1",
     "jquery": "^3.4.1",
     "jquery-ui-dist": "^1.12.1",
+    "lodash": "^4.17.15",
     "normalize.css": "^8.0.1",
     "nouislider": "^13.1.5",
     "wnumb": "^1.2.0"
