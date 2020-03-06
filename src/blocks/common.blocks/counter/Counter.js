@@ -2,11 +2,11 @@ export class Counter {
   constructor(anchorElement) {
     this.anchorElement = anchorElement;
 
-    this._addHostEventListener();
+    this._addEventListeners();
     this._assignElements();
   }
 
-  _addHostEventListener() {
+  _addEventListeners() {
     this.anchorElement.addEventListener('click', this._handleHostClick.bind(this));
   }
 
