@@ -7,7 +7,7 @@ export class Counter {
   }
 
   _addHostEventListener() {
-    this.anchorElement.addEventListener("click", this._handleHostClick.bind(this));
+    this.anchorElement.addEventListener('click', this._handleHostClick.bind(this));
   }
 
   _handleHostClick(event) {
@@ -18,8 +18,8 @@ export class Counter {
   }
 
   _assignElements() {
-    this.$subtractionButton = this.anchorElement.querySelector(".counter__button_type_subtraction");
-    this.$additionButton = this.anchorElement.querySelector(".counter__button_type_addition");
-    this.$quantityDisplay = this.anchorElement.querySelector(".counter__quantity-display");
+    this.$subtractionButton = this.anchorElement.querySelector('.counter__button_type_subtraction');
+    this.$additionButton = this.anchorElement.querySelector('.counter__button_type_addition');
+    this.$quantityDisplay = this.anchorElement.querySelector('.counter__quantity-display');
   }
 }
