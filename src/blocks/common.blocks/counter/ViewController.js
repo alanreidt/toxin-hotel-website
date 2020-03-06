@@ -9,8 +9,21 @@ class ViewController {
     this.setElements(this.model.getOptions());
   }
 
-  setElements({ value }) {
+  setElements({ boundaries, value }) {
     this.quantityDisplay.textContent = value;
+
+    const [min, max] = boundaries;
+
+    this.subtractionButton.classList.remove('counter__button_is-disabled');
+    this.additionButton.classList.remove('counter__button_is-disabled');
+
+    if (value === min) {
+      this.subtractionButton.classList.add('counter__button_is-disabled');
+    }
+
+    if (value === max) {
+      this.additionButton.classList.add('counter__button_is-disabled');
+    }
   }
 
   _assignElements() {
