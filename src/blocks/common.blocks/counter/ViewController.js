@@ -1,10 +1,16 @@
 class ViewController {
-  constructor(anchorElement) {
+  constructor(anchorElement, model) {
     this.anchorElement = anchorElement;
+    this.model = model;
 
     this._assignElements();
     this._bindMethods();
     this._addEventListeners();
+    this.setElements(this.model.getOptions());
+  }
+
+  setElements({ value }) {
+    this.quantityDisplay.textContent = value;
   }
 
   _assignElements() {
@@ -23,10 +29,17 @@ class ViewController {
   }
 
   _handleCounterClick(event) {
-    let quantity = parseFloat(this.quantityDisplay.textContent);
+    let { value } = this.model.getOptions();
 
-    this.quantityDisplay.textContent = (event.target === this.additionButton) ? quantity + 1 :
-      (event.target === this.subtractionButton) ? quantity - 1: quantity;
+    if (event.target === this.additionButton) {
+      value = value + 1;
+    }
+
+    if (event.target === this.subtractionButton) {
+      value = value - 1;
+    }
+
+    this.model.setOptions({ value });
   }
 }
 
