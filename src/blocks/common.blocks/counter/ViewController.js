@@ -1,4 +1,4 @@
-export class ViewController {
+class ViewController {
   constructor(anchorElement) {
     this.anchorElement = anchorElement;
 
@@ -29,3 +29,5 @@ export class ViewController {
       (event.target === this.subtractionButton) ? quantity - 1: quantity;
   }
 }
+
+export default ViewController;
