@@ -1,9 +1,9 @@
-import Dropdown from "./Dropdown";
+import Dropdown from './Dropdown';
 
-window.addEventListener("load", handleWindowLoad());
+window.addEventListener('load', handleWindowLoad());
 
 function handleWindowLoad() {
-  const dropdowns = document.querySelectorAll(".js-dropdown");
+  const dropdowns = document.querySelectorAll('.js-dropdown');
 
   dropdowns.forEach((dropdown) => {
     Dropdown.create(dropdown);
