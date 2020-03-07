@@ -1,4 +1,4 @@
-export class DropdownField {
+export class ViewController {
   constructor(anchorElement) {
     this.anchorElement = anchorElement;
 
