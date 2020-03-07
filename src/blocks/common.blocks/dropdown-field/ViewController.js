@@ -1,4 +1,4 @@
-export class ViewController {
+class ViewController {
   constructor(anchorElement) {
     this.anchorElement = anchorElement;
 
@@ -22,3 +22,5 @@ export class ViewController {
     }
   }
 }
+
+export default ViewController;
