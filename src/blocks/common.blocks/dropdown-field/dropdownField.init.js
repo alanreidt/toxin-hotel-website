@@ -1,11 +1,11 @@
-import { DropdownField } from "./dropdown-field";
+import Dropdown from "./Dropdown";
 
 window.addEventListener("load", handleWindowLoad());
 
 function handleWindowLoad() {
-  const dropdownFields = document.querySelectorAll(".js-dropdown");
+  const dropdowns = document.querySelectorAll(".js-dropdown");
 
-  dropdownFields.forEach((dropdownField) => {
-    new DropdownField(dropdownField);
+  dropdowns.forEach((dropdown) => {
+    Dropdown.create(dropdown);
   });
 };
