@@ -1,7 +1,6 @@
 import wNumb from 'wnumb';
 import noUiSlider from 'nouislider';
 import '../blocks/common.blocks/date-mask/date-mask.init.js';
-import '../blocks/common.blocks/dropdown-field/dropdown-field.js';
 import '../blocks/common.blocks/search-box/__dropdown/search-box__dropdown.js';
 
 
