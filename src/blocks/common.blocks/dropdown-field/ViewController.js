@@ -28,11 +28,14 @@ class ViewController {
   _handleDocumentClick(event) {
     event.preventDefault();
 
-    if (event.target.closest('.js-dropdown__trigger') !== null) {
+    const isDropdownTriggerTarget = event.target.closest('.js-dropdown__trigger') !== null;
+    const isDropdownMenuTarget = event.target.closest('.js-dropdown__menu') !== null;
+
+    if (isDropdownTriggerTarget) {
       this.dropdown.classList.toggle('dropdown_is-expanded');
     }
 
-    if (event.target.closest('.js-dropdown__trigger') === null && event.target.closest('.js-dropdown__menu') === null) {
+    if (!isDropdownTriggerTarget && !isDropdownMenuTarget) {
       this.dropdown.classList.remove('dropdown_is-expanded');
     }
   }
