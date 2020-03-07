@@ -1,24 +1,39 @@
 class ViewController {
-  constructor(anchorElement) {
+  constructor(anchorElement, model) {
     this.anchorElement = anchorElement;
+    this.model = model;
 
-    this._addHostEventListener();
+    this._assignElements();
+    this._bindMethods();
+    this._addEventListeners();
+    this.setElements();
   }
 
-  _addHostEventListener() {
-    this.anchorElement.addEventListener('focusin', this._handleParentFocusIn.bind(this));
-    document.addEventListener('click', this._handleDocumentClick.bind(this));
+  setElements() {}
+
+  _assignElements() {
+    this.dropdown = this.anchorElement.querySelector('.js-dropdown') || this.anchorElement;
+    this.dropdownTrigger = this.anchorElement.querySelector('.js-dropdown__trigger');
+    this.dropdownMenu = this.anchorElement.querySelector('.js-dropdown__menu');
   }
 
-  _handleParentFocusIn() {
-    this.anchorElement.classList.add('dropdown_is-expanded');
+  _bindMethods() {
+    this._handleDocumentClick = this._handleDocumentClick.bind(this);
+  }
+
+  _addEventListeners() {
+    document.addEventListener('click', this._handleDocumentClick);
   }
 
   _handleDocumentClick(event) {
-    const target = event.target.closest('.js-dropdown');
+    event.preventDefault();
 
-    if (target !== this.anchorElement) {
-      this.anchorElement.classList.remove('dropdown_is-expanded');
+    if (event.target.closest('.js-dropdown__trigger') !== null) {
+      this.dropdown.classList.toggle('dropdown_is-expanded');
+    }
+
+    if (event.target.closest('.js-dropdown__trigger') === null && event.target.closest('.js-dropdown__menu') === null) {
+      this.dropdown.classList.remove('dropdown_is-expanded');
     }
   }
 }
