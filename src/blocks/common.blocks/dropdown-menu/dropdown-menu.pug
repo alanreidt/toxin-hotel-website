@@ -6,7 +6,7 @@ include ../../library.blocks/button/button.pug
     options.optionNames {String[]} !required — array with options names
     options.hasButtonPane {Boolean} [false] — adds button panel
 mixin dropdown-menu({ optionNames, hasButtonPane = false } = {})
-  .dropdown-menu
+  .dropdown-menu&attributes(attributes)
     each optionName in optionNames
       .dropdown-menu__option
         span.dropdown-menu__option-text= optionName
