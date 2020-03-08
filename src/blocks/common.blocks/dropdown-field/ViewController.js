@@ -1,4 +1,4 @@
-import Counter from '../counter/Counter'
+import DropdownMenu from '../dropdown-menu/DropdownMenu'
 
 class ViewController {
   constructor(anchorElement, model) {
@@ -12,24 +12,29 @@ class ViewController {
     this._tieComponents();
   }
 
-  setElements({ optionsSet }) {
+  setElements(optionsSet) {
+    const dropdownDropdownMenu = DropdownMenu.create(this.dropdownDropdownMenu, optionsSet);
+    const dropdownDropdownMenuOptionsSet = dropdownDropdownMenu.getOptions();
+
     let guestQuantity = 0;
     let babyQuantity = 0;
 
-    optionsSet.forEach((options, index) => {
-      const counter = Counter.create(this.counters[index], options);
-      const counterOptions = counter.getOptions();
-
-      if (counterOptions.name !== 'Adult' || counterOptions.name !== 'Child') {
-        guestQuantity += counterOptions.value;
+    dropdownDropdownMenuOptionsSet.forEach((options) => {
+      if (options.name === 'Adult' || options.name === 'Child') {
+        guestQuantity += options.value;
       }
 
-      if (counterOptions.name === 'Baby') {
-        babyQuantity += counterOptions.value;
+      if (options.name === 'Baby') {
+        babyQuantity += options.value;
       }
     });
 
-    this.inputField.value = `${guestQuantity} гостя, ${babyQuantity} младенец`;
+    const guestString = guestQuantity !== 0 ? `${guestQuantity} гостя` : '';
+    const babyString = babyQuantity !== 0 ? `${babyQuantity} младенец` : '';
+
+    if (guestQuantity !== 0) {
+      this.inputField.value = `${guestString}, ${babyString}`;
+    }
   }
 
   _assignElements() {
@@ -37,7 +42,7 @@ class ViewController {
     this.dropdownTrigger = this.anchorElement.querySelector('.js-dropdown__trigger');
     this.dropdownMenu = this.anchorElement.querySelector('.js-dropdown__menu');
     this.inputField = this.anchorElement.querySelector('.js-dropdown__input-field');
-    this.counters = this.anchorElement.querySelectorAll('.js-counter');
+    this.dropdownDropdownMenu = this.anchorElement.querySelector('.js-dropdown__dropdown-menu');
   }
 
   _bindMethods() {
@@ -64,11 +69,9 @@ class ViewController {
   }
 
   _tieComponents() {
-    this.counters.forEach((counter) => {
-      Counter.addSubscriber(counter, (options) => {
-        this.model.setOptions(options);
-      })
-    });
+    DropdownMenu.addSubscriber(this.dropdownDropdownMenu, 'update', (options) => {
+      this.model.setOptions(options);
+    })
   }
 }
 
