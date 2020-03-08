@@ -4,8 +4,8 @@ import cloneDeep from 'lodash/cloneDeep';
 import { ObserverMixin } from '../../../../modules/utilities';
 
 class Model {
-  constructor(options) {
-    this._options = {};
+  constructor(options = []) {
+    this._options = [];
 
     this.setOptions(options);
   }
