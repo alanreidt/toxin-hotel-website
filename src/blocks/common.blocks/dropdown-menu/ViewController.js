@@ -10,7 +10,7 @@ class ViewController {
     this._tieComponents();
   }
 
-  setElements({ optionsSet }) {
+  setElements(optionsSet) {
     optionsSet.forEach((options, index) => {
       Counter.create(this.counters[index], options);
     });
@@ -22,7 +22,7 @@ class ViewController {
 
   _tieComponents() {
     this.counters.forEach((counter, index) => {
-      Counter.addSubscriber(counter, (options) => {
+      Counter.addSubscriber(counter, 'update', (options) => {
         this.model.setOptionsAt(index, options);
       })
     });
