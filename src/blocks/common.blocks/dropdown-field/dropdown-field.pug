@@ -11,9 +11,9 @@ include ../dropdown-menu/dropdown-menu.pug
 mixin dropdown({ optionNames, hasButtonPane } = {})
   .dropdown.js-dropdown
     .dropdown__trigger.js-dropdown__trigger
-      +input-field()(value='Change me' readonly='true')&attributes(attributes)
+      +input-field.js-dropdown__input-field()(value='Change me' readonly='true')&attributes(attributes)
     .dropdown__menu.js-dropdown__menu
       +dropdown-menu({
         optionNames,
         hasButtonPane,
-      })
+      }).js-dropdown__dropdown-menu
