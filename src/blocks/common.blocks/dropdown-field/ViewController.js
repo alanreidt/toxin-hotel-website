@@ -1,3 +1,5 @@
+import Counter from '../counter/Counter'
+
 class ViewController {
   constructor(anchorElement, model) {
     this.anchorElement = anchorElement;
@@ -6,15 +8,36 @@ class ViewController {
     this._assignElements();
     this._bindMethods();
     this._addEventListeners();
-    this.setElements();
+    this.setElements(this.model.getOptions());
+    this._tieComponents();
   }
 
-  setElements() {}
+  setElements({ optionsSet }) {
+    let guestQuantity = 0;
+    let babyQuantity = 0;
+
+    optionsSet.forEach((options, index) => {
+      const counter = Counter.create(this.counters[index], options);
+      const counterOptions = counter.getOptions();
+
+      if (counterOptions.name !== 'Adult' || counterOptions.name !== 'Child') {
+        guestQuantity += counterOptions.value;
+      }
+
+      if (counterOptions.name === 'Baby') {
+        babyQuantity += counterOptions.value;
+      }
+    });
+
+    this.inputField.value = `${guestQuantity} гостя, ${babyQuantity} младенец`;
+  }
 
   _assignElements() {
     this.dropdown = this.anchorElement.querySelector('.js-dropdown') || this.anchorElement;
     this.dropdownTrigger = this.anchorElement.querySelector('.js-dropdown__trigger');
     this.dropdownMenu = this.anchorElement.querySelector('.js-dropdown__menu');
+    this.inputField = this.anchorElement.querySelector('.js-dropdown__input-field');
+    this.counters = this.anchorElement.querySelectorAll('.js-counter');
   }
 
   _bindMethods() {
@@ -38,6 +61,14 @@ class ViewController {
     if (!isDropdownTriggerTarget && !isDropdownMenuTarget) {
       this.dropdown.classList.remove('dropdown_is-expanded');
     }
+  }
+
+  _tieComponents() {
+    this.counters.forEach((counter) => {
+      Counter.addSubscriber(counter, (options) => {
+        this.model.setOptions(options);
+      })
+    });
   }
 }
 
