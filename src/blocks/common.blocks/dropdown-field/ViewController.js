@@ -10,7 +10,7 @@ class ViewController {
     this._bindMethods();
     this._addEventListeners();
     this.setElements(this.model.getOptions());
-    this._tieComponents();
+    this._handleDropdownMenuUpdate();
   }
 
   setElements(optionsSet) {
@@ -70,7 +70,7 @@ class ViewController {
     }
   }
 
-  _tieComponents() {
+  _handleDropdownMenuUpdate() {
     DropdownMenu.addSubscriber(this.dropdownDropdownMenu, 'update', (options) => {
       this.model.setOptions(options);
     })
