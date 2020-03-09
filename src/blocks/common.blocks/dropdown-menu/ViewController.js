@@ -6,18 +6,20 @@ class ViewController {
     this.model = model;
 
     this._assignElements();
-    this.setElements(this.model.getOptions());
+    this._createComponents(this.model.getOptions());
     this._tieComponents();
   }
 
-  setElements(optionsSet) {
-    optionsSet.forEach((options, index) => {
-      Counter.create(this.counters[index], options);
-    });
-  }
+  setElements() {}
 
   _assignElements() {
     this.counters = this.anchorElement.querySelectorAll('.js-counter');
+  }
+
+  _createComponents(optionsSet) {
+    optionsSet.forEach((options, index) => {
+      Counter.create(this.counters[index], options);
+    });
   }
 
   _tieComponents() {
