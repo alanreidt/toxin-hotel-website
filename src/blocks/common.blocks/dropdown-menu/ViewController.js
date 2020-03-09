@@ -7,7 +7,7 @@ class ViewController {
 
     this._assignElements();
     this._createComponents(this.model.getOptions());
-    this._tieComponents();
+    this._handleCounterUpdate();
   }
 
   setElements() {}
@@ -22,7 +22,7 @@ class ViewController {
     });
   }
 
-  _tieComponents() {
+  _handleCounterUpdate() {
     this.counters.forEach((counter, index) => {
       Counter.addSubscriber(counter, 'update', (options) => {
         this.model.setOptionsAt(index, options);
