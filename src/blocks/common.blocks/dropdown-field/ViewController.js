@@ -6,6 +6,7 @@ class ViewController {
     this.model = model;
 
     this._assignElements();
+    this._createComponents(this.model.getOptions());
     this._bindMethods();
     this._addEventListeners();
     this.setElements(this.model.getOptions());
@@ -13,13 +14,10 @@ class ViewController {
   }
 
   setElements(optionsSet) {
-    const dropdownDropdownMenu = DropdownMenu.create(this.dropdownDropdownMenu, optionsSet);
-    const dropdownDropdownMenuOptionsSet = dropdownDropdownMenu.getOptions();
-
     let guestQuantity = 0;
     let babyQuantity = 0;
 
-    dropdownDropdownMenuOptionsSet.forEach((options) => {
+    optionsSet.forEach((options) => {
       if (options.name === 'Adult' || options.name === 'Child') {
         guestQuantity += options.value;
       }
@@ -43,6 +41,10 @@ class ViewController {
     this.dropdownMenu = this.anchorElement.querySelector('.js-dropdown__menu');
     this.inputField = this.anchorElement.querySelector('.js-dropdown__input-field');
     this.dropdownDropdownMenu = this.anchorElement.querySelector('.js-dropdown__dropdown-menu');
+  }
+
+  _createComponents(optionsSet) {
+    DropdownMenu.create(this.dropdownDropdownMenu, optionsSet);
   }
 
   _bindMethods() {
