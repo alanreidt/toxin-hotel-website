@@ -8,6 +8,7 @@ class ViewController {
     this._assignElements();
     this._createComponents(this.model.getOptions());
     this._handleCounterUpdate();
+    this._synchronizeModels();
   }
 
   setElements() {}
@@ -27,6 +28,12 @@ class ViewController {
       Counter.addSubscriber(counter, 'update', (options) => {
         this.model.setOptionsAt(index, options);
       })
+    });
+  }
+
+  _synchronizeModels() {
+    this.counters.forEach((counter) => {
+      Counter.triggerSubscribers(counter, 'update', Counter.getOptions(counter));
     });
   }
 }
