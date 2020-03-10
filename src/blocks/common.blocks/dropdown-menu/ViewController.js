@@ -27,7 +27,7 @@ class ViewController {
     this.counters.forEach((counter, index) => {
       Counter.addSubscriber(counter, 'update', (options) => {
         this.model.setOptionsAt(index, options);
-      })
+      });
     });
   }
 
