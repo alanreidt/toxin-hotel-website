@@ -9,8 +9,9 @@ class ViewController {
     this._createComponents(this.model.getOptions());
     this._bindMethods();
     this._addEventListeners();
-    this.setElements(this.model.getOptions());
     this._handleDropdownMenuUpdate();
+    this._synchronizeModels();
+    this.setElements(this.model.getOptions());
   }
 
   setElements(optionsSet) {
@@ -74,6 +75,14 @@ class ViewController {
     DropdownMenu.addSubscriber(this.dropdownDropdownMenu, 'update', (options) => {
       this.model.setOptions(options);
     })
+  }
+
+  _synchronizeModels() {
+    DropdownMenu.triggerSubscribers(
+      this.dropdownDropdownMenu,
+      'update',
+      DropdownMenu.getOptions(this.dropdownDropdownMenu),
+    );
   }
 }
 
