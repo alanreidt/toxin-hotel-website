@@ -9,7 +9,6 @@ class ViewController {
     this._createComponents(this.model.getOptions());
     this._bindMethods();
     this._addEventListeners();
-    this._handleDropdownMenuUpdate();
     this._synchronizeModels();
     this.setElements(this.model.getOptions());
   }
@@ -54,6 +53,9 @@ class ViewController {
 
   _addEventListeners() {
     document.addEventListener('click', this._handleDocumentClick);
+    DropdownMenu.addSubscriber(this.dropdownDropdownMenu, 'update', (options) => {
+      this.model.setOptions(options);
+    });
   }
 
   _handleDocumentClick(event) {
@@ -69,12 +71,6 @@ class ViewController {
     if (!isDropdownTriggerTarget && !isDropdownMenuTarget) {
       this.dropdown.classList.remove('dropdown_is-expanded');
     }
-  }
-
-  _handleDropdownMenuUpdate() {
-    DropdownMenu.addSubscriber(this.dropdownDropdownMenu, 'update', (options) => {
-      this.model.setOptions(options);
-    })
   }
 
   _synchronizeModels() {
