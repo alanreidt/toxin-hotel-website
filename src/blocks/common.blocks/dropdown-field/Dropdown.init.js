@@ -10,17 +10,12 @@ function handleWindowLoad() {
       {
         name: 'Adult',
         boundaries: [1, 5],
-        value: 0,
       },
       {
         name: 'Child',
-        boundaries: [0, 5],
-        value: 0,
       },
       {
         name: 'Baby',
-        boundaries: [0, 3],
-        value: 0,
       }
     ]);
   });
