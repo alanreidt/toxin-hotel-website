@@ -17,8 +17,7 @@
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-imagemin": "^3.0.0",
     "parcel-plugin-svg-sprite": "^1.4.1",
-    "pug": "^2.0.4",
-    "scroll-lock": "^2.1.2"
+    "pug": "^2.0.4"
   },
   "dependencies": {
     "cleave.js": "^1.5.3",
@@ -27,6 +26,7 @@
     "jquery-ui-dist": "^1.12.1",
     "lodash": "^4.17.15",
     "nouislider": "^13.1.5",
+    "scroll-lock": "^2.1.2",
     "wnumb": "^1.2.0"
   }
 }
