@@ -23,7 +23,7 @@
     "deep-equal": "^2.0.1",
     "jquery": "^3.5.0",
     "jquery-ui-dist": "^1.12.1",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "nouislider": "^13.1.5",
     "scroll-lock": "^2.1.2",
     "wnumb": "^1.2.0"
